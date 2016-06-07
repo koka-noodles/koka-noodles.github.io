@@ -12,17 +12,7 @@ var wiPlaynum = 0;
 var playnum = 0; // delete after everyone has one
 
 
-// return button function
 
-$('#myvids').submit(function(event){
-
-  // prevent default browser behaviour
-  event.preventDefault();
-
-  //do stuff with your form here
-  ...
-
-});
 
 
 
@@ -46,6 +36,14 @@ function onYouTubeApiLoad() {
  
     gapi.client.setApiKey('AIzaSyAIorEJxO3GGHDQt_LZTv142xiVWlMqs-E');
 }
+
+
+// return button function
+
+$('#myvids').submit(function(event){
+
+  // prevent default browser behaviour
+  event.preventDefault();
 
 function verifyorder() {
  
@@ -164,6 +162,10 @@ function verifyorder() {
 
 }
 
+
+
+
+});
 
 // Called automatically with the response of the YouTube API request.
 function onSearchResponsestucky(response) { // stuckman
