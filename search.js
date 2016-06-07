@@ -38,13 +38,6 @@ function onYouTubeApiLoad() {
 }
 
 
-// return button function
-
-$('#myvids').submit(function(event){
-
-  // prevent default browser behaviour
-  event.preventDefault();
-
 function verifyorder() {
  
 
@@ -162,10 +155,6 @@ function verifyorder() {
 
 }
 
-
-
-
-});
 
 // Called automatically with the response of the YouTube API request.
 function onSearchResponsestucky(response) { // stuckman
