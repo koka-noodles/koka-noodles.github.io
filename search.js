@@ -166,7 +166,6 @@ function verifyorder() {
 //
 }
   })
-})
 
 
 // Called automatically with the response of the YouTube API request.
