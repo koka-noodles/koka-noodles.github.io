@@ -40,14 +40,6 @@ function onYouTubeApiLoad() {
 function verifyorder() {
  
  
-// 
-  $('.input-group').keypress(function(e){
-    if(e.which == 13) {
-      //dosomething
-      alert('Enter pressed');
-
- 
-
   var order = document.getElementById('value').value;
 
   var request = gapi.client.youtube.search.list({  // search 1 for stuckman
@@ -163,9 +155,6 @@ function verifyorder() {
 }
 
 
-//
-})
-  }
 
 
 // Called automatically with the response of the YouTube API request.
