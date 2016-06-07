@@ -39,6 +39,14 @@ function onYouTubeApiLoad() {
 
 function verifyorder() {
  
+ //
+ $('.input-group-btn').keypress(function(e){
+    if(e.which == 13) {
+      //dosomething
+      alert('Enter pressed');
+    }
+  })
+ 
  
   var order = document.getElementById('value').value;
 
