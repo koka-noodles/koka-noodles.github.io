@@ -12,6 +12,20 @@ var wiPlaynum = 0;
 var playnum = 0; // delete after everyone has one
 
 
+// return button function
+
+$('#myvids').submit(function(event){
+
+  // prevent default browser behaviour
+  event.preventDefault();
+
+  //do stuff with your form here
+  ...
+
+});
+
+
+
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 // Helper function to display JavaScript value on HTML page.
