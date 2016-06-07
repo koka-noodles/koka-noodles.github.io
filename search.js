@@ -37,13 +37,15 @@ function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyAIorEJxO3GGHDQt_LZTv142xiVWlMqs-E');
 }
 
-$(function(){
+function verifyorder() {
+ 
+ 
+// 
   $('.input-group').keypress(function(e){
     if(e.which == 13) {
       //dosomething
       alert('Enter pressed');
 
-function verifyorder() {
  
 
   var order = document.getElementById('value').value;
