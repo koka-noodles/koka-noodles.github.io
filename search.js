@@ -37,6 +37,11 @@ function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyAIorEJxO3GGHDQt_LZTv142xiVWlMqs-E');
 }
 
+$(function(){
+  $('.input-group').keypress(function(e){
+    if(e.which == 13) {
+      //dosomething
+      alert('Enter pressed');
 
 function verifyorder() {
  
@@ -154,6 +159,12 @@ function verifyorder() {
   request.execute(onSearchResponsewisecrack);
 
 }
+
+
+//
+}
+  })
+})
 
 
 // Called automatically with the response of the YouTube API request.
