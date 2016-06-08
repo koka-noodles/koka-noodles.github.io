@@ -40,7 +40,7 @@ function onYouTubeApiLoad() {
 function verifyorder() {
  
  
-  var order = document.getElementById('value').value;
+  var order = document.getElementById('Mvalue').value;
 
   var request = gapi.client.youtube.search.list({  // search 1 for stuckman
     part: 'snippet', 
