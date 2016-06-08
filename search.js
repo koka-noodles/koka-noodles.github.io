@@ -37,6 +37,20 @@ function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyAIorEJxO3GGHDQt_LZTv142xiVWlMqs-E');
 }
 
+
+
+$('#yourForm').submit(function(event){
+
+  // prevent default browser behaviour
+  event.preventDefault();
+
+alert("I am an alert box!")
+
+});
+
+
+
+
 function verifyorder() {
  
  
