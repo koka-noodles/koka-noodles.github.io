@@ -38,19 +38,6 @@ function onYouTubeApiLoad() {
 }
 
 
-
-$('#yourForm').submit(function(event){
-
-  // prevent default browser behaviour
-  event.preventDefault();
-
-alert("I am an alert box!")
-
-});
-
-
-
-
 function verifyorder() {
  
  
