@@ -6,9 +6,7 @@ body {
     background-size: 100% 1.2em;*/
 }
 
-body#text{
-	background-color:#00f;
-}
+body#text{background-color:red;}
 
 html { 
    /* background: url(../images/comp.jpg) no-repeat center center fixed;  */ 
