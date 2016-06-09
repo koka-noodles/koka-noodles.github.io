@@ -62,7 +62,7 @@ p.typewriter{
 	text-transform: capitalize;
 	font-size: 2em; 
 	color: transparent;
-   	text-shadow: 0 0 1px rgba(0,0,0,0.8);
+   	text-shadow: 0 0 9px rgba(0,0,0,0.8);
 }
 
 #response {
