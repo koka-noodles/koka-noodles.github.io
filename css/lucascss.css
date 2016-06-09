@@ -18,7 +18,7 @@ html {
 img.bg {
 	background: src="images/comp.jpg";
 	background-repeat: no-repeat;
-	background-position: top;
+	background-position: center;
 	background-size: contain;
     	height: 1080px;  
 }
