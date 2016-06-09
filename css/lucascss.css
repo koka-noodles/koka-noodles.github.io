@@ -53,8 +53,8 @@ img.bg {
 	border: 5px solid #ABCED4;
 }
 
-.typewriter{
-	font-family:'VT323';
+#typewriter{
+	font-family: 'VT323', ;
 }
 
 #response {
