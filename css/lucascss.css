@@ -58,6 +58,7 @@ body#xtext{background-color:#001a00;}
 p.typewriter{
 	font-family: 'VT323';
 	color:#e6ffe6;
+	letter-spacing: 3px;
 }
 
 #response {
