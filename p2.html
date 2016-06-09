@@ -55,30 +55,6 @@ dull boy all work and no play makes jack a dull boy all work and no play makes j
 
 
 <script>
-var text = $('.typewriter').text();
-var length = text.length;
-var timeOut;
-var character = 0;
-
-var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
-
-(function typeWriter() { 
-    timeOut = setTimeout(function() {
-        character++;
-        var type = text.substring(0, character);
-        $('.typewriter').text(type);
-        snd.play();
-        typeWriter();
-        
-        if (character == length) {
-            clearTimeout(timeOut);
-        }
-        
-    }, 50);
-}());
-</script>  
-
-<script>
 var lines = new Image();
 lines.src = 'images/scanlines.png';
 
@@ -133,6 +109,31 @@ function fakeCRT() {
     }, Math.floor(1000 / 40));
 }
 </script>
+
+
+<script>
+var text = $('.typewriter').text();
+var length = text.length;
+var timeOut;
+var character = 0;
+
+var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
+
+(function typeWriter() { 
+    timeOut = setTimeout(function() {
+        character++;
+        var type = text.substring(0, character);
+        $('.typewriter').text(type);
+        snd.play();
+        typeWriter();
+        
+        if (character == length) {
+            clearTimeout(timeOut);
+        }
+        
+    }, 50);
+}());
+</script>  
 
 
   
