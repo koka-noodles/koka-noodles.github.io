@@ -40,13 +40,14 @@ var timeOut;
 var character = 0;
 
 var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
-snd.play();
+
 
 (function typeWriter() { 
     timeOut = setTimeout(function() {
         character++;
         var type = text.substring(0, character);
         $('.typewriter').text(type);
+        snd.play();
         typeWriter();
         
         if (character == length) {
