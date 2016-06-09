@@ -61,6 +61,8 @@ p.typewriter{
 	letter-spacing: 3px;
 	text-transform: capitalize;
 	font-size: 2em; 
+	-webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+	filter: blur(5px);
 }
 
 #response {
