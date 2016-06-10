@@ -111,6 +111,16 @@ h1{
   min-height: 528px;
 }
 
+p.typewriter{
+	font-family: 'Press Start 2P', cursive;
+	color:#4dff4d;
+	letter-spacing: 3px;
+	text-transform: capitalize;
+	font-size: 2em; 
+	color: transparent;
+   	text-shadow: 0 0 2.5px rgba(0, 255, 14, 1);
+}
+
 
 /*animation*/
 
