@@ -7,7 +7,7 @@ body {
 }
 
 html { 
-  /* background: url(../images/comp.jpg) no-repeat center center fixed; */
+   background: url(../images/comp.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,10 +15,9 @@ html {
 }
 
 
-img.bg {
       /* Set rules to fill background */
       min-height: 100%;
-      min-width: 1024;
+      min-width: 1024px;
       
       /* Set up proportionate scaling */
       width: 100%;
@@ -33,15 +32,13 @@ img.bg {
     @media screen and (max-width: 1024px){
       img.bg {
         left: 50%;
-        margin-left: -512px;
-      	
-      }
+        margin-left: -512px; }
     }
     
     #page-wrap { position: relative; width: 400px; margin: 50px auto; padding: 20px; background: white; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
     p { font: 15px/2 Georgia, Serif; margin: 0 0 30px 0; text-indent: 40px; }
-	
-body#xtext{background-color:#001a00;}
+		
+/*body#xtext{background-color:#001a00;}*/
 
 #tvids {
     padding-top: 25px;
