@@ -7,7 +7,7 @@ body {
 }
 
 html { 
-   /* background: url(../images/comp.jpg) no-repeat center center fixed; */
+   background: url(../images/comp.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,11 +17,11 @@ html {
 
 img.bg {
       /* Set rules to fill background */
-      min-height: 1080px;
-      min-width: 100%;
+      min-height: 100%;
+      min-width: 1024;
       
       /* Set up proportionate scaling */
-      width: auto;
+      width: 100%;
       height: auto;
       
       /* Set up positioning */
@@ -30,10 +30,10 @@ img.bg {
       left: 0;
     }
     
-    @media screen and (max-width: 1920px){
+    @media screen and (max-width: 1024px){
       img.bg {
-        /*left: 50%;
-        margin-left: -512px; */
+        left: 50%;
+        margin-left: -512px;
       	
       }
     }
