@@ -114,11 +114,11 @@ h1{
 p.typewriter{
 	font-family: 'Press Start 2P', cursive;
 	color:#4dff4d;
-	letter-spacing: 3px;
+	letter-spacing: 2.5px;
 	text-transform: capitalize;
-	font-size: 2em; 
+	font-size: 1.4em; 
 	color: transparent;
-   	text-shadow: 0 0 2.5px rgba(0, 255, 14, 1);
+   	text-shadow: 0 0 2px rgba(0, 255, 14, 1);
 }
 
 
