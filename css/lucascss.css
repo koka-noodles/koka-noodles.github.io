@@ -16,7 +16,7 @@ html {
 
 img.bg {
       /* Set rules to fill background */
-      min-height: 1500%;
+      min-height: 100%;
       min-width: 1024px;
       
       /* Set up proportionate scaling */
@@ -27,7 +27,6 @@ img.bg {
       position: fixed;
       top: 0;
       left: 0;
-      opacity: .2;
     }
     
     @media screen and (max-width: 1024px){
@@ -41,7 +40,7 @@ img.bg {
 
 img.bg2 {
       /* Set rules to fill background */
-      min-height: 100%;
+      min-height: 1500%;
       min-width: 1024px;
       
       /* Set up proportionate scaling */
@@ -52,6 +51,7 @@ img.bg2 {
       position: fixed;
       top: 0;
       left: 0;
+      opacity: .2;
     }
     
     @media screen and (max-width: 1024px){
