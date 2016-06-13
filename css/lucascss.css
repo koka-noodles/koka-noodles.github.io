@@ -39,7 +39,10 @@ img.bg {
     p { font: 15px/2 Georgia, Serif; margin: 0 0 30px 0; text-indent: 40px; }
 
 
-	
+.bg.second{
+	opacity: 0.2;
+}
+
 #tvids {
     padding-top: 25px;
     padding-right: 20px;
