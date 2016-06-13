@@ -31,7 +31,18 @@
   <a href="http://koka-noodles.github.io/p2">Page 2</a>
   <!-- <img src="images/scanlines.png" class="bg second"> -->
   herro 
+  <canvas id="myCanvas" width="200" height="100"
+    style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+  </canvas>
   
+  
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0,0,150,75);
+  </script>
           
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
