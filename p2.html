@@ -78,7 +78,7 @@ var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
           snd.play();
         	typeWriter();
         }else{
-        $('.typewriter').text(type+"‡");
+        $('.typewriter').text(type+"|");
         typeWriter();
         }
         
@@ -86,7 +86,7 @@ var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
             clearTimeout(timeOut);
         }
         
-    }, 50);
+    }, 30);
 }());
 
 
