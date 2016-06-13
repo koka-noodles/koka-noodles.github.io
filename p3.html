@@ -36,40 +36,14 @@
     Your browser does not support the canvas element.
   </canvas>
   
-  <canvas id="myCanvas2" width="200" height="100"
-    style="border:1px solid #c3c3c3;">
-    Your browser does not support the canvas element.
-  </canvas>
-  
-  <canvas id="myCanvas3" width="200" height="100"
-    style="border:1px solid #c3c3c3;">
-    Your browser does not support the canvas element.
-  </canvas>
-  
+ 
   
   <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
   
-    var c=document.getElementById('myCanvas2');
-    var ctx=c.getContext('2d');
-    ctx.transform(1,0,0.2,1,0,0);
-    ctx.fillStyle='lightblue';
-    ctx.fillRect(50,50,250,100);
-    ctx.fillStyle='red';
-    ctx.font='30px Arial';
-    ctx.fillText('Transform', 60,80);
     
-    var c=document.getElementById('myCanvas3');
-    var ctx=c.getContext('2d');
-    ctx.transform(1,0.2,0,1,0,0);
-    ctx.fillStyle='lightblue';
-    ctx.fillRect(50,50,250,100);
-    ctx.fillStyle='red';
-    ctx.font='30px Arial';
-    ctx.fillText('Transform', 60,80);
-  
   </script>
           
     
