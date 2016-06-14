@@ -30,68 +30,65 @@
   <body>
   
   <img src="images/scanlines.png" class="bg second">
+    
+  <p class="typewriter">all work and no play makes jack a dull boy all work and no play makes jack a dull boy 
+  all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play 
+  makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
+  dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and 
+  no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a
+  dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all 
+  work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes 
+  jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all
+  work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes 
+  jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy 
+  all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play 
+  makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull
+  boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no 
+  play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
+  dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and 
+  no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
+  dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and 
+  no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
+  dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy :)
+  </p>
+
+
+
+  
+  <script>
+  var text = $('.typewriter').text();
+  var length = text.length;
+  var timeOut;
+  var character = 0;
+  
+  var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
+  
+  (function typeWriter() { 
+      timeOut = setTimeout(function() {
+          character++;
+          var type = text.substring(0, character);
+          var sstring = type.substring((character)-1,character);
+          console.log(sstring);
+          if(sstring == "j"){
+          	$('.typewriter').text(type);
+            //plau noise for a
+            snd.play();
+          	typeWriter();
+          }else{
+          $('.typewriter').text(type+"|");
+          typeWriter();
+          }
+          
+          if (character == length) {
+              clearTimeout(timeOut);
+          }
+          
+      }, 90);
+  }());
   
   
-  hello nurse
+  </script>  
   
-<p class="typewriter">all work and no play makes jack a dull boy all work and no play makes jack a dull boy 
-all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play 
-makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
-dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and 
-no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a
-dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all 
-work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes 
-jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all
-work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes 
-jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy 
-all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play 
-makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull
-boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and no 
-play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
-dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and 
-no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
-dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy all work and 
-no play makes jack a dull boy all work and no play makes jack a dull boy all work and no play makes jack a 
-dull boy all work and no play makes jack a dull boy all work and no play makes jack a dull boy :)
-</p>
-
-
-
-
-<script>
-var text = $('.typewriter').text();
-var length = text.length;
-var timeOut;
-var character = 0;
-
-var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
-
-(function typeWriter() { 
-    timeOut = setTimeout(function() {
-        character++;
-        var type = text.substring(0, character);
-        var sstring = type.substring((character)-1,character);
-        console.log(sstring);
-        if(sstring == "j"){
-        	$('.typewriter').text(type);
-          //plau noise for a
-          snd.play();
-        	typeWriter();
-        }else{
-        $('.typewriter').text(type+"|");
-        typeWriter();
-        }
-        
-        if (character == length) {
-            clearTimeout(timeOut);
-        }
-        
-    }, 90);
-}());
-
-
-</script>  
-
 
   
  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
