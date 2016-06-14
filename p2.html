@@ -31,14 +31,12 @@
   
   <img src="images/scanlines.png" class="bg second">
   
-  <form id="frm1" action="form_action.asp">
-  First name: <input type="text" name="fname"><br>
-  <input type="button" onclick="myFunction()" value="Submit">
-  </form>
+  <input id="someInput" type="text">
+  <input type="button" value="Say Hello" onClick="myFunction()">
   
   <script>
     function myFunction() {
-        document.getElementById("frm1").submit();
+        var text = $('.typewriter').text();
     }
   </script>
   
@@ -50,7 +48,7 @@
 
   
   <script>
-  var text = $('.typewriter').text();
+  
   var length = text.length;
   var timeOut;
   var character = 0;
