@@ -48,6 +48,10 @@
   var sndj = new Audio("/sound/typing.wav"); // buffers automatically when created
   var snda = new Audio("/sound/blip.wav"); // buffers automatically when created
   
+  
+  var dateSpan = document.createElement('span')
+  dateSpan.innerHTML = dateString;
+  
   (function typeWriter() { 
       timeOut = setTimeout(function() {
           character++;
@@ -69,7 +73,7 @@
               console.log("plaing a a and j");
               break;
           }
-          $('.typewriter').text(type+"<span class="blink">Blink</span>");
+          $('.typewriter').text(typeappendChild(dateSpan));
           typeWriter();
           
           if (character == length) {
