@@ -46,25 +46,21 @@ img.bg {
 }
 
 
-@keyframes blink {
-  50% {
-    opacity: 0.0;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    opacity: 0.0;
-  }
-}
 .blink {
-  animation: blink 1s step-start 0s infinite;
-  -webkit-animation: blink 1s step-start 0s infinite;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
-
-#frm1{
-
-}
 
 #tvids {
     padding-top: 25px;
