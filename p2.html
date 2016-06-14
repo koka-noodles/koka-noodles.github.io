@@ -38,6 +38,7 @@
   </p>
 
   <span class="blink">Blink</span>
+  
 
   <script>
   var text = $('.typewriter').text();
@@ -50,6 +51,10 @@
   
   
   var x = document.getElementsByClassName("blink")[0].className;
+  var x = document.createElement("P");
+  var t = document.createTextNode("This is a paragraph.");
+  x.appendChild(t);
+  document.body.appendChild(x);
   
   (function typeWriter() { 
       timeOut = setTimeout(function() {
@@ -73,7 +78,6 @@
               break;
           }
           $('.typewriter').text(type+"|");
-          type.appendChild(x)
           typeWriter();
           
           if (character == length) {
