@@ -49,7 +49,7 @@
   var snda = new Audio("/sound/blip.wav"); // buffers automatically when created
   
   
-  
+  var x = document.getElementsByClassName("blink")[0].className;
   
   (function typeWriter() { 
       timeOut = setTimeout(function() {
@@ -72,7 +72,7 @@
               console.log("plaing a a and j");
               break;
           }
-          $('.typewriter').text.appendChild(blink);
+          $('.typewriter').text.appendChild(x);
           typeWriter();
           
           if (character == length) {
