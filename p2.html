@@ -61,7 +61,8 @@
   var timeOut;
   var character = 0;
   
-  var snd = new Audio("/sound/typing.wav"); // buffers automatically when created
+  var sndj = new Audio("/sound/typing.wav"); // buffers automatically when created
+  var snda = new Audio("/sound/blip.wav"); // buffers automatically when created
   
   (function typeWriter() { 
       timeOut = setTimeout(function() {
@@ -69,15 +70,18 @@
           var type = text.substring(0, character);
           var sstring = type.substring((character)-1,character);
           console.log(sstring);
-          if(sstring == "j"){
-          	$('.typewriter').text(type);
-            //plau noise for a
-            snd.play();
-          	typeWriter();
-          }else{
+          switch(sstring){
+            case "j":
+              sndj.play();
+              console.log("j");
+              break;
+            case "a":  
+              snda.play();
+              console.log("a");
+              break;
+          }
           $('.typewriter').text(type+"|");
           typeWriter();
-          }
           
           if (character == length) {
               clearTimeout(timeOut);
