@@ -49,6 +49,7 @@ img.bg {
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  color: #00fc0d;
 }
 @keyframes blink-animation {
   to {
