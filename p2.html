@@ -49,8 +49,7 @@
   var snda = new Audio("/sound/blip.wav"); // buffers automatically when created
   
   
-  var dateSpan = document.createElement('span')
-  dateSpan.innerHTML = dateString;
+  
   
   (function typeWriter() { 
       timeOut = setTimeout(function() {
@@ -73,7 +72,7 @@
               console.log("plaing a a and j");
               break;
           }
-          $('.typewriter').text(typeappendChild(dateSpan));
+          $('.typewriter').text(typeappendChild(blink));
           typeWriter();
           
           if (character == length) {
