@@ -42,10 +42,11 @@ img.bg {
 
 .bg.second{
 	opacity: 0.2;
+	z-index: -1;
 }
 
 #frm1{
-	z-index: +1;
+
 }
 
 #tvids {
