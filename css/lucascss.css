@@ -68,6 +68,28 @@ img.bg {
   }
 }
 
+.blink2 {
+  animation: blink-animation .7s steps(2, start) infinite;
+   -webkit-animation: blink-animation .7s steps(2, start) infinite;
+  font-family: 'Press Start 2P', cursive;
+  color:#4dff4d;
+  letter-spacing: 2.5px;
+  text-transform: capitalize;
+  font-size: 1.1em; 
+  color: transparent;
+  text-shadow: 0 0 2px rgba(0, 255, 14, 1);
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
 
 #tvids {
     padding-top: 25px;
