@@ -47,15 +47,21 @@
   var timeOut;
   var character = 0;
   var text = $('.typewriter').text();
-  var snda = new Audio("/sound/typing.wav"); // buffers automatically when created
-  /*var sndb = new Audio("/sound/blip.wav"); // buffers automatically when created*/
-  var sndc = new Audio("/sound/aceb.wav"); // buffers automatically when created
-  var sndd = new Audio("/sound/ban.wav"); // buffers automatically when created
-  var snde = new Audio("/sound/great.wav"); // buffers automatically when created
-  var sndf = new Audio("/sound/jungg.wav"); // buffers automatically when created
-  var sndg = new Audio("/sound/lice.mp3"); // buffers automatically when created
-  var sndh = new Audio("/sound/typing.wav"); // buffers automatically when created
-  var sndi = new Audio("/sound/uvert.wav"); // buffers automatically when created
+  var snda = new Audio("/sound/aceb.wav"); // buffers automatically when created
+  var sndb = new Audio("/sound/aelkoeh.wav"); // buffers automatically when created
+  var sndc = new Audio("/sound/ban.wav"); // buffers automatically when created
+  var sndd = new Audio("/sound/berto.wav"); // buffers automatically when created
+  var snde = new Audio("/sound/blade.wav"); // buffers automatically when created
+  var sndf = new Audio("/sound/board.wav"); // buffers automatically when created
+  var sndg = new Audio("/sound/clea.mp3"); // buffers automatically when created
+  var sndh = new Audio("/sound/great.wav"); // buffers automatically when created
+  var sndi = new Audio("/sound/ick.wav"); // buffers automatically when created
+  var sndj = new Audio("/sound/jungg.wav"); // buffers automatically when created
+  var sndk = new Audio("/sound/lap.wav"); // buffers automatically when created
+  var sndl = new Audio("/sound/lice.wav"); // buffers automatically when created
+  var sndm = new Audio("/sound/olym.wav"); // buffers automatically when created
+  var sndp = new Audio("/sound/typing.wav"); // buffers automatically when created
+  var sndq = new Audio("/sound/uvert.wav"); // buffers automatically when created
   
  
   
@@ -67,40 +73,74 @@
           console.log(sstring);
           switch(sstring){
             case "a":
+            case "p":
               snda.play();
-              console.log("playing a a");
+              console.log("playing a a p");
               break;
             case "b":  
-              snda.play();
-              console.log("playing a b");
+            case "q":  
+              sndb.play();
+              console.log("playing a b q");
               break;
-            case "s":  
+            case "c":
+            case "u":
               sndc.play();
-              console.log("playing a s");
+              console.log("playing a c u");
               break;
-            case "m":  
-              sndd.play();
-              console.log("playing a m");
-              break;
+            case "d":
             case "r":  
-              snde.play();
-              console.log("playing a r");
-              break;
-            case "u":  
-              sndf.play();
-              console.log("playing a u");
-              break;
-            case "i":  
-              sndg.play();
-              console.log("playing a i");
+              sndd.play();
+              console.log("playing a d r");
               break;
             case "e":  
-              sndh.play();
-              console.log("playing a e");
+            case "s":  
+              snde.play();
+              console.log("playing a e s");
               break;
-            case ".":  
+            case "f":
+            case "t":
+              sndf.play();
+              console.log("playing a f t");
+              break;
+            case "g":
+            case "w":
+              sndg.play();
+              console.log("playing a g w");
+              break;
+            case "h":
+            case "x":  
+              sndh.play();
+              console.log("playing a h x");
+              break;
+            case "i":
+            case "y":  
               sndi.play();
-              console.log("playing a e");
+              console.log("playing a i y");
+            break;
+            case "j":  
+            case "z":
+              sndj.play();
+              console.log("playing a j z");
+            break;
+            case "k":  
+              sndk.play();
+              console.log("playing a k ");
+            break;
+            case "l":  
+              sndl.play();
+              console.log("playing a l");
+            break;
+            case "m":  
+              sndm.play();
+              console.log("playing a m");
+            break;
+            case "n":  
+              sndn.play();
+              console.log("playing a n");
+            break;
+            case "o":  
+              sndo.play();
+              console.log("playing a o");
             break;
           }
           $('.typewriter').html(type+'<span class="blink">|</span>'+'<span class="blink2">|</span>');
