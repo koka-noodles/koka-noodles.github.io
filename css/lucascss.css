@@ -49,7 +49,13 @@ img.bg {
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
-  color: #00fc0d;
+  font-family: 'Press Start 2P', cursive;
+  color:#4dff4d;
+  letter-spacing: 2.5px;
+  text-transform: capitalize;
+  font-size: 1.1em; 
+  color: transparent;
+  text-shadow: 0 0 2px rgba(0, 255, 14, 1);
 }
 @keyframes blink-animation {
   to {
@@ -137,16 +143,6 @@ h1{
 }
 
 p.typewriter{
-	font-family: 'Press Start 2P', cursive;
-	color:#4dff4d;
-	letter-spacing: 2.5px;
-	text-transform: capitalize;
-	font-size: 1.1em; 
-	color: transparent;
-   	text-shadow: 0 0 2px rgba(0, 255, 14, 1);
-}
-
-p.blink{
 	font-family: 'Press Start 2P', cursive;
 	color:#4dff4d;
 	letter-spacing: 2.5px;
