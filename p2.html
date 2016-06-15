@@ -56,6 +56,8 @@
   var t = document.createTextNode("|");
   x.appendChild(t);
   document.body.appendChild(x);
+  document.getElementsByClassName('blink').appendChild(x);
+  document.getElementsByClassName('typewriter').appendChild(x);
   
   (function typeWriter() { 
       timeOut = setTimeout(function() {
