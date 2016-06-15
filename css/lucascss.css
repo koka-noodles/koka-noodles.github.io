@@ -49,7 +49,7 @@ img.bg {
 .blink {
   animation: blink-animation .7s steps(2, start) infinite;
    -webkit-animation: blink-animation .7s steps(2, start) infinite;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Catamaran', sans-serif;
   color:#4dff4d;
   letter-spacing: 2.5px;
   text-transform: capitalize;
@@ -71,7 +71,7 @@ img.bg {
 .blink2 {
   animation: blink-animation .7s steps(2, start) infinite;
    -webkit-animation: blink-animation .7s steps(2, start) infinite;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Catamaran', sans-serif;
   color:#4dff4d;
   letter-spacing: 1.5px;
   text-transform: capitalize;
