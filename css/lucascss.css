@@ -146,6 +146,16 @@ p.typewriter{
    	text-shadow: 0 0 2px rgba(0, 255, 14, 1);
 }
 
+p.blink{
+	font-family: 'Press Start 2P', cursive;
+	color:#4dff4d;
+	letter-spacing: 2.5px;
+	text-transform: capitalize;
+	font-size: 1.1em; 
+	color: transparent;
+   	text-shadow: 0 0 2px rgba(0, 255, 14, 1);
+}
+
 
 /*animation*/
 
