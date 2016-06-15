@@ -47,8 +47,8 @@ img.bg {
 
 
 .blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation .7s steps(2, start) infinite;
+   -webkit-animation: blink-animation .7s steps(2, start) infinite;
   font-family: 'Press Start 2P', cursive;
   color:#4dff4d;
   letter-spacing: 2.5px;
