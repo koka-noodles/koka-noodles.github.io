@@ -48,13 +48,13 @@
   var text = $('.typewriter').text();
   var sndj = new Audio("/sound/typing.wav"); // buffers automatically when created
   var snda = new Audio("/sound/blip.wav"); // buffers automatically when created
-  var pip = "|";
+  
  
   
   (function typeWriter() { 
       timeOut = setTimeout(function() {
           character++;
-          var type = text.substring(0, character, pip);
+          var type = text.substring(0, character);
           var sstring = type.substring((character)-1,character);
           console.log(sstring);
           switch(sstring){
@@ -72,7 +72,7 @@
               console.log("playing a a and j");
               break;
           }
-          $('.typewriter').text(type);/*+"|"*/
+          $('.typewriter').text(type+"|");
           typeWriter();
           
           if (character == length) {
