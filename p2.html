@@ -48,7 +48,7 @@
   var character = 0;
   var text = $('.typewriter').text();
   var snda = new Audio("/sound/typing.wav"); // buffers automatically when created
-  var sndb = new Audio("/sound/blip.wav"); // buffers automatically when created
+  /*var sndb = new Audio("/sound/blip.wav"); // buffers automatically when created*/
   var sndc = new Audio("/sound/aceb.wav"); // buffers automatically when created
   var sndd = new Audio("/sound/ban.wav"); // buffers automatically when created
   var snde = new Audio("/sound/great.wav"); // buffers automatically when created
@@ -71,7 +71,7 @@
               console.log("playing a a");
               break;
             case "b":  
-              sndb.play();
+              snda.play();
               console.log("playing a b");
               break;
             case "s":  
