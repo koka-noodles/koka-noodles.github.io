@@ -35,7 +35,7 @@
  
   
     
-  <p class="typewriter">BASE jump man drugs sprawl tube youtube 3D-printed cartel. fluidity geodesic silent chrome stimulate bridge stimulate human.</p>
+  <p class="typewriter">BASE jump man drugs sprawl. tube youtube 3D-printed cartel. fluidity geodesic silent chrome. stimulate bridge stimulate human.</p>
 
   <span class="blink"></span>
   <span class="blink2"></span>
@@ -47,8 +47,15 @@
   var timeOut;
   var character = 0;
   var text = $('.typewriter').text();
-  var sndj = new Audio("/sound/typing.wav"); // buffers automatically when created
-  var snda = new Audio("/sound/blip.wav"); // buffers automatically when created
+  var snda = new Audio("/sound/typing.wav"); // buffers automatically when created
+  var sndb = new Audio("/sound/blip.wav"); // buffers automatically when created
+  var sndc = new Audio("/sound/aceb.wav"); // buffers automatically when created
+  var sndd = new Audio("/sound/ban.wav"); // buffers automatically when created
+  var snde = new Audio("/sound/great.wav"); // buffers automatically when created
+  var sndf = new Audio("/sound/jungg.wav"); // buffers automatically when created
+  var sndg = new Audio("/sound/lice.mp3"); // buffers automatically when created
+  var sndh = new Audio("/sound/typing.wav"); // buffers automatically when created
+  var sndi = new Audio("/sound/uvert.wav"); // buffers automatically when created
   
  
   
@@ -59,19 +66,42 @@
           var sstring = type.substring((character)-1,character);
           console.log(sstring);
           switch(sstring){
-            case "j":
-              sndj.play();
-              console.log("playing a j");
-              break;
-            case "a":  
+            case "a":
               snda.play();
               console.log("playing a a");
               break;
-            case "u":  
-              snda.play();
-              sndj.play();
-              console.log("playing a a and j");
+            case "b":  
+              sndb.play();
+              console.log("playing a b");
               break;
+            case "s":  
+              sndc.play();
+              console.log("playing a s");
+              break;
+            case "m":  
+              sndd.play();
+              console.log("playing a m");
+              break;
+            case "r":  
+              snde.play();
+              console.log("playing a r");
+              break;
+            case "u":  
+              sndf.play();
+              console.log("playing a u");
+              break;
+            case "i":  
+              sndg.play();
+              console.log("playing a i");
+              break;
+            case "e":  
+              sndh.play();
+              console.log("playing a e");
+              break;
+            case ".":  
+              sndi.play();
+              console.log("playing a e");
+            break;
           }
           $('.typewriter').html(type+'<span class="blink">|</span>'+'<span class="blink2">|</span>');
          
