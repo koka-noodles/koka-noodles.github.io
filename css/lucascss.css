@@ -80,6 +80,7 @@ img.bg {
   text-shadow: 0 0 9px rgba(0, 255, 14, 1);
   position:relative;
   left: -1.3em;
+  text-decoration: underline;
 }
 @keyframes blink-animation {
   to {
