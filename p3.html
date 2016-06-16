@@ -31,20 +31,22 @@
   
   <!-- <img src="images/scanlines.png" class="bg second"> -->
   herro 
-  <canvas id="myCanvas" width="200" height="100"
-    style="border:1px solid #c3c3c3;">
-    Your browser does not support the canvas element.
-  </canvas>
   
+  <sctipt>
+    var context;
+    window.addEventListener('load', init, false);
+    function init() {
+      try {
+        // Fix up for prefixing
+        window.AudioContext = window.AudioContext||window.webkitAudioContext;
+        context = new AudioContext();
+      }
+      catch(e) {
+        alert('Web Audio API is not supported in this browser');
+      }
+    }
+  </sctipt>
  
-  
-  <script>
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
-  
-    
-  </script>
           
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
