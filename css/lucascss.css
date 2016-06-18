@@ -178,8 +178,9 @@ p.typewriter{
 }
 
 p.imbdrat{
-	font-family: 'Orbitron', cursive;
+	font-family: 'Orbitron', sans-serif;
 	color:#4dff4d;
+	size: .5em;
 }
 /*animation*/
 
