@@ -819,3 +819,9 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // Replace the 'ytplayer' element with an <iframe> and
 // YouTube player after the API code downloads.
 var player;
+
+//for the table 
+	$(document).ready(function() {
+  $('#example').dataTable();
+});
+
