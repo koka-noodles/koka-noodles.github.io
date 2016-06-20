@@ -820,8 +820,5 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // YouTube player after the API code downloads.
 var player;
 
-//for the table 
-	$(document).ready(function() {
-  $('#example').dataTable();
-});
+
 
