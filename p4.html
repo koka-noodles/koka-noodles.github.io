@@ -816,7 +816,11 @@
   <script>
   $(document).ready(function() 
     { 
-        $("#table").tablesorter(); 
+        $("#table").tablesorter({
+          headers:{
+            0:{sort: "text"}
+          }
+        }); 
     } 
   ); 
   
