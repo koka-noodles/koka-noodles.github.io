@@ -179,6 +179,20 @@ function myTimer() {
     var content = document.createTextNode(" Romanian");
     theDiv.appendChild(content);
 
+    var docElm = document.documentElement;
+if (docElm.requestFullscreen) {
+    docElm.requestFullscreen();
+}
+else if (docElm.mozRequestFullScreen) {
+    docElm.mozRequestFullScreen();
+}
+else if (docElm.webkitRequestFullScreen) {
+    docElm.webkitRequestFullScreen();
+}
+else if (docElm.msRequestFullscreen) {
+    docElm.msRequestFullscreen();
+}
+
 
     // Code for Safari
     // document.getElementById("videoWrapper").style.WebkitTransform = "rotate(20deg)";
