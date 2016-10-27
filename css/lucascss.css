@@ -191,9 +191,140 @@ h1{
   padding-left: 0px;
 }
 
-#onetext{
+#en_PLtext{
   z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
 }
+
+#de_DEtext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#en_ENtext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#es_EStext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#fr_FRtext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#it_ITtext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#cs_CZtext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#el_ELtext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#hu_HUtext{
+  z-index: +10;
+  position: absolute;
+  right: 74px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#pl_PLtext{
+  z-index: +10;
+  position: absolute;
+  right: 95px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#ro_ROtext{
+  z-index: +10;
+  position: absolute;
+  right: 77px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+
 p {
     margin: 0 0 0;
 }
