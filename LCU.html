@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>League Client</title>
+    <base target="_blank">
+    <script type="text/javascript">
+        window.parent.postMessage({
+            type: 'PostMessageBridge',
+            action: 'landing-page-loading'
+        }, '*');
+    </script>
+    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/css/lol_landing.css">
+    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/css/lcu_flat_button.css"></link>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lucascssLOL.css" rel="stylesheet">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- <script type="text/javascript">
+        (function() {
+            function getHashParam(paramKey) {
+                var hashParams = {};
+                var hash = window.location.hash.slice(1);
+                var keyValuePairStrings = hash.split('&');
+                keyValuePairStrings.forEach(function(keyValuePairString) {
+                    var keyValuePair = keyValuePairString.split('=');
+                    hashParams[keyValuePair[0]] = keyValuePair[1];
+                });
+                return hashParams[paramKey];
+            }
+
+            function getSessionParam(paramKey) {
+                var hashValue = getHashParam(paramKey);
+                var sessionValue = sessionStorage.getItem('home_' + paramKey);
+                if (hashValue) {
+                    sessionStorage.setItem('home_' + paramKey, hashValue);
+                    return hashValue;
+                } else if (sessionValue) {
+                    return sessionValue;
+                } else {
+                    return null;
+                }
+            }
+
+            function loadLCUFonts(cssPath) {
+                var cssRef = document.createElement('link');
+                cssRef.rel = 'stylesheet';
+                cssRef.type = 'text/css';
+                cssRef.href = cssPath;
+                document.getElementsByTagName('head')[0].appendChild(cssRef);
+            }
+            var protocol = getSessionParam('protocol');
+            var port = parseInt(getSessionParam('port'));
+            if (!protocol) {
+                var cssPath = 'https://127.0.0.1:' + port + '/fe/lol-typekit/fonts/fonts.css?locale=euw-en_GB';
+                loadLCUFonts(cssPath);
+            } else {
+                var cssPath = protocol + '//127.0.0.1:' + port + '/fe/lol-typekit/fonts/fonts.css?locale=euw-en_GB';
+                loadLCUFonts(cssPath);
+            }
+        })();
+    </script> -->
+    <script type="text/javascript">
+        window.oembedGlobals = {
+            region: 'euw',
+            language: 'en',
+            locale: 'en_GB',
+            amServiceHost: 'https://am-a.akamaihd.net',
+            newsOembedServiceHost: 'http://news-oembed.leagueoflegends.com',
+            oembedProviderHost: 'https://oembed.leagueoflegends.com',
+            pingEndpoint: null
+        }
+    </script>
+    <script type="text/javascript">
+        window.i18nEmbed = {
+            "button.learnMore": "Learn More",
+            "button.patchNotes": "Patch Notes",
+            "button.freeChampRotation": "Free Champion Rotation"
+        };
+    </script>
+</head>
+
+<body  data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false" onload="myFunction()">
+
+
+
+
+
+<!-- First row -->
+<div class="col-lg-4 col-sm-6 col-xs-12" id="boxy1" >
+<!-- class="i18n-en_GB" -->
+    <div class="lcu-container">
+        <div class="card-type-promo" data-ping-meta="cardType=promo">
+            <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
+        </div>
+        <div class="button-row-top flex-row flex-gutter-medium" id="eune_en"></div>
+        <div class="content-row-bottom flex-row flex-gutter-medium">
+            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
+            </div>
+            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
+            </div>
+            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
+            </div>
+
+        </div>
+    </div>
+  </div>
+
+<div class="col-lg-4 col-sm-6 col-xs-12" id="boxy2"  class="allclients">
+
+    <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+        <div class="lcu-container">
+            <div class="card-type-promo" data-ping-meta="cardType=promo">
+                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/fr/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
+            </div>
+            <div class="button-row-top flex-row flex-gutter-medium" id="euw_fr"></div>
+            <div class="content-row-bottom flex-row flex-gutter-medium">
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/fr/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/fr/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/fr/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
+                </div>
+
+            </div>
+        </div>
+  </div>
+
+  <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy3" >
+
+      <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+          <div class="lcu-container">
+              <div class="card-type-promo" data-ping-meta="cardType=promo">
+                  <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/it/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
+              </div>
+              <div class="button-row-top flex-row flex-gutter-medium"></div>
+              <div class="content-row-bottom flex-row flex-gutter-medium">
+                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/it/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
+                  </div>
+                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/it/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
+                  </div>
+                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/it/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
+                  </div>
+
+              </div>
+          </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy4" >
+
+        <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+            <div class="lcu-container">
+                <div class="card-type-promo" data-ping-meta="cardType=promo">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="button-row-top flex-row flex-gutter-medium"></div>
+                <div class="content-row-bottom flex-row flex-gutter-medium">
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
+                    </div>
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
+                    </div>
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
+                    </div>
+
+                </div>
+            </div>
+      </div>
+
+<!-- second row -->
+    <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy5" style="height: 720px;" style="width: 1280px;">
+    <!-- class="i18n-en_GB" -->
+        <div class="lcu-container">
+            <div class="card-type-promo" data-ping-meta="cardType=promo">
+                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/de/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
+            </div>
+            <div class="button-row-top flex-row flex-gutter-medium"></div>
+            <div class="content-row-bottom flex-row flex-gutter-medium">
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/de/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/de/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/de/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
+                </div>
+
+            </div>
+        </div>
+      </div>
+
+    <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy6" style="height: 720px;" style="width: 1280px;">
+
+        <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+            <div class="lcu-container">
+                <div class="card-type-promo" data-ping-meta="cardType=promo">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/pl/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="button-row-top flex-row flex-gutter-medium"></div>
+                <div class="content-row-bottom flex-row flex-gutter-medium">
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/pl/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                    </div>
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/pl/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                    </div>
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/pl/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                    </div>
+
+                </div>
+            </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy7" style="height: 720px;" style="width: 1280px;">
+
+          <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+              <div class="lcu-container">
+                  <div class="card-type-promo" data-ping-meta="cardType=promo">
+                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/cs/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                  </div>
+                  <div class="button-row-top flex-row flex-gutter-medium"></div>
+                  <div class="content-row-bottom flex-row flex-gutter-medium">
+                      <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                          <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/cs/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                      </div>
+                      <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                          <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/cs/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                      </div>
+                      <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                          <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/cs/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                      </div>
+
+                  </div>
+              </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy8" style="height: 720px;" style="width: 1280px;">
+
+            <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+                <div class="lcu-container">
+                    <div class="card-type-promo" data-ping-meta="cardType=promo">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/en/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                    </div>
+                    <div class="button-row-top flex-row flex-gutter-medium"></div>
+                    <div class="content-row-bottom flex-row flex-gutter-medium">
+                        <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                            <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/en/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                        </div>
+                        <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                            <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/en/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                        </div>
+                        <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                            <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/en/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                        </div>
+
+                    </div>
+                </div>
+          </div>
+
+
+
+
+<!-- Third row -->
+<div class="col-lg-4 col-sm-6 col-xs-12" id="boxy9" style="height: 720px;" style="width: 1280px;">
+
+    <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+        <div class="lcu-container">
+            <div class="card-type-promo" data-ping-meta="cardType=promo">
+                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/el/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+            </div>
+            <div class="button-row-top flex-row flex-gutter-medium"></div>
+            <div class="content-row-bottom flex-row flex-gutter-medium">
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/el/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/el/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/el/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+
+            </div>
+        </div>
+  </div>
+
+  <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy10" style="height: 720px;" style="width: 1280px;">
+
+      <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+          <div class="lcu-container">
+              <div class="card-type-promo" data-ping-meta="cardType=promo">
+                  <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/hu/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+              </div>
+              <div class="button-row-top flex-row flex-gutter-medium"></div>
+              <div class="content-row-bottom flex-row flex-gutter-medium">
+                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/hu/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                  </div>
+                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/hu/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                  </div>
+                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/hu/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                  </div>
+
+              </div>
+          </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy11" style="height: 720px;" style="width: 1280px;">
+
+        <body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false">
+
+            <div class="lcu-container">
+                <div class="card-type-promo" data-ping-meta="cardType=promo">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/ro/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="button-row-top flex-row flex-gutter-medium"></div>
+                <div class="content-row-bottom flex-row flex-gutter-medium">
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/ro/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                    </div>
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/ro/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                    </div>
+                    <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/eune/ro/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                    </div>
+
+                </div>
+            </div>
+      </div>
+
+
+
+
+      <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy12">
+         <a href="#">
+             <h2 style="background-color: rgba(0, 0, 0, 0)">
+               <br>
+              <p>Last load was at</p>
+               <h3 style="font-size:19px">
+                <script>
+                   document.write(Date());
+                 </script>
+               </h3>
+            </h2>
+         </a>
+     </div>
+
+    <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/lassojs/0.1.4/lasso.js"></script>
+    <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/js/require.js" data-main="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/js/require-league-landing.js"></script>
+
+
+    <script>
+
+    console.log("5 + 6");
+
+
+    function myFunction() {
+      var myVar = setInterval(myTimer, 500000);
+
+    function myTimer() {
+        location.reload();
+        window.location.href = "file:///C:/Users/lucas.wilson/Documents/GitHub/koka-noodles.github.io/LCU.html";
+    }
+        //document.getElementById("boxy1").style.height ="712";
+        //document.getElementById("boxy1").style.width ="1280";
+
+
+        document.getElementById("boxy1").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
+        document.getElementById("boxy2").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; z-index: -1; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
+        document.getElementById("boxy3").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px; z-index: -2;";
+        document.getElementById("boxy4").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px; z-index: -3;";
+        document.getElementById("boxy5").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  top: -375px;";
+        document.getElementById("boxy6").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -1; top: -375px;";
+        document.getElementById("boxy7").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -2; top: -375px;";
+        document.getElementById("boxy8").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -3; top: -375px;";
+        document.getElementById("boxy9").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  top: -750px;";
+        document.getElementById("boxy10").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -1; top: -750px;";
+        document.getElementById("boxy11").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -2; top: -750px;";
+        document.getElementById("boxy12").style=" width: 470px; z-index: -2; left: 50px; top: -750px;";
+
+
+        var theDiv = document.getElementById("eune_en");
+        var content = document.createTextNode(" EUNE EN");
+        theDiv.appendChild(content);
+
+        var theDiv = document.getElementById("euw_fr");
+        var content = document.createTextNode(" French");
+        theDiv.appendChild(content);
+
+
+        // var theDiv = document.getElementById("boxy1");
+        // var content = document.createTextNode(" EUNE EN");
+        // theDiv.appendChild(content);
+
+    }
+    </script>
+
+    </body>
+
+    <!-- 2nd page -->
+
+
+
+        <!-- <base target="_blank">
+        <script type="text/javascript">
+            window.parent.postMessage({
+                type: 'PostMessageBridge',
+                action: 'landing-page-loading'
+            }, '*');
+        </script>
+        <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/es_ES/3ef7fee61c26c4a8c2501a602ea61309b3abf85b/assets/css/lol_landing.css">
+        <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/es_ES/3ef7fee61c26c4a8c2501a602ea61309b3abf85b/assets/css/lcu_flat_button.css"></link>
+        <script type="text/javascript">
+            (function() {
+                function getHashParam(paramKey) {
+                    var hashParams = {};
+                    var hash = window.location.hash.slice(1);
+                    var keyValuePairStrings = hash.split('&');
+                    keyValuePairStrings.forEach(function(keyValuePairString) {
+                        var keyValuePair = keyValuePairString.split('=');
+                        hashParams[keyValuePair[0]] = keyValuePair[1];
+                    });
+                    return hashParams[paramKey];
+                }
+
+                function getSessionParam(paramKey) {
+                    var hashValue = getHashParam(paramKey);
+                    var sessionValue = sessionStorage.getItem('home_' + paramKey);
+                    if (hashValue) {
+                        sessionStorage.setItem('home_' + paramKey, hashValue);
+                        return hashValue;
+                    } else if (sessionValue) {
+                        return sessionValue;
+                    } else {
+                        return null;
+                    }
+                }
+
+                function loadCss(cssPath) {
+                    var cssRef = document.createElement('link');
+                    cssRef.rel = 'stylesheet';
+                    cssRef.type = 'text/css';
+                    cssRef.href = cssPath;
+                    document.getElementsByTagName('head')[0].appendChild(cssRef);
+                }
+                var protocol = getSessionParam('protocol');
+                var port = parseInt(getSessionParam('port'));
+                if (!protocol) {
+                    var fontPath = 'https://127.0.0.1:' + port + '/fe/lol-typekit/fonts/fonts.css?locale=euw-es_ES';
+                    var landingPageStyles = 'https://127.0.0.1:' + port + '/fe/lol-home/landing-page-styles.css';
+                    loadCss(fontPath);
+                    loadCss(landingPageStyles);
+                } else {
+                    var fontPath = protocol + '//127.0.0.1:' + port + '/fe/lol-typekit/fonts/fonts.css?locale=euw-es_ES';
+                    var landingPageStyles = protocol + '//127.0.0.1:' + port + '/fe/lol-home/landing-page-styles.css';
+                    loadCss(fontPath);
+                    loadCss(landingPageStyles);
+                }
+            })();
+        </script>
+        <script type="text/javascript">
+            window.oembedGlobals = {
+                region: 'euw',
+                language: 'es',
+                locale: 'es_ES',
+                amServiceHost: 'https://am-a.akamaihd.net',
+                newsOembedServiceHost: 'http://news-oembed.leagueoflegends.com',
+                oembedProviderHost: 'https://oembed.leagueoflegends.com',
+                pingEndpoint: null
+            }
+        </script>
+        <script type="text/javascript">
+            window.i18nEmbed = {
+                "button.learnMore": "Más información",
+                "button.patchNotes": "Notas de Versión",
+                "button.freeChampRotation": "Rotación gratuita de campeones",
+                "video.viewInBrowser": "Ver en el navegador"
+            };
+        </script>
+    </head> -->
+
+    <!-- <body class="i18n-es_ES" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false" data-client-spec="low">
+        <div class="home-landing-container" data-ping-meta="screen=rclient-lol-home|subScreen=rclient-lol-overview">
+            <div class="card-type-promo" data-ping-meta="cardType=promo">
+                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+            </div>
+            <div class="home-landing-button-row-top flex-row flex-gutter-medium"></div>
+            <div class="home-landing-content-row-bottom flex-row flex-gutter-medium">
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
+                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/es/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&styled=0&requirejs=2"></lasso-embed>
+                </div>
+
+            </div>
+        </div> -->
+        <!-- <script type="text/javascript">
+            YOUTUBE_API_READY = false;
+            window.onYouTubeIframeAPIReady = function() {
+                YOUTUBE_API_READY = true;
+                document.body.dispatchEvent(new CustomEvent('youtube_api_ready'));
+            }
+        </script> -->
+        <!-- <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/lassojs/0.1.4/lasso.js"></script>
+        <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/es_ES/3ef7fee61c26c4a8c2501a602ea61309b3abf85b/assets/js/require.js" data-main="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/es_ES/3ef7fee61c26c4a8c2501a602ea61309b3abf85b/assets/js/require-overview-landing.js"></script> -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+
+</html>

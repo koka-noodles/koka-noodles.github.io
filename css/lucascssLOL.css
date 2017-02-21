@@ -1,0 +1,152 @@
+.templateImg{
+  float: right;
+}
+
+.fitImage{
+  position: absolute;
+  height: 720px;
+  z-index: -1;
+  padding-left: 416px;
+}
+
+
+
+.box{
+  position: absolute;
+  height: 720px;
+  width: 500px;
+  color:red;
+
+
+}
+
+#box {
+
+	background: #404040;
+  position: absolute;
+  height: 720px;
+  width: 650px;
+  color: #404040;
+}
+
+body {
+    background-color: #454954;
+}
+
+
+.allclients {
+    position: relative; z-index: +1;
+    position: relative; box-shadow: 10px 10px 5px #888888; right: 80px;
+    color: red;
+}
+
+#euw_en{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+#euw_fr{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#euw_it{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#euw_es{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#euw_de{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#eune_pl{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#eune_cs{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#eune_en{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#eune_el{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#eune_hu{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#eune_ro{
+  z-index: +10;
+  position: absolute;
+  font-size: 500%;
+  text-shadow: 2px 2px Black;
+  color: #EA5146;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
