@@ -371,6 +371,12 @@
         document.getElementById("boxy11").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -2; top: -750px;";
         document.getElementById("boxy12").style=" width: 470px; z-index: -2; left: 50px; top: -750px;";
 
+        var x = document.getElementsByClassName("youtube-thumbnail");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "inline";
+                }
+
 
         var theDiv = document.getElementById("euw_en");
         var content = document.createTextNode(" EUW EN");
