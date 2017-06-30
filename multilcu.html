@@ -349,11 +349,28 @@
 
     function myFunction() {
       var myVar = setInterval(myTimer, 500000);
+      var myVar2 = setInterval(myTimer2, 5000);
 
     function myTimer() {
         location.reload();
         window.location.href = "http://koka-noodles.github.io/multilcu.html";
     }
+
+    function myTimer2() {
+      var x = document.getElementsByClassName("youtube-thumbnail");
+          var i;
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "inline";
+              console.log("I changed youtube");
+              }
+              clearInterval(myVar2);
+
+    }
+
+
+
+
+
         //document.getElementById("boxy1").style.height ="712";
         //document.getElementById("boxy1").style.width ="1280";
 
@@ -371,14 +388,18 @@
         document.getElementById("boxy11").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -2; top: -750px;";
         document.getElementById("boxy12").style=" width: 470px; z-index: -2; left: 50px; top: -750px;";
 
-        var x = document.getElementsByClassName("youtube-thumbnail");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "inline";
-                console.log("I changed youtube");
-                }
-        console.log("Love you long time");        
-        document.getElementsByClassName("youtube-thumbnail").styledisplay = "inline";
+        // var x = document.getElementsByClassName("youtube-thumbnail");
+        //     var i;
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "inline";
+        //         console.log("I changed youtube");
+        //         }
+        //
+        // console.log("Love you long time");
+        // document.getElementsByClassName("youtube-thumbnail").style.display = "inline";
+        // document.getElementById("boxy6").style.display = "inline";
+
+
 
         var theDiv = document.getElementById("euw_en");
         var content = document.createTextNode(" EUW EN");
