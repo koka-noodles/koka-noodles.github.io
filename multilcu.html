@@ -41,7 +41,7 @@
     </script>
 </head>
 
-<body  data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false" onload="myFunction()">
+<body  data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false" onload="myFunction()" style="overflow:visible;">
 
 
 
@@ -345,6 +345,11 @@
     <script>
 
     console.log("I changed something");
+//
+// class="oembed-youtube-video-wrapper"
+//     .card-type-promo .oembed-content-promo iframe {
+//     width: 100%;
+//     height: 90%;
 
 
     function myFunction() {
@@ -362,6 +367,13 @@
           for (i = 0; i < x.length; i++) {
               x[i].style.display = "inline";
               console.log("I changed youtube 20 sec");
+              }
+
+      var y = document.getElementsByClassName(".card-type-promo .oembed-content-promo iframe");
+          var o;
+          for (o = 0; o < y.length; o++) {
+              y[o].style.display = "height: 90%;";
+              console.log("I changed youtube size ");
               }
               clearInterval(myVar2);
 
