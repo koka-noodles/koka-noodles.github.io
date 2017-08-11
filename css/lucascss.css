@@ -323,6 +323,18 @@ h1{
   font-family: 'Permanent Marker', cursive;
 }
 
+#na_ENtext{
+  z-index: +10;
+  position: absolute;
+  right: 77px;
+  top:20px;
+  font-size: 200%;
+  font-weight: bold;
+  color: #AFFC41;
+  border-radius: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
 
 
 p {
