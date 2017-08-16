@@ -1,0 +1,29 @@
+.templateImg{
+  float: right;
+}
+
+
+
+.box{
+  float: right;
+  height: 720px;
+  z-index: -1;
+position: relative;
+width: 223px;
+height: 720px;
+border: 4px solid #f00;
+top: -720px;
+background-color: red;
+}
+
+
+.fitImage{
+  /*position: absolute;*/
+  float: right;
+  height: 720px;
+  z-index: -1;
+  /*padding-left: 416px;*/
+  position: relative;
+  top: -720px;
+  left: -224Px;
+}
