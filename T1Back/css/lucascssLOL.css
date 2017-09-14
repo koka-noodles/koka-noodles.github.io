@@ -16,6 +16,17 @@ top: -720px;
 background-color: red;
 }
 
+.textbox{
+float: right;
+z-index: 1;
+position: relative;
+left: 626px;
+width: 380px;
+top: -487px;
+background-color:rgba(0, 0, 0, 0.1);
+word-wrap: break-word;
+}
+
 
 .fitImage{
   /*position: absolute;*/
