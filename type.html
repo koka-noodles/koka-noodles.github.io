@@ -29,17 +29,17 @@
     <![endif]-->
   </head>
   <body>
-
+  
   <img src="images/scanlines.png" class="bg second">
-
- 
-
-
+  
+ <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcopenhagenflames%2Fvideos%2F490068047993364%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+  
+    
   <p class="typewriter">BASE jump man drugs sprawl. tube youtube 3D-printed cartel. fluidity geodesic silent chrome. stimulate bridge stimulate human.</p>
 
   <span class="blink"></span>
   <span class="blink2"></span>
-
+  
 
   <script>
   var text = $('.typewriter').text();
@@ -62,10 +62,10 @@
   var sndm = new Audio("/sound/olym.wav"); // buffers automatically when created
   var sndn = new Audio("/sound/typing.wav"); // buffers automatically when created
   var sndo = new Audio("/sound/uvert.wav"); // buffers automatically when created
-
-
-
-  (function typeWriter() {
+  
+ 
+  
+  (function typeWriter() { 
       timeOut = setTimeout(function() {
           character++;
           var type = text.substring(0, character);
@@ -77,8 +77,8 @@
               snda.play();
               console.log("playing a a p");
               break;
-            case "b":
-            case "q":
+            case "b":  
+            case "q":  
               sndb.play();
               console.log("playing a b q");
               break;
@@ -88,12 +88,12 @@
               console.log("playing a c u");
               break;
             case "d":
-            case "r":
+            case "r":  
               sndd.play();
               console.log("playing a d r");
               break;
-            case "e":
-            case "s":
+            case "e":  
+            case "s":  
               snde.play();
               console.log("playing a e s");
               break;
@@ -108,57 +108,57 @@
               console.log("playing a g w");
               break;
             case "h":
-            case "x":
+            case "x":  
               sndh.play();
               console.log("playing a h x");
               break;
             case "i":
-            case "y":
+            case "y":  
               sndi.play();
               console.log("playing a i y");
             break;
-            case "j":
+            case "j":  
             case "z":
               sndj.play();
               console.log("playing a j z");
             break;
-            case "k":
+            case "k":  
               sndk.play();
               console.log("playing a k ");
             break;
-            case "l":
+            case "l":  
               sndl.play();
               console.log("playing a l");
             break;
-            case "m":
+            case "m":  
               sndm.play();
               console.log("playing a m");
             break;
-            case "n":
+            case "n":  
               sndn.play();
               console.log("playing a n");
             break;
-            case "o":
+            case "o":  
               sndo.play();
               console.log("playing a o");
             break;
           }
           $('.typewriter').html(type+'<span class="blink">|</span>'+'<span class="blink2">|</span>');
-
+         
           typeWriter();
-
+          
           if (character == length) {
               clearTimeout(timeOut);
           }
-
+          
       }, 90);
   }());
+  
+  
+  </script>  
+  
 
-
-  </script>
-
-
-
+  
  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -170,8 +170,8 @@
     };
     firebase.initializeApp(config);
   </script>
-
-
+          
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
