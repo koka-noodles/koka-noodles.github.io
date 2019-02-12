@@ -1,188 +1,293 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>League Client</title>
-    <base target="_blank">
-    <script type="text/javascript">
-        window.parent.postMessage({
-            type: 'PostMessageBridge',
-            action: 'landing-page-loading'
-        }, '*');
-    </script>
-    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/css/lol_landing.css">
-    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/css/lcu_flat_button.css"></link>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/lucascssLOL.css" rel="stylesheet">
-    <script src="https://www.youtube.com/iframe_api"></script>
-
-    <script type="text/javascript">
-        window.oembedGlobals = {
-            region: 'euw',
-            language: 'en',
-            locale: 'en_GB',
-            amServiceHost: 'https://am-a.akamaihd.net',
-            newsOembedServiceHost: 'http://news-oembed.leagueoflegends.com',
-            oembedProviderHost: 'https://oembed.leagueoflegends.com',
-            pingEndpoint: null
-        }
-    </script>
-    <script type="text/javascript">
-        window.i18nEmbed = {
-            "button.learnMore": "Learn More",
-            "button.patchNotes": "Patch Notes",
-            "button.freeChampRotation": "Free Champion Rotation"
-        };
-    </script>
-</head>
-
-<body  data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false" onload="myFunction()">
-
-
-
-
-
-<!-- First row -->
-<div class="col-lg-4 col-sm-6 col-xs-12" id="boxy1" >
-<!-- class="i18n-en_GB" -->
-    <div class="lcu-container">
-        <div class="card-type-promo" data-ping-meta="cardType=promo">
-            <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
-        </div>
-        <div class="button-row-top flex-row flex-gutter-medium" id="eune_en"></div>
-        <div class="content-row-bottom flex-row flex-gutter-medium">
-            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
-                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
-            </div>
-            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
-                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
-            </div>
-            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
-                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
-            </div>
-
-        </div>
-    </div>
-  </div>
-
-  <!-- First row -->
-  <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy2" >
-  <!-- class="i18n-en_GB" -->
-      <div class="lcu-container">
-          <div class="card-type-promo" data-ping-meta="cardType=promo">
-              <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
-          </div>
-          <div class="button-row-top flex-row flex-gutter-medium" id="eune_en"></div>
-          <div class="content-row-bottom flex-row flex-gutter-medium">
-              <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
-                  <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
-              </div>
-              <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
-                  <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
-              </div>
-              <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
-                  <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
-              </div>
-
-          </div>
-      </div>
-    </div>
-
-
-    <!-- First row -->
-    <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy3" >
-    <!-- class="i18n-en_GB" -->
-        <div class="lcu-container">
-            <div class="card-type-promo" data-ping-meta="cardType=promo">
-                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
-            </div>
-            <div class="button-row-top flex-row flex-gutter-medium" id="eune_en"></div>
-            <div class="content-row-bottom flex-row flex-gutter-medium">
-                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
-                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
-                </div>
-                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
-                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
-                </div>
-                <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
-                    <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
-                </div>
-
-            </div>
-        </div>
-      </div>
-
-
-      <!-- First row -->
-      <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy4" >
-      <!-- class="i18n-en_GB" -->
-          <div class="lcu-container">
-              <div class="card-type-promo" data-ping-meta="cardType=promo">
-                  <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
-              </div>
-              <div class="button-row-top flex-row flex-gutter-medium" id="eune_en"></div>
-              <div class="content-row-bottom flex-row flex-gutter-medium">
-                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
-                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
-                  </div>
-                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
-                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
-                  </div>
-                  <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
-                      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
-                  </div>
-
-              </div>
-          </div>
-        </div>
-
-
-
-
-
-    <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/lassojs/0.1.4/lasso.js"></script>
-    <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/js/require.js" data-main="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/js/require-league-landing.js"></script>
-
-
-    <script>
-    console.log("5 + 6");
-
-
-      function myFunction() {
-        var myVar = setInterval(myTimer, 500000);
-
-      function myTimer() {
-          location.reload();
-          window.location.href = "file:///C:/Users/lucas.wilson/Documents/GitHub/koka-noodles.github.io/LCU.html";
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>League Client</title>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require-overview-landing" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/fb3fe48544379c0c8ffcf847e5b756c9a933be28/assets/js/require-overview-landing.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="https://lolstatic-a.akamaihd.net/lib/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="rClientWindowMessenger" src="https://lolstatic-a.akamaihd.net/ci/rclient-window-messenger/0.0.3/index.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="magifyJQueryPlugin" src="https://lolstatic-a.akamaihd.net/ci/jquery-magify/latest/index.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lassoLoadJQueryPlugin" src="https://lolstatic-a.akamaihd.net/ci/jquery-lassolistener/latest/index.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ping" src="https://lolstatic-a.akamaihd.net/ping/ping-0.1.663.min.js"></script>
+  <base target="_blank">
+  <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflxGrywa/www-widgetapi.js" async=""></script>
+  <script type="text/javascript">
+    window.parent.postMessage({
+      type: 'PostMessageBridge',
+      action: 'landing-page-loading'
+    }, '*');
+  </script>
+  <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/fb3fe48544379c0c8ffcf847e5b756c9a933be28/assets/css/lol_landing.css">
+  <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/fb3fe48544379c0c8ffcf847e5b756c9a933be28/assets/css/lcu_flat_button.css">
+  <script type="text/javascript">
+    (function() {
+      function getHashParam(paramKey) {
+        var hashParams = {};
+        var hash = window.location.hash.slice(1);
+        var keyValuePairStrings = hash.split('&');
+        keyValuePairStrings.forEach(function(keyValuePairString) {
+          var keyValuePair = keyValuePairString.split('=');
+          hashParams[keyValuePair[0]] = keyValuePair[1];
+        });
+        return hashParams[paramKey];
       }
 
+      function getSessionParam(paramKey) {
+        var hashValue = getHashParam(paramKey);
+        var sessionValue = sessionStorage.getItem('home_' + paramKey);
+        if (hashValue) {
+          var sessionParamValue = validateSessionParam(paramKey, hashValue);
+          sessionStorage.setItem('home_' + paramKey, sessionParamValue);
+          return sessionParamValue;
+        } else if (sessionValue) {
+          return sessionValue;
+        } else {
+          return null;
+        }
+      }
 
-        document.getElementById("boxy1").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
-        document.getElementById("boxy2").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); z-index: -1; width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
-        document.getElementById("boxy3").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); z-index: -2; width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
-        document.getElementById("boxy4").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); z-index: -3; width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
+      function validateSessionParam(paramKey, hashValue) {
+        if (paramKey === 'protocol') {
+          if (hashValue === 'http:' || hashValue === 'https:') {
+            return hashValue;
+          } else {
+            return 'https:';
+          }
+        } else if (paramKey === 'port') {
+          return parseInt(hashValue);
+        } else {
+          return hashValue;
+        }
+      }
 
-
-        var theDiv = document.getElementById("eune_en");
-        var content = document.createTextNode(" EUNE EN");
-        theDiv.appendChild(content);
-
-
-
+      function loadCss(cssPath) {
+        var cssRef = document.createElement('link');
+        cssRef.rel = 'stylesheet';
+        cssRef.type = 'text/css';
+        cssRef.href = cssPath;
+        document.getElementsByTagName('head')[0].appendChild(cssRef);
+      }
+      var protocol = getSessionParam('protocol');
+      var port = getSessionParam('port');
+      if (!protocol) {
+        var fontPath = 'https://127.0.0.1:' + port + '/fe/lol-typekit/fonts/fonts.css?locale=euw-en_GB';
+        var landingPageStyles = 'https://127.0.0.1:' + port + '/fe/lol-home/landing-page-styles.css';
+        loadCss(fontPath);
+        loadCss(landingPageStyles);
+      } else {
+        var fontPath = protocol + '//127.0.0.1:' + port + '/fe/lol-typekit/fonts/fonts.css?locale=euw-en_GB';
+        var landingPageStyles = protocol + '//127.0.0.1:' + port + '/fe/lol-home/landing-page-styles.css';
+        loadCss(fontPath);
+        loadCss(landingPageStyles);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" type="text/css" href="https://127.0.0.1:null/fe/lol-typekit/fonts/fonts.css?locale=euw-en_GB">
+  <link rel="stylesheet" type="text/css" href="https://127.0.0.1:null/fe/lol-home/landing-page-styles.css">
+  <script type="text/javascript">
+    window.oembedGlobals = {
+      region: 'euw',
+      language: 'en',
+      locale: 'en_GB',
+      amServiceHost: 'https://am-a.akamaihd.net',
+      newsOembedServiceHost: 'http://news-oembed.leagueoflegends.com',
+      oembedProviderHost: 'https://oembed.leagueoflegends.com',
+      pingEndpoint: null
     }
-    </script>
+  </script>
+  <script type="text/javascript">
+    // window.i18nEmbed = {
+    //   "button.learnMore": "Learn More",
+    //   "button.patchNotes": "Patch Notes",
+    //   "button.freeChampRotation": "Free Champion Rotation",
+    //   "button.revivalMissions": "Get Started",
+    //   "personalizedOffers.button": "Your Shop",
+    //   "video.viewInBrowser": "View in browser",
+    //   "links.feedbackSurvey": "http://leagueoflegends.eu-surveyen1.sgizmo.com/s3/"
+    // };
+  </script>
+</head>
 
-    </body>
-
-
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-
+<body class="i18n-en_GB" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="true">
+  <div class="home-landing-container screen-metadata appends-filters-from-client" data-ping-meta="screen=rclient-lol-home|subScreen=rclient-lol-overview|loadTime=1544616986207" data-lasso-endpoint="https://contenttargeting.leagueoflegends.com/euw/v1/en/rclient-lol-home-overview?filters=&amp;limit=4#"
+    data-rodeo-concurrency="true">
+    <div class="card-type-promo" data-utm-medium="OverviewTier1" data-ping-meta="cardType=promo">
+      <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/1?contentTemplate=lazy-default&amp;styled=0&amp;requirejs=2" class="redirect-on-failure">
+        <div class="oembed-wrapper" id="oembed-wrapper-d5026c352cd5def99877bd43c628c4af">
+          <div class="oembed-item-wrapper oembed-article oembed-lazy-default oembed-lazy-default-article oembed-i18n-en-GB" data-oembed-uuid="fc6b048c-d4c7-4a9a-a1c4-2313b68c1b22" data-oembed-url="http://euw.leagueoflegends.com/en/news/champions-skins/champion-release/neeko-available-now"
+            data-oembed-url-content="http://euw.leagueoflegends.com/en/news/champions-skins/champion-release/neeko-available-now" data-oembed-url-redirect="" data-oembed-open-externally="1" data-oembed-category="champions_skins"
+            data-oembed-subcategory="champion_release" data-oembed-article-type-category="" data-oembed-article-type-subcategory="" data-oembed-article-type="." data-oembed-tag="neeko" data-oembed-author="DyQuill" data-oembed-cta-button-text=""
+            data-oembed-open-hide-cta="0" data-oembed-discussion-id="87UqExa6" data-ping-meta="uuid=fc6b048c-d4c7-4a9a-a1c4-2313b68c1b22|title=Neeko available now!|author=DyQuill|realm=euw|language=en|publish_date=2018-12-05T16:00:01.708Z|category=champions_skins:champion_release|tuuid=e96ae6f6-4426-4245-a428-d86ae8f91549|type=article|redirect=|tags=neeko">
+            <div class="oembed-content-field oembed-content-media oembed-content-media-type-image"><img data-src-original="http://euw.leagueoflegends.com/sites/default/files/upload/neeko_header.jpg" data-src-thumbnail="http://euw.leagueoflegends.com/sites/default/files/styles/thumbnail/public/upload/neeko_header.jpg" data-src-medium="http://euw.leagueoflegends.com/sites/default/files/styles/medium/public/upload/neeko_header.jpg" data-src-large="http://euw.leagueoflegends.com/sites/default/files/styles/large/public/upload/neeko_header.jpg" data-src-wide_xlarge="http://euw.leagueoflegends.com/sites/default/files/styles/wide_xlarge/public/upload/neeko_header.jpg" data-src-wide_hd="http://euw.leagueoflegends.com/sites/default/files/styles/wide_hd/public/upload/neeko_header.jpg"></div>
+            <div class="oembed-content-field oembed-content-backdrop oembed-content-media-type-image promo-backdrop"><img data-src-original="http://euw.leagueoflegends.com/sites/default/files/t1_neeko_base_splash_final.jpg" data-src-thumbnail="http://euw.leagueoflegends.com/sites/default/files/styles/thumbnail/public/t1_neeko_base_splash_final.jpg" data-src-medium="http://euw.leagueoflegends.com/sites/default/files/styles/medium/public/t1_neeko_base_splash_final.jpg" data-src-large="http://euw.leagueoflegends.com/sites/default/files/styles/large/public/t1_neeko_base_splash_final.jpg" data-src-wide_xlarge="http://euw.leagueoflegends.com/sites/default/files/styles/wide_xlarge/public/t1_neeko_base_splash_final.jpg" data-src-wide_hd="http://euw.leagueoflegends.com/sites/default/files/styles/wide_hd/public/t1_neeko_base_splash_final.jpg" src="https://am-a.akamaihd.net/image?resize=:718&amp;quality=90&amp;f=http://euw.leagueoflegends.com/sites/default/files/t1_neeko_base_splash_final.jpg" class="magified"></div>
+            <div class="oembed-content-field oembed-content-promo oembed-content-media-type-video">
+              <div class="oembed-youtube-video-wrapper" data-video-src="https://www.youtube.com/embed/bPj48lmrynU?enablejsapi=1&amp;showinfo=0&amp;rel=0&amp;autohide=1" data-youtube-id="bPj48lmrynU"><img class="youtube-thumbnail generated magified" data-src-original="https://img.youtube.com/vi/bPj48lmrynU/maxresdefault.jpg" data-ping-meta="contentType=video|interactionType=video|contentOpens=external|youtubeId=bPj48lmrynU|href=https://www.youtube.com/embed/bPj48lmrynU?enablejsapi=1&amp;showinfo=0&amp;rel=0&amp;autohide=1&amp;widget_referrer=leagueclient|redirect=https://www.youtube.com/watch?v=bPj48lmrynU" src="https://am-a.akamaihd.net/image?resize=:319&amp;quality=90&amp;f=https://img.youtube.com/vi/bPj48lmrynU/maxresdefault.jpg"></div><img class="youtube-thumbnail magified" data-src-original="https://img.youtube.com/vi/bPj48lmrynU/maxresdefault.jpg" data-youtube-id="bPj48lmrynU" src="https://am-a.akamaihd.net/image?resize=:321&amp;quality=90&amp;f=https://img.youtube.com/vi/bPj48lmrynU/maxresdefault.jpg">
+</div>
+            <div class="oembed-content-wrapper promo-present">
+              <div class="oembed-content-field oembed-content-title">Neeko available now!</div>
+              <div class="oembed-content-field oembed-content-short-title">Neeko available now!</div>
+              <div class="oembed-content-field oembed-content-subtitle">New Champion</div>
+              <div class="oembed-content-field oembed-content-published"><time datetime="2018-12-05T16:00:01.708Z">December 5, 2018</time></div>
+              <div class="oembed-content-field oembed-content-body-small">So many things to see, so many champions to be! Shapeshift into someone new—Neeko is available now.</div>
+              <div class="oembed-content-field oembed-content-body-medium">So many things to see, so many champions to be! Shapeshift into someone new—Neeko is available now.</div>
+              <!-- <div class="lol-uikit-flat-button-container" data-ping-meta="buttonType=promoLearnMore|interactionType=button|contentOpens=external">
+                <div class="lol-uikit-flat-button idle">
+                  <div class="lol-uikit-flat-button-bg"></div>
+                  <div class="lol-uikit-flat-button-border-idle"></div>
+                  <div class="lol-uikit-flat-button-border-transition"></div>
+                  <div class="lol-uikit-flat-button-flare"></div>
+                  <div class="lol-uikit-flat-button-glow"></div>
+                  <div class="lol-uikit-flat-button-sheen-wrapper">
+                    <div class="lol-uikit-flat-button-sheen"></div>
+                  </div>
+                  <div class="lol-uikit-flat-button-content-wrapper">Learn More </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </lasso-embed>
+    </div>
+    <!-- <div class="home-landing-button-row-top flex-row flex-gutter-medium"><span class="free-champ-rotation-button"><div class="lol-uikit-flat-button-container" data-ping-meta="buttonType=freeChampRotation|contentOpens=client|interactionType=button|title=Free Champ Rotation Button">    <div class="lol-uikit-flat-button utility idle">      <div class="lol-uikit-flat-button-bg"></div>      <div class="lol-uikit-flat-button-border-idle"></div>      <div class="lol-uikit-flat-button-border-transition"></div>      <div class="lol-uikit-flat-button-flare"></div>      <div class="lol-uikit-flat-button-glow"></div>      <div class="lol-uikit-flat-button-sheen-wrapper">        <div class="lol-uikit-flat-button-sheen"></div>      </div>      <div class="lol-uikit-flat-button-content-wrapper">Free Champion Rotation      </div>    </div>  </div></span></div> -->
+    <div class="home-landing-content-row-bottom flex-row flex-gutter-medium">
+      <div class="flex-col card-type-news card-style-standard" data-utm-medium="OverviewTier2Pos1" data-ping-meta="cardType=article|size=2|position=1">
+        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/2?contentTemplate=lazy-default&amp;styled=0&amp;requirejs=2">
+          <div class="oembed-wrapper" id="oembed-wrapper-ab9dc550396f26fe7e072d1bd48cde0c">
+            <div class="oembed-item-wrapper oembed-article oembed-lazy-default oembed-lazy-default-article oembed-i18n-en-GB video-redirect" data-oembed-uuid="5ca76889-da7a-4112-a19d-9f4214a9bf7f" data-oembed-url="https://youtu.be/E2NVjOWxNtA"
+              data-oembed-url-content="http://euw.leagueoflegends.com/en/news/game-updates/special-event/snowdown-2018-event-trailer" data-oembed-url-redirect="https://youtu.be/E2NVjOWxNtA" data-oembed-open-externally="1" data-oembed-category="game_updates"
+              data-oembed-subcategory="special_event" data-oembed-article-type-category="redirect" data-oembed-article-type-subcategory="video_redirect" data-oembed-article-type="redirect.video_redirect" data-oembed-tag="snowdown" data-oembed-author="Bilby"
+              data-oembed-cta-button-text="" data-oembed-open-hide-cta="0" data-ping-meta="uuid=5ca76889-da7a-4112-a19d-9f4214a9bf7f|title=Snowdown 2018 Event Trailer|author=Bilby|realm=euw|language=en|publish_date=2018-12-06T16:00:01.708Z|category=game_updates:special_event|tuuid=22ff10be-6eb7-45e4-9f81-def614396fed|type=article|redirect=https://youtu.be/E2NVjOWxNtA|tags=snowdown|interactionType=card|contentOpens=external">
+              <div class="oembed-content-field oembed-content-media oembed-content-media-type-image"><img data-src-original="http://euw.leagueoflegends.com/sites/default/files/upload/snowdown2018_centrallol_no_text_thumbnail.jpg" data-src-thumbnail="http://euw.leagueoflegends.com/sites/default/files/styles/thumbnail/public/upload/snowdown2018_centrallol_no_text_thumbnail.jpg" data-src-medium="http://euw.leagueoflegends.com/sites/default/files/styles/medium/public/upload/snowdown2018_centrallol_no_text_thumbnail.jpg" data-src-large="http://euw.leagueoflegends.com/sites/default/files/styles/large/public/upload/snowdown2018_centrallol_no_text_thumbnail.jpg" data-src-wide_xlarge="http://euw.leagueoflegends.com/sites/default/files/styles/wide_xlarge/public/upload/snowdown2018_centrallol_no_text_thumbnail.jpg" data-src-wide_hd="http://euw.leagueoflegends.com/sites/default/files/styles/wide_hd/public/upload/snowdown2018_centrallol_no_text_thumbnail.jpg" src="https://am-a.akamaihd.net/image?resize=239:&amp;quality=90&amp;f=http://euw.leagueoflegends.com/sites/default/files/upload/snowdown2018_centrallol_no_text_thumbnail.jpg" class="magified"></div>
+              <div class="oembed-content-wrapper">
+                <div class="oembed-content-field oembed-content-title">Snowdown 2018 Event Trailer</div>
+                <div class="oembed-content-field oembed-content-short-title">Snowdown 2018 Event <span class="lcu-external-link">Trailer</span></div>
+                <div class="oembed-content-field oembed-content-published"><time datetime="2018-12-06T16:00:01.708Z">December 6, 2018</time></div>
+                <div class="oembed-content-field oembed-content-body-small">Gather ‘round, and hear the story of how Winter Wonder Neeko and friends saved Snowdown.</div>
+                <div class="oembed-content-field oembed-content-body-medium">Gather ‘round and hear the story of how Winter Wonder Neeko, Snow Man Yi, Winter Wonder Soraka, and Ice King Mundo saved Snowdown from Ice King Twitch in the Snowdown 2018
+                  event in League of Legends.</div>
+              </div>
+            </div>
+          </div>
+        </lasso-embed>
+      </div>
+      <div class="flex-col card-type-news card-style-standard" data-utm-medium="OverviewTier2Pos2" data-ping-meta="cardType=article|size=2|position=2">
+        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/3?contentTemplate=lazy-default&amp;styled=0&amp;requirejs=2">
+          <div class="oembed-wrapper" id="oembed-wrapper-f60ce43ee16ef2c29205a69693d44691">
+            <div class="oembed-item-wrapper oembed-article oembed-lazy-default oembed-lazy-default-article oembed-i18n-en-GB" data-oembed-uuid="f48a2323-e515-4ff1-a189-666b86d6d0f9" data-oembed-url="https://riot.com/2TPxP8a" data-oembed-url-content="http://euw.leagueoflegends.com/en/news/riot-games/editorial/dev-diary-league-comics-and-marvel"
+              data-oembed-url-redirect="https://riot.com/2TPxP8a" data-oembed-open-externally="1" data-oembed-category="riot_games" data-oembed-subcategory="editorial" data-oembed-article-type-category="" data-oembed-article-type-subcategory=""
+              data-oembed-article-type="." data-oembed-tag="dev_blog dev_diary comic league_comics marvel" data-oembed-author="Ghostcrawler" data-oembed-cta-button-text="" data-oembed-open-hide-cta="0" data-ping-meta="uuid=f48a2323-e515-4ff1-a189-666b86d6d0f9|title=/dev diary: League Comics and Marvel|author=Ghostcrawler|realm=euw|language=en|publish_date=2018-11-28T16:00:01.708Z|category=riot_games:editorial|tuuid=72348fae-15b8-47f1-aef3-54d0fbb3198a|type=article|redirect=https://riot.com/2TPxP8a|tags=dev_blog,dev_diary,comic,league_comics,marvel|interactionType=card|contentOpens=external">
+              <div class="oembed-content-field oembed-content-media oembed-content-media-type-image"><img data-src-original="http://euw.leagueoflegends.com/sites/default/files/upload/t2_image_0.jpg" data-src-thumbnail="http://euw.leagueoflegends.com/sites/default/files/styles/thumbnail/public/upload/t2_image_0.jpg" data-src-medium="http://euw.leagueoflegends.com/sites/default/files/styles/medium/public/upload/t2_image_0.jpg" data-src-large="http://euw.leagueoflegends.com/sites/default/files/styles/large/public/upload/t2_image_0.jpg" data-src-wide_xlarge="http://euw.leagueoflegends.com/sites/default/files/styles/wide_xlarge/public/upload/t2_image_0.jpg" data-src-wide_hd="http://euw.leagueoflegends.com/sites/default/files/styles/wide_hd/public/upload/t2_image_0.jpg" src="https://am-a.akamaihd.net/image?resize=239:&amp;quality=90&amp;f=http://euw.leagueoflegends.com/sites/default/files/upload/t2_image_0.jpg" class="magified"></div>
+              <div class="oembed-content-wrapper">
+                <div class="oembed-content-field oembed-content-title">/dev diary: League Comics and Marvel</div>
+                <div class="oembed-content-field oembed-content-short-title">/dev: League Comics and <span class="lcu-external-link">Marvel</span></div>
+                <div class="oembed-content-field oembed-content-published"><time datetime="2018-11-28T16:00:01.708Z">November 28, 2018</time></div>
+                <div class="oembed-content-field oembed-content-body-small">We’re partnering with Marvel Comics to work on multiple new series set in the world of Runeterra!</div>
+                <div class="oembed-content-field oembed-content-body-medium">We’re partnering with Marvel Comics to work on multiple new series set in the world of Runeterra!</div>
+              </div>
+            </div>
+          </div>
+        </lasso-embed>
+      </div>
+      <div class="flex-col card-type-news card-style-standard" data-survey-target="" data-utm-medium="OverviewTier2Pos3" data-ping-meta="cardType=article|size=2|position=3">
+        <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/4?contentTemplate=lazy-default&amp;styled=0&amp;requirejs=2">
+          <div class="oembed-wrapper" id="oembed-wrapper-6365625a2739ae41370cdbf34778c355">
+            <div class="oembed-item-wrapper oembed-article oembed-lazy-default oembed-lazy-default-article oembed-i18n-en-GB" data-oembed-uuid="1675f104-494d-4f81-8d8c-cad3ff3d991d" data-oembed-url="https://euw.merch.riotgames.com/en/promos/2018/snowdown"
+              data-oembed-url-content="http://euw.leagueoflegends.com/en/news/store/sales/fizz-series-3-figure" data-oembed-url-redirect="https://euw.merch.riotgames.com/en/promos/2018/snowdown" data-oembed-open-externally="1" data-oembed-category="store"
+              data-oembed-subcategory="sales" data-oembed-article-type-category="" data-oembed-article-type-subcategory="" data-oembed-article-type="." data-oembed-tag="" data-oembed-author="Riot Gustfaint" data-oembed-cta-button-text=""
+              data-oembed-open-hide-cta="0" data-ping-meta="uuid=1675f104-494d-4f81-8d8c-cad3ff3d991d|title=Fizz Series 3 Figure|author=Riot Gustfaint|realm=euw|language=en|publish_date=2018-12-10T20:00:01.875Z|category=store:sales|tuuid=c5e09284-8e0e-4836-a95e-bb24406ac8b4|type=article|redirect=https://euw.merch.riotgames.com/en/promos/2018/snowdown|tags=|interactionType=card|contentOpens=external">
+              <div class="oembed-content-field oembed-content-media oembed-content-media-type-image"><img data-src-original="http://euw.leagueoflegends.com/sites/default/files/upload/snowdown_fizz_client_header.jpg" data-src-thumbnail="http://euw.leagueoflegends.com/sites/default/files/styles/thumbnail/public/upload/snowdown_fizz_client_header.jpg" data-src-medium="http://euw.leagueoflegends.com/sites/default/files/styles/medium/public/upload/snowdown_fizz_client_header.jpg" data-src-large="http://euw.leagueoflegends.com/sites/default/files/styles/large/public/upload/snowdown_fizz_client_header.jpg" data-src-wide_xlarge="http://euw.leagueoflegends.com/sites/default/files/styles/wide_xlarge/public/upload/snowdown_fizz_client_header.jpg" data-src-wide_hd="http://euw.leagueoflegends.com/sites/default/files/styles/wide_hd/public/upload/snowdown_fizz_client_header.jpg" src="https://am-a.akamaihd.net/image?resize=239:&amp;quality=90&amp;f=http://euw.leagueoflegends.com/sites/default/files/upload/snowdown_fizz_client_header.jpg" class="magified"></div>
+              <div class="oembed-content-wrapper">
+                <div class="oembed-content-field oembed-content-title">Fizz Series 3 Figure</div>
+                <div class="oembed-content-field oembed-content-short-title">Fizz Series 3 <span class="lcu-external-link">Figure</span></div>
+                <div class="oembed-content-field oembed-content-published"><time datetime="2018-12-10T20:00:01.875Z">December 10, 2018</time></div>
+                <div class="oembed-content-field oembed-content-body-small">The Tidal Trickster playfully swims his way into the Series 3 figure line with his shark in tow. </div>
+                <div class="oembed-content-field oembed-content-body-medium">The Tidal Trickster playfully swims his way into the Series 3 figure line with his massive shark in tow. </div>
+              </div>
+            </div>
+          </div>
+        </lasso-embed>
+      </div>
+      <div class="flex-col card-type-survey card-style-standard" data-survey-frequency="50" data-ping-meta="cardType=survey|cardTier=2|position=3">
+        <div class="feedback-survey-wrapper">
+          <div class="feedback-survey-media"><img data-src-original="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/fb3fe48544379c0c8ffcf847e5b756c9a933be28/assets/img/feedback-survey/card.png"></div>
+          <div class="feedback-survey-title">Help us improve. Share your feedback.<span class="lcu-external-link"></span></div>
+        </div>
+      </div>
+      <div class="flex-col dual-card" data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="true">
+        <!-- <div class="flex-row flex-gutter-medium">
+          <div class="flex-col card-type-store" data-utm-medium="OverviewTier3Pos4" data-ping-meta="cardType=store|size=3|position=4">
+            <lasso-embed class="js-store-card" url="http://news-oembed.leagueoflegends.com/v2/store/euw/en/store-card/1">
+              <div class="oembed-wrapper" id="oembed-wrapper-bce5da8a985487271da02e78dc131376">
+                <div class="store-card oembed-item-wrapper oembed-store oembed-default oembed-default-store " data-ping-meta="itemType=CHAMPION_SKIN|itemId=518001|title=Winter Wonder Neeko|ipCost=|rpCost=1350|discount=0|interactionType=card|contentOpens=client"
+                  data-oembed-itemtype="CHAMPION_SKIN" data-oembed-itemid="518001" data-oembed-title="Winter Wonder Neeko" data-oembed-rpcost="1350" data-oembed-discount="0">
+                  <div class="store-card-media" data-item-type="CHAMPION_SKIN" data-item-id="518001">
+                    <div class="store-card-cost">
+                      <div class="rp-cost-container"><span class="rp-cost">1350</span></div>
+                    </div>
+                  </div>
+                  <div class="store-card-content">
+                    <div class="short-title">Winter Wonder Neeko</div>
+                  </div>
+                </div>
+              </div>
+            </lasso-embed>
+          </div>
+          <div class="flex-col card-type-store" data-utm-medium="OverviewTier3Pos5" data-ping-meta="cardType=store|size=3|position=5">
+            <lasso-embed class="js-store-card" url="http://news-oembed.leagueoflegends.com/v2/store/euw/en/store-card/2">
+              <div class="oembed-wrapper" id="oembed-wrapper-bce5da8a985487271da02e78dc131376">
+                <div class="store-card oembed-item-wrapper oembed-store oembed-default oembed-default-store " data-ping-meta="itemType=CHAMPION_SKIN|itemId=11017|title=Snow Man Yi|ipCost=|rpCost=1350|discount=0|interactionType=card|contentOpens=client"
+                  data-oembed-itemtype="CHAMPION_SKIN" data-oembed-itemid="11017" data-oembed-title="Snow Man Yi" data-oembed-rpcost="1350" data-oembed-discount="0">
+                  <div class="store-card-media" data-item-type="CHAMPION_SKIN" data-item-id="11017">
+                    <div class="store-card-cost">
+                      <div class="rp-cost-container"><span class="rp-cost">1350</span></div>
+                    </div>
+                  </div>
+                  <div class="store-card-content">
+                    <div class="short-title">Snow Man Yi</div>
+                  </div>
+                </div>
+              </div>
+            </lasso-embed>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    YOUTUBE_API_READY = false;
+    window.onYouTubeIframeAPIReady = function() {
+      YOUTUBE_API_READY = true;
+      document.body.dispatchEvent(new CustomEvent('youtube_api_ready'));
+    }
+  </script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    (() => {
+      const urlParams = new URLSearchParams(window.location.search.substr(1));
+      const paramClientLanguage = urlParams.get('client-language');
+      if (paramClientLanguage) {
+        const storeCards = document.getElementsByClassName('js-store-card');
+        Array.from(storeCards).forEach((storeCard) => {
+          storeCard.setAttribute('url', storeCard.getAttribute('url').replace('euw/en', 'euw/' + paramClientLanguage));
+        });
+      }
+    })();
+  </script>
+  <script>
+    (() => {
+      const urlParams = new URLSearchParams(window.location.search.substr(1));
+      const paramFilters = urlParams.get('filters');
+      const rodeoProviders = document.getElementsByClassName('appends-filters-from-client');
+      Array.from(rodeoProviders).forEach((provider) => {
+        const providerUrl = provider.getAttribute('data-lasso-endpoint');
+        provider.setAttribute('data-lasso-endpoint', providerUrl.replace(':filters', paramFilters || ''));
+      });
+    })();
+  </script>
+  <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/lassojs/0.1.6/lasso.js"></script>
+  <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/fb3fe48544379c0c8ffcf847e5b756c9a933be28/assets/js/require.js" data-main="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/fb3fe48544379c0c8ffcf847e5b756c9a933be28/assets/js/require-overview-landing.js"></script>
+</body>
 
 </html>

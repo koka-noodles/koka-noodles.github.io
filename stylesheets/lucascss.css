@@ -145,4 +145,9 @@ iframe{
     50%  {background-color:blue; width:50%;}
     75%  {background-color:green; width:75%;}*/
     100% {background-color:red; width:100%;}
-}*/
+}
+
+.iframeView{
+  height: 550em;
+  width: 33.3%;
+}
