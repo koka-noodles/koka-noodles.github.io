@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!-- <html lang="en">
   <head>
@@ -75,3 +76,82 @@ Message Input
 
 
 Message Matthieu Bacconnier -->
+=======
+<!DOCTYPE html>
+<!-- <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="stylesheets/iframeview.css" rel="stylesheet">
+  </head>
+<body>
+  <div id="iframeView">
+  <iframe src="https://www.metacritic.com/"></iframe>
+  </div>
+</body>
+ -->
+
+​
+<html lang="en">
+​
+<head>
+ <meta charset="utf-8">
+​
+ <title>League clients</title>
+ <meta name="description" content="Preview of all clients">
+ <meta name="author" content="@mbacconnier,@lucas.wilson">
+​
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+  }
+​
+  .frameGrid {
+   display: flex;
+   flex-wrap: wrap;
+  }
+​
+  .frame {
+   flex: 0 0 auto;
+   width: 1055px;
+   height: 718px;
+   border: 0;
+  }
+ </style>
+</head>
+​
+<body>
+ <script>
+  (function () {
+   const allIframes = document.getElementsByTagName('iframe');
+​
+   window.addEventListener('message', evnt => {
+    if (!evnt.data || evnt.data.messageType !== 'rcp-fe-lol-home-data-request') return;
+​
+    var sourceIframe = [].slice.call(allIframes).filter(function (iframe) {
+     return iframe.contentWindow === event.source;
+    })[0];
+​
+    sourceIframe.contentWindow.postMessage(evnt.data, '*');
+   }, false);
+  }());
+ </script>
+ <section class="frameGrid">
+  <iframe id="testFrame" src="https://staging.frontpage.euw.leagueoflegends.com/fr_FR/lol/home/personalised-overview?client-language=fr&filters=filter_level_31"
+   class="frame"></iframe>
+  <iframe id="testFrame" src="https://staging.frontpage.euw.leagueoflegends.com/en_GB/lol/home/personalised-overview?client-language=en&filters=filter_level_31"
+   class="frame"></iframe>
+
+
+ </section>
+</body>
+​
+</html>
+<!-- Collapse
+
+Jump
+Message Input
+
+
+Message Matthieu Bacconnier -->
+>>>>>>> origin/master
