@@ -16,6 +16,34 @@
       overflow:hidden;
       background: #236096;
     }
+    
+        .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
 
     .boxCont {
       height: 264px;
@@ -236,7 +264,7 @@ function myTimer() {
 
 <div class="textBoxes2">
   <div class="boxCont">
-    <h2>Czech<h2>
+    <h2>Czech<h2><t1 style="font-size: 3em; color: darkorange;">Fop test <span class="blink_text">DON'T PANIC</span></t1>
   </div>
   <div class="boxCont">
     <h2>German</h2>
