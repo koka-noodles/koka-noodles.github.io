@@ -26,7 +26,20 @@
 
 </head>
 <body>
-    <script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
+
+<h1> HERE </h1>
+<p id="myP">This is a p element.</p>
+
+<button type="button" onclick="myFunction()">Hide content of p</button>
+
+
+<script>
+function myFunction() {
+  document.getElementById("myP").style.visibility = "hidden";
+}
+</script>
+
+<script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
 
 <div id="tree"></div>
     <script>
@@ -69,28 +82,15 @@ window.onload = function () {
     });
 
     chart.load([
-            { id: 1, tags: ["blue"], name: "King George VI", img: "https://cdn.balkan.app/shared/f1.png"},
-            { id: 2, pid: 1, tags: ["partner"], name: "Queen Elizabeth", title: "The Queen Mother", img: "https://cdn.balkan.app/shared/f2.png" },
+            { id: 1, name: "1", img: "https://cdn.balkan.app/shared/f1.png"},
+            { id: 2, pid: 1, tags: ["partner"], name: "2", img: "https://cdn.balkan.app/shared/f2.png" },
+            { id: 3, pid: 1, name: "1", img: "https://cdn.balkan.app/shared/f1.png"},
+            { id: 4, pid: 1, name: "1", img: "https://cdn.balkan.app/shared/f1.png"},
+            { id: 5, pid: 1, name: "1", img: "https://cdn.balkan.app/shared/f1.png"},
+            { id: 6, pid: 1, name: "1", img: "https://cdn.balkan.app/shared/f1.png"},
+            { id: 7, pid: 1, name: "1", img: "https://cdn.balkan.app/shared/f1.png"},
 
-            { id: 3, pid: 1, tags: ["blue"],  ppid: 2, name: "Queen Elizabeth II", img: "https://cdn.balkan.app/shared/f5.png"},
-            { id: 4, pid: 3, tags: ["left-partner"], name: "Prince Philip", title: "Duke of Edinburgh", img: "https://cdn.balkan.app/shared/f3.png"},
-            { id: 5, pid: 1, ppid: 2, name: "Princess Margaret", img: "https://cdn.balkan.app/shared/f6.png"},
 
-            { id: 6, pid: 3,tags: ["blue"], ppid: 4, name: "David Wilson", title: "Prince of Wales", img: "https://cdn.balkan.app/shared/f8.png"},
-            { id: 7, pid: 6, tags: ["partner"], name: "Judy Russell", img: "https://cdn.balkan.app/shared/f9.png"},
-
-            { id: 8, pid: 6, tags: ["partner"], name: "Camila", title: "Duchess of Cornwall", img: "https://cdn.balkan.app/shared/f7.png" },
-            { id: 9, pid: 3, ppid: 4 , name: "Sue", title: "Lady", img: "https://cdn.balkan.app/shared/f10.png"},
-            { id: 10, pid: 3, ppid: 4 , name: "Martin", title: "Duke of York", img: "https://cdn.balkan.app/shared/f2.png"},
-            { id: 11, pid: 3, ppid: 4, name: "Prince Edward", title: "Earl of Wessex", img: "https://cdn.balkan.app/shared/f12.png"},
-
-            { id: 13, pid: 6, ppid: 7, name: "Chokole WIlson", img: "https://cdn.balkan.app/shared/f15.png"},
-            { id: 15, pid: 13, tags: ["right-partner"], name: "Jason McCorkal", img: "https://cdn.balkan.app/shared/f16.png"},
-            { id: 12, pid: 6, ppid: 7, tags: ["blue"], name: "Lucas Wilson", title: "Badass", img: "https://cdn.balkan.app/shared/f14.png"},
-            { id: 14, pid: 12, tags: ["left-partner"], name: "Clare Fletcher", img: "https://cdn.balkan.app/shared/f13.png"},
-
-            { id: 18, pid: 12, ppid: 14, name: "Morrow", img: "https://cdn.balkan.app/shared/f19.png"},
-            { id: 19, pid: 13, ppid: 15, name: "Robin", img: "https://cdn.balkan.app/shared/f19.png"}
         ]);
 };
     </script>
