@@ -20,6 +20,9 @@
     width: 100%;
     height: 100%;
 }
+[node-id] circle {
+        fill: #016e25;
+    }
 
 
     </style>
@@ -59,7 +62,12 @@ window.onload = function () {
             blue: {
                 template: "family_template_blue"
             }
-        }
+        },
+        clinks: [
+            {from: 4, to: 0, label: 'text'},
+            {from: 44, to: 43, template: 'blue', label: 'Child of' },
+
+        ]
     });
 
     chart.on('render-link', function(sender, args){
@@ -69,25 +77,32 @@ window.onload = function () {
     });
 
     chart.load([
-            { id: 1, name: "ID 1", name:"ID 1 ", img: "https://cdn.balkan.app/shared/f1.png"},
-            { id: 2, pid: 1, tags: ["partner"], name: "ID 2 ", title: "The 2", img: "https://cdn.balkan.app/shared/f2.png" },
+            { id: 1, name:"ID 1 George Herbert ", img: "https://cdn.balkan.app/shared/f1.png"},
+            { id: 2, pid: 1, tags: ["partner"], name: "ID 2 Jean C.Lawrence ", title: "The 2", img: "https://cdn.balkan.app/shared/f1.png" },
 
             //Genaration break
 
-            { id: 3, pid: 1, ppid: 2, name: "ID 3 George Lawrence", img: "https://cdn.balkan.app/shared/f5.png"},
-            { id: 4, pid: 3, tags: ["partner"], name: "ID 2 Ann Willy", title: "Duke", img: "https://cdn.balkan.app/shared/f3.png"},
-            { id: 5, pid: 1, ppid: 2, name: "ID 5", img: "https://cdn.balkan.app/shared/f6.png"},
+            { id: 3, pid: 1, ppid: 2, name: "ID 3 George Lawrence", img: "https://cdn.balkan.app/shared/f2.png"},
+            { id: 4, pid: 3, tags: ["partner"], name: "ID 2 Ann Willy", title: "Duke", img: "https://cdn.balkan.app/shared/f2.png"},
+
+            { id: 5, pid: 1, ppid: 2, name: "ID 5 Ruth Mary", img: "https://cdn.balkan.app/shared/f2.png"},
+            { id: 47, pid: 5, tags: ["partner"], name: "ID 47 A.W. Quinton", img: "https://cdn.balkan.app/shared/f2.png"},
+
+            { id: 45, pid: 1, ppid: 2, name: "ID 45 Monica", img: "https://cdn.balkan.app/shared/f2.png"},
+            { id: 46, pid: 45, tags: ["partner"], name: "ID 46 Ronald Hodgson", img: "https://cdn.balkan.app/shared/f2.png"},
+
+
 
             //Genaration break
 
-            { id: 6, pid: 3, ppid: 4, name: "ID 6 Judy ", img: "https://cdn.balkan.app/shared/f9.png"},
-            { id: 11, pid: 3, ppid: 4, name: "ID 11 Elizabeth ", img: "https://cdn.balkan.app/shared/f9.png"},
-            { id: 8, pid: 3, ppid: 4, name: "ID 8 Sue ", img: "https://cdn.balkan.app/shared/f9.png"},
-            { id: 10, pid: 8, tags: ["left-partner"], name: "ID 10 Nick ", img: "https://cdn.balkan.app/shared/f9.png"},
-            { id: 7, pid: 6, tags: ["left-partner"], name: "ID 7 Dave ", img: "https://cdn.balkan.app/shared/f8.png"},
-            { id: 9, pid: 3, ppid: 4, name: "ID 9 Martin ", img: "https://cdn.balkan.app/shared/f10.png"},
-            { id: 12, pid: 9, tags: ["left-partner"], name: "ID 12 Jean ", img: "https://cdn.balkan.app/shared/f8.png"},
-            { id: 14, pid: 9, tags: ["right-partner"], name: "ID 13 Vicky ", img: "https://cdn.balkan.app/shared/f8.png"},
+            { id: 6, pid: 3, ppid: 4, name: "ID 6 Judy ", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 11, pid: 3, ppid: 4, name: "ID 11 Elizabeth ", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 8, pid: 3, ppid: 4, name: "ID 8 Sue ", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 10, pid: 8, tags: ["left-partner"], name: "ID 10 Nick ", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 7, pid: 6, tags: ["left-partner"], name: "ID 7 Dave ", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 9, pid: 3, ppid: 4, name: "ID 9 Martin ", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 12, pid: 9, tags: ["left-partner"], name: "ID 12 Jean ", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 14, pid: 9, tags: ["right-partner"], name: "ID 13 Vicky ", img: "https://cdn.balkan.app/shared/f3.png"},
 
 
 
@@ -106,7 +121,11 @@ window.onload = function () {
             { id: 18, pid: 8, ppid: 10, name: "ID 18 Julia", img: "https://cdn.balkan.app/shared/f15.png"},
             { id: 31, pid: 18, tags: ["left-partner"], name: "ID 31 Bernie", img: "https://cdn.balkan.app/shared/f15.png"},
             { id: 19, pid: 8, ppid: 10, name: "ID 19 Robert", img: "https://cdn.balkan.app/shared/f15.png"},
+            { id: 36, pid: 19, tags: ["left-partner"], name: "ID 36 Julia", title: "Sir", img: "https://cdn.balkan.app/shared/f15.png"},
             { id: 20, pid: 8, ppid: 10, name: "ID 20 Charles", img: "https://cdn.balkan.app/shared/f15.png"},
+            { id: 39, pid: 20, tags: ["partner"], name: "ID 39 Sandy", img: "https://cdn.balkan.app/shared/f15.png"},
+            { id: 43, pid: 20, tags: ["partner"], name: "ID 43 Helen", img: "https://cdn.balkan.app/shared/f15.png"},
+            // { id: 45, pid: 43, tags: ["left-partner"], name: "ID Joe's father", img: "https://cdn.balkan.app/shared/f15.png"},
 
             { id: 15, pid: 9, ppid: 12, name: "ID 15 Andrew", img: "https://cdn.balkan.app/shared/f15.png"},
             { id: 16, pid: 9, ppid: 12, name: "ID 16 Ingrid", img: "https://cdn.balkan.app/shared/f15.png"},
@@ -114,12 +133,25 @@ window.onload = function () {
 
             //Genaration break
 
-            { id: 25, pid: 13, ppid: 24, name: "ID 25 Robin", img: "https://cdn.balkan.app/shared/f15.png"},
-            { id: 26, pid: 13, ppid: 24, name: "ID 26 Orin", img: "https://cdn.balkan.app/shared/f15.png"},
+            { id: 25, pid: 13, ppid: 24, name: "ID 25 Robin", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 26, pid: 13, ppid: 24, name: "ID 26 Orin", img: "https://cdn.balkan.app/shared/f16.png"},
 
-            { id: 28, pid: 21, ppid: 27 , name: "ID 28 Morrow", img: "https://cdn.balkan.app/shared/f15.png"},
+            { id: 28, pid: 21, ppid: 27 , name: "ID 28 Morrow", img: "https://cdn.balkan.app/shared/f16.png"},
 
-            { id: 30, pid: 22, ppid: 29 , name: "ID 29 Thor", img: "https://cdn.balkan.app/shared/f15.png"},
+            { id: 30, pid: 22, ppid: 29 , name: "ID 29 Thorbjorn", img: "https://cdn.balkan.app/shared/f16.png"},
+
+            { id: 32, pid: 18, ppid: 31 , name: "ID 32 Andrea", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 33, pid: 18, ppid: 31 , name: "ID 33 Nadia", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 34, pid: 18, ppid: 31 , name: "ID 34 Marteen", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 35, pid: 18, ppid: 31 , name: "ID 34 Luken", img: "https://cdn.balkan.app/shared/f16.png"},
+
+            { id: 37, pid: 19, ppid: 36 , name: "ID 39 Alexander", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 38, pid: 19, ppid: 36 , name: "ID 38 Kit", img: "https://cdn.balkan.app/shared/f16.png"},
+
+            { id: 41, pid: 20, ppid: 39 , name: "ID 41 John", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 42, pid: 20, ppid: 39 , name: "ID 42 Ali", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 40, pid: 20, ppid: 39 , name: "ID 40 Rebecca", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 44, pid: 20, ppid: 43 , name: "ID 44 Joe", img: "https://cdn.balkan.app/shared/f16.png"},
 
 
 
