@@ -77,13 +77,39 @@ window.onload = function () {
     });
 
     chart.load([
-            { id: 1, name:"ID 1 George Herbert ", img: "https://cdn.balkan.app/shared/f1.png"},
+
+            { id: 54, name:"ID 54 Joshua", img: "https://cdn.balkan.app/shared/f12.png"},
+            { id: 58, pid: 54, tags: ["partner"], name:"ID 53 Rebrcca Hine ", img: "https://cdn.balkan.app/shared/f12.png"},
+
+            //Genaration break
+
+            { id: 54, name:"ID 54 Joshua", img: "https://cdn.balkan.app/shared/f12.png"},
+            { id: 53, pid: 54, tags: ["partner"], name:"ID 53 Rebrcca Hine ", img: "https://cdn.balkan.app/shared/f12.png"},
+            { id: 57, pid: 54, tags: ["left-partner"], name:"ID 57 Elizabeth Campbell", img: "https://cdn.balkan.app/shared/f12.png"},
+
+            //Genaration break
+
+            { id: 51, pid: 54, ppid: 53, name:"ID 51 Jacob", img: "https://cdn.balkan.app/shared/f13.png"},
+            { id: 50, pid: 51, tags: ["partner"], name:"ID 50 Hanna Coe Warner", img: "https://cdn.balkan.app/shared/f13.png"},
+            { id: 52, pid: 51, tags: ["left-partner"], name:"ID 50 Elizabeth Drew", img: "https://cdn.balkan.app/shared/f13.png"},
+
+            //Genaration break
+
+            { id: 55, pid: 51, ppid: 52, name:"ID 55 ", img: "https://cdn.balkan.app/shared/f14.png"},
+            { id: 56, pid: 55, tags: ["partner"], name:"ID 56 ", img: "https://cdn.balkan.app/shared/f14.png"},
+
+            { id: 48, pid: 51, ppid: 50, name:"ID 48 Joseph", img: "https://cdn.balkan.app/shared/f14.png"},
+            { id: 49, pid: 48, tags: ["partner"], name:"ID 49 Ellen Digg ", img: "https://cdn.balkan.app/shared/f14.png"},
+
+            //Genaration break
+
+            { id: 1, pid: 48, ppid: 49, name:"ID 1 George Herbert ", img: "https://cdn.balkan.app/shared/f1.png"},
             { id: 2, pid: 1, tags: ["partner"], name: "ID 2 Jean C.Lawrence ", title: "The 2", img: "https://cdn.balkan.app/shared/f1.png" },
 
             //Genaration break
 
             { id: 3, pid: 1, ppid: 2, name: "ID 3 George Lawrence", img: "https://cdn.balkan.app/shared/f2.png"},
-            { id: 4, pid: 3, tags: ["partner"], name: "ID 2 Ann Willy", title: "Duke", img: "https://cdn.balkan.app/shared/f2.png"},
+            { id: 4, pid: 3, tags: ["partner"], name: "ID 2 Anne Willy", title: "Duke", img: "https://cdn.balkan.app/shared/f2.png"},
 
             { id: 5, pid: 1, ppid: 2, name: "ID 5 Ruth Mary", img: "https://cdn.balkan.app/shared/f2.png"},
             { id: 47, pid: 5, tags: ["partner"], name: "ID 47 A.W. Quinton", img: "https://cdn.balkan.app/shared/f2.png"},
