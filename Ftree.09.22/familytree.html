@@ -25,7 +25,7 @@
 <body>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/d3-dag.js"></script>
-    <script src="data/data.js"></script>
+    <script src="data/data_wilson.js"></script>
     <script src="js/familytree.js"></script>
     <script>
         // insert svg object to hold the family tree
@@ -34,7 +34,8 @@
             .attr("height", document.documentElement.clientHeight);
 
         // make family tree object
-        let FT = new FamilyTree(data, svg);
+        let FT = new FamilyTree(data, svg)
+        .orientation("vertical");
 
         // draw family tree
         FT.draw();
