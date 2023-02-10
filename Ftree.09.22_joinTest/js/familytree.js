@@ -588,13 +588,23 @@ class FTDrawer {
         x0,
         y0,
     ) {
+
+
         this.ft_datahandler = ft_datahandler;
         this.svg = svg;
         this._orientation = null;
         this.link_css_class = "link";
+        this.link_css_classb = "linkb";
+        console.log("Hello world!");
+
+        // console.log(ft_datahandler);
+        // console.log(this);
+        // console.log(this._orientation);
+        
 
         // append group element to draw family tree in
         this.g = this.svg.append("g");
+        
 
         // initialize panning, zooming
         this.zoom = d3.zoom().on("zoom", event => this.g.attr("transform", event.transform));
@@ -743,8 +753,26 @@ class FTDrawer {
 
     static default_node_size_func(node) {
         // returns an integer determining the node's size
+        
+        // console.log(node);
+        // console.log(node.data.id + " This is from the size func");
+        // console.log(node.data.marrige + " This is from the size func are you married");        
+        
+        if (node.data.marrige === "yes") {
+            this.link_css_class = "linkB";
+            // console.log("IF yes marrige");            
+            // console.log(this.link_css_class + " Yes marriage link css class");
+          } else if(node.data.marrige === "no"){
+            this.link_css_class = "link";
+            // console.log(this.link_css_class + " No marriage link css class");
+            // console.log("IF no, not married");
+          } else {
+            // console.log("IF missing an answer");
+          }
+
         if (node.is_union()) return 0;
         else return 10;
+        
     }
 
     node_size(node_size_func) {
@@ -816,7 +844,7 @@ class FTDrawer {
                 this.draw(node);
             })
             .attr('visible', true);
-
+            
         // add tooltip
         if (this.show_tooltips) {
             const tooltip_div = this._tooltip_div,
@@ -971,7 +999,7 @@ class FamilyTree extends FTDrawer {
     }
 
     draw_data(data) {
-        console.log("Yeet");
+        //console.log("Yeet");
         var x0 = null,
             y0 = null;
         if (this.root !== null) {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!--
+    collapsible directed acyclical graph for family tree visualization
+    author: Benjamin W. Portner
+    license: GNU General Public License v3.0
+
+    based on d3 collapsible treemap example by d3noob: https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
+    features in the original:
+    - d3 tree
+    - collapsible
+    - transitions
+    new features:
+    - two types of nodes: unions and persons
+    - d3 dag instead of tree (to allow two parents per union)
+    - collapse/expand in all directions (memory function)
+    - tooltips: show node metadata on hover
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/d3-dag.js"></script>
+    <script src="data/data_wilson.js"></script>
+    <script src="js/familytree.js"></script>
+    <script>
+        // insert svg object to hold the family tree
+        const svg = d3.select("body").append("svg")
+            .attr("width", document.body.offsetWidth)
+            .attr("height", document.documentElement.clientHeight);
+
+        // make family tree object
+        let FT = new FamilyTree(data, svg)
+        .orientation("vertical");
+
+        // draw family tree
+        FT.draw();
+    </script>
+    <script>
+        // console.log(FT + " this is the html FT");
+        // console.log(FT.draw + " this is the html FT.Draw");
+        
+        // console.log(this.data + " this.data");
+        // console.log(FT.draw + " draw.data");
+        
+        // console.log(this.data.links[1]);
+        // console.log(" log this.data.links[1]");
+        // console.log(this.data.persons);
+        // console.log(" log this.data.persons");
+        // console.dir(this.data.persons);
+        // console.log(" dir this.data.persons");
+        // console.dir(this.data.persons.id1);
+        // console.log(" dir this.data.persons.id1");
+        // console.dir(this.data.persons.id1.name);
+        // console.dir(this.data.persons.id1.marrige + " Is married?");        
+        //style.color = "blue";
+        ///this.data.persons.id1.link_css_class == "linkB";
+        // var obj = document.getElementById("id1");
+        // console.log(obj);
+        // obj.style["background-color"] = "lightgray";
+
+        let valuesArray = Object.values(FT);
+
+        for (let value of valuesArray) {
+	        console.log(value);
+            console.log(" Beep");
+        }   
+
+        console.log(data.unions.u1.marrige);
+
+        
+        
+        // const para = document.querySelector("svg");
+        // const compStyles = window.getComputedStyle(para);
+        // console.log(compStyles);
+
+        // const para2 = document.querySelector("FT");
+        // const compStyles2 = window.getComputedStyle(para);
+        // console.log(compStyles2);
+
+        // const para3 = document.querySelector("data.unions.u1.marrige");
+        // const compStyles3 = window.getComputedStyle(para);
+        // console.log(compStyles3);
+
+        const el = document.querySelector("*");
+        //console.log(el);
+        
+        
+
+        
+
+        
+    </script>
+</body>

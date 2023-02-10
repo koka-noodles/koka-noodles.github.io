@@ -1,0 +1,45 @@
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.person {
+    stroke: steelblue;
+    stroke-width: 3px;
+}
+
+.extendable {
+    fill: lightsteelblue;
+}
+
+.non-extendable {
+    fill: #fff;
+}
+
+.node-label {
+    font: 12px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: rgb(255, 0, 255);
+    stroke-width: 2px;
+}
+
+.linkb {
+    fill: none;
+    stroke: rgb(51, 255, 0);
+    stroke-width: 2px;
+}
+
+.tooltip {
+    position: absolute;
+    font: 12px sans-serif;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    /* z-index: -20; */
+    pointer-events: none;
+}
