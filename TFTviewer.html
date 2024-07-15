@@ -13,7 +13,7 @@
     body {
       margin: 0;
       padding: 0;
-      overflow:hidden;
+      overflow:auto;
       background: #236096;
     }
 
@@ -74,8 +74,8 @@
 
 
     .boxCont {
-      height: 264px;
-      width: 388px;
+      height: 422px;
+      width: 638px;
       /* background-color: red; */
       display: flex;
     }
@@ -88,7 +88,7 @@
 
     .textBoxes {
       display: flex;
-      margin-top: -1000px;
+      margin-top: -3257px;
       /* flex-wrap: wrap; */
     }
 
@@ -105,6 +105,31 @@
     }
 
     .textBoxes4 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes5 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes6 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes7 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+
+    .textBoxes8 {
       display: flex;
       margin-top: -21px;
       /* flex-wrap: wrap; */
@@ -127,7 +152,7 @@
       -o-transform: scale(0.5);
       -webkit-transform: scale(0.5); */
       transform-origin: left;
-      transform: scale(0.35,0.35);
+      transform: scale(0.60,0.60);
 
       -ms-transform-origin: 0 0;
       -moz-transform-origin: 0 0;
@@ -135,6 +160,10 @@
       -webkit-transform-origin: 0 0;
       transform-origin: 0 0;
 
+    }
+
+    .twitter-timeline {
+    z-index: 10;
     }
 
     .viewChange{
@@ -163,218 +192,10 @@
 
 </head>
 
-<body onload="myFunction()">
-  <script>
-    (function () {
-      const allIframes = document.getElementsByTagName('iframe');
-
-      window.addEventListener('message', evnt => {
-        if (!evnt.data || evnt.data.messageType !== 'rcp-fe-lol-home-data-request') return;
-
-        var sourceIframe = [].slice.call(allIframes).filter(function (iframe) {
-          return iframe.contentWindow === event.source;
-        })[0];
-
-        sourceIframe.contentWindow.postMessage(evnt.data, '*');
-      }, false);
-    }());
-</script>
-
-<script>
-console.log("I changed something");
-
-function myFunction() {
-  console.log("Timer start");
-  var myVar = setInterval(myTimer, 500000);
-}
-
-function myTimer() {
-    console.log("Timer run");
-    location.reload();
-    window.location.href = "http://koka-noodles.github.io/viewer.html";
-}
-
-</script>
-
-<!-- lc_tft_overview -->
+<body>
 
 
-<section class="frameGrid">
-  <!-- EUW English  -->
-  <div class="boxCont" id="div-with-bg">
-      <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=en-gb&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- EUNE English  -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=en-pl&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- EUW ENglish geo for UK -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=en-us&environment=live&geoCountry=gb&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Czech -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=cs-cz&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- German -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=de-de&seamless=true" class="frame"></iframe>
-  </div>
-</section>
-
-<section class="frameGrid">
-  <!-- French -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=fr-fr&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Greek -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=el-gr&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Hungarian -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=hu-hu&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Italian -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=it-it&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Polish -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=pl-pl&seamless=true" class="frame"></iframe>
-  </div>
-</section>
-
-
-<section class="frameGrid">
-  <!-- Romanian -->
-  <div class="boxCont">
-      <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=ro-ro&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Spanish -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=es-es&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- North America -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=en-us&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Russia -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=ru-ru&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Turkish -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lc_tft_overview&locale=tr-tr&seamless=true" class="frame"></iframe>
-  </div>
-</section>
-
-<section class="frameGrid">
-  <!-- spare -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lc_tft_overview&locale=en-gb&environment=live&geoCountry=filter_location_sau" class="frame"></iframe>
-  </div>
-  <!-- spare -->
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lc_tft_overview&locale=en-gb&environment=live&geoCountry=gb" class="frame"></iframe>
-  </div> -->
-  <!-- spare -->
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lc_tft_overview&locale=en-au&environment=live" class="frame"></iframe>
-  </div> -->
-  <!-- spare -->
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lc_tft_overview&locale=ru-ru&environment=live" class="frame"></iframe>
-  </div> -->
-  <!-- <div class="boxCont">
-    <a class="twitter-timeline" href="https://twitter.com/loleu?ref_src=twsrc%5Etfw">Tweets by loleu</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div> -->
-  <form class="viewChange" action="https://koka-noodles.github.io/VAL_viewer.html">
-      <input type="submit" value="Go to VAL" />
-  </form>
-</section>
-
-
-
-
-<div class="textBoxes">
-  <div class="boxCont">
-    <h2>EUW English<h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUNE English</h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUW English Geo UK</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Czech</h2>
-  </div>
-  <div class="boxCont">
-    <h2>German</h2>
-  </div>
-</div>
-
-
-<div class="textBoxes2">
-  <div class="boxCont">
-    <h2>French</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Greek</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Hungarian</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Italian</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Polish</h2>
-  </div>
-</div>
-
-<div class="textBoxes3">
-  <div class="boxCont">
-    <h2>Romanian<h2>
-  </div>
-  <div class="boxCont">
-    <h2>Spanish</h2>
-  </div>
-  <div class="boxCont">
-    <h2>North America</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Russia</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Turkish</h2>
-  </div>
-</div>
-
-
-<div class="textBoxes4">
-  <div class="boxCont">
-    <h2>spare<h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-
-
-
-
+  <h1>IF YOU ARE SEEING THIS THE PAGE YOU WANT HAS BEEN MOVED, PLEASE REACH OUT TO LUCAS WILSON OR TO A MEMBER OF CONTENT OPS</h1>
 
 </body>
 

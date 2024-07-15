@@ -1,461 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-<style>
-#gal { cursor:pointer; }
-#gal:-webkit-full-screen { cursor:pointer; }
-#gal:-moz-full-screen { cursor:pointer; }
-#gal:-ms-fullscreen { cursor:pointer; }
-#gal:fullscreen { cursor:pointer; }
+  <meta charset="utf-8">
+
+  <title>League clients</title>
+  <meta name="description" content="Preview of all clients">
+  <meta name="author" content="@mbacconnier,@lucas.wilson">
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      overflow:auto;
+      background: #236096;
+    }
+
+        .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
 
 
-/*used*/
-.w3-tooltip,.w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
-.w3-content{margin:auto}.w3-rest{overflow:hidden} /*max-width:980px*/
-.w3-black,.w3-hover-black:hover{color:#000!important;background-color:#fff!important}
-.w3-display-right{position:absolute;top:1450px;right:0%;}
-.me-display-right{padding-top:10px;position:absolute;top:0px;right:0px;-ms-transform:translate(0%,-50%)}
-.me-display-middle{padding-top:10px;position:absolute;top:0px;right:50%;-ms-transform:translate(0%,-50%)}
-.w3-btn,.w3-button{font-size:150%;padding:5px;display:inline-block;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}svg:not(:root){overflow:hidden}
-button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
-button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}
-.w3-display-left{position:absolute;top:1450px;left:0%;}
-/*end used*/
+        .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
 
 
-/*unused*/
-.w3-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit} 
-.me-black,.w3-hover-black:hover{color:#000!important;background-color:#fff!important}
-.meB-display-right{position:absolute;top:1.5%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
-.me-btn,.me-button{border:none;display:inline-block;padding:0px 0px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
-.me-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
-#buttonz {display: none;
-          position: fixed;
-          top:50%;
-}
-/*end unused*/
+    .boxCont {
+      height: 422px;
+      width: 638px;
+      /* background-color: red; */
+      display: flex;
+    }
 
-.buttonROw{
-  padding: 10px;
-}
+    .frameGrid {
+      display: flex;
+      margin-top: -15px;
+      /* flex-wrap: wrap; */
+    }
 
-.container{
-    display:flex;
-    padding-top: 20px;
-    padding-bottom: 0px;
-}
-.fixed{
-    padding: 20px;
-    width: 700px;
-    
-}
-.flex-item{
-    
-    flex-grow: 1;
-}
+    .textBoxes {
+      display: flex;
+      margin-top: -3257px;
+      /* flex-wrap: wrap; */
+    }
 
-.arrowKeys{
-  text-align: center;
-}
+    .textBoxes2 {
+      display: flex;
+      margin-top: -40px;
+      /* flex-wrap: wrap; */
+    }
 
+    .textBoxes3 {
+      display: flex;
+      margin-top: -10px;
+      /* flex-wrap: wrap; */
+    }
 
+    .textBoxes4 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
 
+    .textBoxes5 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
 
+    .textBoxes6 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
 
-
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%; /* Center the snackbar */
-    bottom: 30px; /* 30px from the bottom */
-}
-
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
-    visibility: visible; /* Show the snackbar */
-
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
-However, delay the fade out process for 2.5 seconds */
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
+    .textBoxes7 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
 
 
+    .textBoxes8 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .testFrame {
+      width: 320px;
+      height: 192px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .frame {
+      flex: 0 0 auto;
+      width: 1280px;
+      height: 786px;
+      border: 0;
+      /* -ms-transform: scale(0.5);
+      -moz-transform: scale(0.5);
+      -o-transform: scale(0.5);
+      -webkit-transform: scale(0.5); */
+      transform-origin: left;
+      transform: scale(0.60,0.60);
+
+      -ms-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+
+    }
+
+    .twitter-timeline {
+    z-index: 10;
+    }
+
+    .viewChange{
+      z-index: 50;
+    }
+
+    h2{
+      color: #009aff;
+      z-index: 2;
+      padding-left: 30px;
+      /* margin-right: -72px; */
+      /* white-space: nowrap; */
+      /* overflow: hidden; */
+      /* margin-bottom: -47px; */
+    }
+
+    #div-with-bg{
+    background: color url('EU.svg') others;
+    }
 
 
 
+  </style>
 
 
-</style>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
-<h2>Szkolne przygody 2</h2>
-<span class="content-border">    
-        <img src="https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles-na/2016/november/gutterrat/group_banner_15_540.jpg"></a>
-</span>
-
-<div class="container">
-    <div class="fixed">
-      <p>Po krótkiej przerwie w celu regeneracji sił artystycznych <a href="http://grouchygutterrat.tumblr.com/" target="_blank"><strong>Gutter Rat</strong></a> powraca z 2 sezonem Szkolnych przygód! Dołączcie do nas i śledźcie jeszcze więcej zamieszania w statecznych szkolnych klasach, gdy Ahri, Darius, Ekko i Vlad próbują przetrwać bez uszczerbku choćby jeden dzień szkoły.</p>
-      <p>Jeśli przegapiliście sezon 1 albo chcecie go sobie przypomnieć, wszystkie komiksy z naszej serii inauguracyjnej obejrzycie <a href="https://eune.leagueoflegends.com/pl/news/community/community-spotlight/szkolne-przygody" target="_blank"><strong>tutaj!</strong></a></p>
-    </div>
-    <div class="flex-item">
-      <div class="content-border">
-        <div class="white-stone accent-before accent-after">
-          <p><a href="https://eune.leagueoflegends.com/pl/page/community-collab-comics-collection">Tutaj </a>znajdziesz poprzednią współpracę.
-            <br>Kliknij na komiks, aby zmaksymalizować.
-<br>
-             Użyj strzałek na klawiaturze
-            <div class="arrowKeys" style="font-size:24px"><i class="fa fa-caret-square-o-up">&nbsp;</br><i class="fa fa-caret-square-o-left">&nbsp;<i class="fa fa-caret-square-o-down">&nbsp;</i><i class="fa fa-caret-square-o-right"></i>
-            </div>lub przesuń palcem, by poruszać się na urządzeniu przenośnym.
-          </p>
-        </div>
-      </div>
-    </div>
-</div>
-
-<div class="buttonROw" style="text-align: center;">
-  <button onclick="showFirstSlide(1)" style="font-size:24px"><i class="material-icons">first_page</i></button>
-  <button onclick="plusDivs(-1)" style="font-size:24px"><i class="material-icons">keyboard_arrow_left</i></button>
-  <button onclick="plusDivs(1)" style="font-size:24px"><i class="material-icons">keyboard_arrow_right</i></button>
-  <button type="button" onclick="triggerFS()" style="font-size:24px"><i class="material-icons" style="font-size: 100%">fullscreen</i></button>
-</div>
-
-<div id="gal" class="w3-content w3-display-container" style="overflow:auto">
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-WindSandwich-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-Bats-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-Stargazing-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-NoMesses-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-Chronobeach_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-Prom-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-TapOut-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-Daydream-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-Stay%20Off-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-AverageDay-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-Dodgeballs-pl_PL.jpg" > 
-  <img class="mySlides" tabindex="-1" src="https://lolstatic-a.akamaihd.net/content/eu/pl/17/academy_a/Academy-2-FoodFight-pl_PL.jpg" > 
-  <button id="fsBut" class="me-display-right" style="opacity: 0.0;"><i class="material-icons">fullscreen</i></button>
-    
-  <!-- The actual snackbar -->
-  <div id="snackbar"><div id="snackbarNum"></div></div>
 
 
-</div>
+  <h1>IF YOU ARE SEEING THIS THE PAGE YOU WANT HAS BEEN MOVED, PLEASE REACH OUT TO LUCAS WILSON OR TO A MEMBER OF CONTENT OPS</h1>
 
-<button id="backbut" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button id="fbut" class="w3-button w3-black w3-display-right" onclick="plusDivs(1);">&#10095;</button>
-
-<div class="buttonROw" style="text-align: center;">
-  <button onclick="showFirstSlide(1)" style="font-size:24px"><i class="material-icons">first_page</i></button>
-  <button onclick="plusDivs(-1)" style="font-size:24px"><i class="material-icons">keyboard_arrow_left</i></button>
-  <button onclick="plusDivs(1)" style="font-size:24px"><i class="material-icons">keyboard_arrow_right</i></button>
-  <button type="button" onclick="triggerFS()" style="font-size:24px"><i class="material-icons" style="font-size: 100%">fullscreen</i></button>
-</div>
-
-
-<script>
-
-var fsButton = document.getElementById("fsBut");
-var isFullscreen = false; //bool
-
-function triggerFS(){
-    console.log("in onclick");
-    fsButton.click(); // this will trigger the click event
-}
-
-
-function mySnackbar() {
-    // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
-
-    // Add the "show" class to DIV
-    x.className = "show";
-
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
-
-
-function scrollWin() { 
-    var i;
-    var j = document.getElementsByClassName("mySlides");
-    for (i = 0; i < j.length; i++) { 
-        document.getElementsByClassName("mySlides")[i].scrollIntoView(true);        
-    }   
-  }
-
-// exit fullscreen 
-document.addEventListener('fullscreenchange', exitHandler);
-document.addEventListener('webkitfullscreenchange', exitHandler);
-document.addEventListener('mozfullscreenchange', exitHandler);
-document.addEventListener('MSFullscreenChange', exitHandler);
-function exitHandler() {
-    if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-        console.log("I left fullscreen "+isFullscreen);
-        isFullscreen = false;
-        console.log("fullscreen "+isFullscreen);
-      
-    }
-} 
-// end exit fullscreen 
-
-
-// keybord nav
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    switch (evt.keyCode) {
-        case 27:
-            // esc key
-            break;
-        case 37:
-            plusDivs(-1);
-            // left
-            break;
-        case 39:
-            plusDivs(1);       
-            break;
-            // right
-        case 38:
-            // window.scrollBy(0, -50);
-            
-            break; 
-            // up
-        case 40:
-            // window.scrollBy(0, 50);
-            
-            break;   
-            // down
-    }
-};
-//end keybord nav
-
-
-// slideshow
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(input) {
-  var x = document.getElementsByClassName("mySlides");
-  var n = parseInt(input);
-
-  if (n == 1){
-    if (slideIndex == x.length) { 
-      mySnackbar();
-      console.log("slide index A "+slideIndex);
-      var myTextArea = document.getElementById('snackbarNum');
-      myTextArea.innerHTML = "Koniec";
-    }
-    else if(slideIndex == x.length-1){
-    showDivs(slideIndex += n);
-    mySnackbar();
-    console.log("slide index BB "+slideIndex);
-    var myTextArea = document.getElementById('snackbarNum');
-    myTextArea.innerHTML = "Koniec";
-    }
-    else{
-    showDivs(slideIndex += n);
-    mySnackbar();
-    console.log("slide index B "+slideIndex);
-    var myTextArea = document.getElementById('snackbarNum');
-    myTextArea.innerHTML = slideIndex;
-    }
-  }
-  else if (n != 1) {
-    if (slideIndex == 1) {
-      mySnackbar();
-      console.log("slide index C "+slideIndex);
-      var myTextArea = document.getElementById('snackbarNum');
-      myTextArea.innerHTML = "Pierwsza strona";
-  }
-    else {
-          showDivs(slideIndex += n); 
-          mySnackbar();
-          console.log("slide index D "+slideIndex);
-          var myTextArea = document.getElementById('snackbarNum');
-          myTextArea.innerHTML = slideIndex;
-    }
-  }
-  else {
-    showDivs(slideIndex += n);
-    mySnackbar();
-    console.log("slide index E "+slideIndex);
-    var myTextArea = document.getElementById('snackbarNum');
-    myTextArea.innerHTML = slideIndex;
-  }
-}
-
-//&& slideIndex != 1
-function showDivs(n) {
-  var n = parseInt(n);
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var y = document.getElementById("backbut");
-  var f = document.getElementById("fbut");
-  if (n > x.length) {
-      slideIndex = 1
-    }    
-  if (n < 1) {
-    slideIndex = x.length
-  }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";
-      scrollWin()
-  if (slideIndex == 1){
-      y.style.display = "none";
-      } else {
-      y.style.display = "block";
-  }
-  if (slideIndex == x.length){
-      f.style.display = "none";
-      } else {
-      f.style.display = "block";
-  }
-  document.querySelector('.me-display-right').focus();
-}
-// slideshow end
-
-function showFirstSlide(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var y = document.getElementById("backbut");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex = 0].style.display = "block";  
-  slideIndex = 1;
-  if (slideIndex == 1){
-      y.style.display = "none";
-      } else {
-        y.style.display = "none";
-  }
-}
-
-// full screen 
-function goFullscreen(elem) {  
-  elem = elem || document.documentElement;
-  if (!document.fullscreenElement && !document.mozFullScreenElement &&
-    !document.webkitFullscreenElement && !document.msFullscreenElement) {
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-      isFullscreen = true;
-    } else if (elem.msRequestFullscreen) {
-      elem.msRequestFullscreen();
-      isFullscreen = true;
-    } else if (elem.mozRequestFullScreen) {
-      elem.mozRequestFullScreen();
-      isFullscreen = true;
-    } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-      isFullscreen = true;
-    }
-  } 
-}
-
-document.getElementById('gal').addEventListener('click', function() {
-  if (isFullscreen == false){
-  goFullscreen(this);
-  }
-  else{
-    plusDivs(1)
-  } 
-});
-
-
-
-
-// full screen 
-function exitFullscreen(elem) {
-  elem = elem || document.documentElement;
-  if (document.exitFullscreen) {
-      document.exitFullscreen();
-      isFullscreen = false;
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-      isFullscreen = false;
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-      isFullscreen = false;
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-      isFullscreen = false;
-      console.log("is fullscreen "+isFullscreen);
-    }
-  }
-
-
-document.getElementById('fsBut').addEventListener('click', function() {
-  console.log("is fullscreen "+isFullscreen);
-  exitFullscreen(this);
-});
-
-//Simply store the first point the user touched down:
-var start = null;
-window.addEventListener("touchstart",function(event){
- if(event.touches.length === 1){
-    //just one finger touched
-    start = event.touches.item(0).clientX;
-  }else{
-    //a second finger hit the screen, abort the touch
-    start = null;
-  }
-});
-
-//Then if the finger lefts the screen, check if the offset is higher then a value:
-window.addEventListener("touchend",function(event){
-  var offset = 100;//at least 100px are a swipe
-  if(start){
-    //the only finger that hit the screen left it
-    var end = event.changedTouches.item(0).clientX;
-    if(end > start + offset){
-     //a left -> right swipe
-     plusDivs(-1);
-    }
-    if(end < start - offset ){
-     //a right -> left swipe
-     plusDivs(1);
-    }
-  }
-});
-
-</script>
 </body>
+
 </html>

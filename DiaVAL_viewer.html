@@ -13,7 +13,7 @@
     body {
       margin: 0;
       padding: 0;
-      overflow:hidden;
+      overflow:auto;
       background: #236096;
     }
 
@@ -74,38 +74,62 @@
 
 
     .boxCont {
-      height: 264px;
-      width: 448px;
+      height: 422px;
+      width: 638px;
       /* background-color: red; */
       display: flex;
     }
 
     .frameGrid {
       display: flex;
-      /* margin-top: 13px; */
+      margin-top: -15px;
       /* flex-wrap: wrap; */
-      margin-bottom: 49px;
     }
 
     .textBoxes {
       display: flex;
-      margin-top: -840px;
+      margin-top: -3257px;
       /* flex-wrap: wrap; */
     }
 
     .textBoxes2 {
       display: flex;
-      margin-top: 18px;
+      margin-top: -40px;
       /* flex-wrap: wrap; */
     }
 
     .textBoxes3 {
       display: flex;
-      margin-top: 12px;
+      margin-top: -10px;
       /* flex-wrap: wrap; */
     }
 
     .textBoxes4 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes5 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes6 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes7 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+
+    .textBoxes8 {
       display: flex;
       margin-top: -21px;
       /* flex-wrap: wrap; */
@@ -121,14 +145,14 @@
     .frame {
       flex: 0 0 auto;
       width: 1280px;
-      height: 946px;
+      height: 786px;
       border: 0;
       /* -ms-transform: scale(0.5);
       -moz-transform: scale(0.5);
       -o-transform: scale(0.5);
       -webkit-transform: scale(0.5); */
       transform-origin: left;
-      transform: scale(0.35,0.35);
+      transform: scale(0.60,0.60);
 
       -ms-transform-origin: 0 0;
       -moz-transform-origin: 0 0;
@@ -149,9 +173,7 @@
     h2{
       color: #009aff;
       z-index: 2;
-      /* padding-left: 30px; */
-      padding-left: 290px;
-      width: 454px;
+      padding-left: 30px;
       /* margin-right: -72px; */
       /* white-space: nowrap; */
       /* overflow: hidden; */
@@ -170,207 +192,10 @@
 
 </head>
 
-<body onload="myFunction()">
-  <script>
-    (function () {
-      const allIframes = document.getElementsByTagName('iframe');
-
-      window.addEventListener('message', evnt => {
-        if (!evnt.data || evnt.data.messageType !== 'rcp-fe-lol-home-data-request') return;
-
-        var sourceIframe = [].slice.call(allIframes).filter(function (iframe) {
-          return iframe.contentWindow === event.source;
-        })[0];
-
-        sourceIframe.contentWindow.postMessage(evnt.data, '*');
-      }, false);
-    }());
-</script>
-
-<script>
-console.log("I changed something");
-
-function myFunction() {
-  console.log("Timer start");
-  var myVar = setInterval(myTimer, 500000);
-}
-
-function myTimer() {
-    console.log("Timer run");
-    location.reload();
-    window.location.href = "http://koka-noodles.github.io/DiaTFTviewer.html";
-}
-
-</script>
+<body>
 
 
-<section class="frameGrid">
-  <!-- EN US or based on geo location -->
-  <div class="boxCont" id="div-with-bg">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=en-us&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Singapore -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=en-sg&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Thailand -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=th-th&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Indonesia -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=id-id&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=de-de" class="frame"></iframe>
-  </div> -->
-</section>
-
-<section class="frameGrid">
-  <!-- Japan -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=ja-jp&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Vietnam -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=vi-vn&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- Taiwan -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=zh-tw&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- LATAM -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=es-mx&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=vi-vn" class="frame"></iframe>
-  </div> -->
-</section>
-
-
-<!-- <section class="frameGrid">
-  <div class="boxCont">
-      <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=ru-ru" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-</section> -->
-
-<section class="frameGrid">
-  <!-- Brazil -->
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=pt-br&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=ko-kr&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=de-de&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=valorant_client_promo&locale=pl-pl&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- <div class="boxCont">
-    <a class="twitter-timeline" href="https://twitter.com/Valorant_EU?ref_src=twsrc%5Etfw">Tweets by Valorant_EU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div> -->
-  <form class="viewChange" action="https://koka-noodles.github.io/Diaviewer.html">
-      <input type="submit" value="Go to LOL" />
-  </form>
-</section>
-
-
-
-
-<div class="textBoxes">
-  <div class="boxCont">
-    <h2>English Based on geo location<h2>
-  </div>
-  <div class="boxCont">
-    <h2>Singapore</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Thailand</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Indonesia</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-
-<div class="textBoxes2">
-  <div class="boxCont">
-    <h2>Japan</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Vietnam</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Taiwan</h2>
-  </div>
-  <div class="boxCont">
-    <h2>LATAM</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-<div class="textBoxes3">
-  <div class="boxCont">
-    <h2>Brazil<h2>
-  </div>
-  <div class="boxCont">
-    <h2>Korean</h2>
-  </div>
-  <div class="boxCont">
-    <h2>German</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Polish</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-
-<div class="textBoxes4">
-  <!-- <div class="boxCont">
-    <h2>Remove<h2>
-  </div>
-  <div class="boxCont">
-    <h2>Remove</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Remove</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Remove</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div> -->
-
-</div>
-
-
-
-
-
+  <h1>IF YOU ARE SEEING THIS THE PAGE YOU WANT HAS BEEN MOVED, PLEASE REACH OUT TO LUCAS WILSON OR TO A MEMBER OF CONTENT OPS</h1>
 
 </body>
 

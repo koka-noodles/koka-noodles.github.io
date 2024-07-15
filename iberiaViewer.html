@@ -9,17 +9,73 @@
   <meta name="description" content="Preview of all clients">
   <meta name="author" content="@mbacconnier,@lucas.wilson">
 
-  <style>
+  <style type="text/css">
     body {
       margin: 0;
       padding: 0;
-      overflow:hidden;
+      overflow:auto;
       background: #236096;
     }
 
+        .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+
+        .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+
     .boxCont {
-      height: 264px;
-      width: 388px;
+      height: 422px;
+      width: 638px;
       /* background-color: red; */
       display: flex;
     }
@@ -32,7 +88,7 @@
 
     .textBoxes {
       display: flex;
-      margin-top: -1000px;
+      margin-top: -3257px;
       /* flex-wrap: wrap; */
     }
 
@@ -49,6 +105,31 @@
     }
 
     .textBoxes4 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes5 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes6 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes7 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+
+    .textBoxes8 {
       display: flex;
       margin-top: -21px;
       /* flex-wrap: wrap; */
@@ -71,7 +152,7 @@
       -o-transform: scale(0.5);
       -webkit-transform: scale(0.5); */
       transform-origin: left;
-      transform: scale(0.35,0.35);
+      transform: scale(0.60,0.60);
 
       -ms-transform-origin: 0 0;
       -moz-transform-origin: 0 0;
@@ -79,6 +160,14 @@
       -webkit-transform-origin: 0 0;
       transform-origin: 0 0;
 
+    }
+
+    .twitter-timeline {
+    z-index: 10;
+    }
+
+    .viewChange{
+      z-index: 50;
     }
 
     h2{
@@ -91,6 +180,10 @@
       /* margin-bottom: -47px; */
     }
 
+    #div-with-bg{
+    background: color url('EU.svg') others;
+    }
+
 
 
   </style>
@@ -99,196 +192,10 @@
 
 </head>
 
-<body onload="myFunction()">
-  <script>
-    (function () {
-      const allIframes = document.getElementsByTagName('iframe');
-
-      window.addEventListener('message', evnt => {
-        if (!evnt.data || evnt.data.messageType !== 'rcp-fe-lol-home-data-request') return;
-
-        var sourceIframe = [].slice.call(allIframes).filter(function (iframe) {
-          return iframe.contentWindow === event.source;
-        })[0];
-
-        sourceIframe.contentWindow.postMessage(evnt.data, '*');
-      }, false);
-    }());
-</script>
-
-<script>
-console.log("I changed something");
-
-function myFunction() {
-  console.log("Timer start");
-  var myVar = setInterval(myTimer, 500000);
-}
-
-function myTimer() {
-    console.log("Timer run");
-    location.reload();
-    window.location.href = "https://koka-noodles.github.io/viewer.html";
-}
-
-</script>
+<body>
 
 
-
-
-<section class="frameGrid">
-  <div class="boxCont">
-      <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/es_ES/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/en_GB/lol/home/personalised-overview?client-language=en&filters=filter_location_prt" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/en_GB/lol/home/personalised-overview?client-language=en&filters=filter_location_gbr" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/en_GB/lol/home/personalised-overview?client-language=en&filters=filter_location_nor" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/en_GB/lol/home/personalised-overview?client-language=en&filters=filter_location_ind" class="frame"></iframe>
-  </div>
-</section>
-
-<section class="frameGrid">
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.eune.leagueoflegends.com/cs_CZ/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/de_DE/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/fr_FR/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.eune.leagueoflegends.com/el_GR/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.eune.leagueoflegends.com/hu_HU/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-</section>
-
-
-<section class="frameGrid">
-  <div class="boxCont">
-      <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/it_IT/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.eune.leagueoflegends.com/pl_PL/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.eune.leagueoflegends.com/ro_RO/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/en_GB/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.na.leagueoflegends.com/en_US/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-</section>
-
-<section class="frameGrid">
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/fr_FR/lol/home/personalised-overview?client-language=en&filters=filter_rank_gold" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.eune.leagueoflegends.com/en_PL/lol/home/personalised-overview " class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/en_AU/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://frontpage.euw.leagueoflegends.com/ru_RU/lol/home/personalised-overview" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <a class="twitter-timeline" href="https://twitter.com/loleu?ref_src=twsrc%5Etfw">Tweets by loleu</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-</section>
-
-
-
-
-<div class="textBoxes">
-  <div class="boxCont">
-    <h2>Spani<h2>
-  </div>
-  <div class="boxCont">
-    <h2>Portugal</h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUW English UK</h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUW English Nordics</h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUW English India</h2>
-  </div>
-</div>
-
-
-<div class="textBoxes2">
-  <div class="boxCont">
-    <h2>Czech<h2>
-  </div>
-  <div class="boxCont">
-    <h2>German</h2>
-  </div>
-  <div class="boxCont">
-    <h2>French</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Greek</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Hungarian</h2>
-  </div>
-</div>
-
-<div class="textBoxes3">
-  <div class="boxCont">
-    <h2>Italian<h2>
-  </div>
-  <div class="boxCont">
-    <h2>Poland</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Romania</h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUW English</h2>
-  </div>
-  <div class="boxCont">
-    <h2>North Ameerica</h2>
-  </div>
-</div>
-
-
-<div class="textBoxes4">
-  <div class="boxCont">
-    <h2>EUW FR Gold players<h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUNE EN</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Australia</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Russia</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-
-
-
-
+  <h1>IF YOU ARE SEEING THIS THE PAGE YOU WANT HAS BEEN MOVED, PLEASE REACH OUT TO LUCAS WILSON OR TO A MEMBER OF CONTENT OPS</h1>
 
 </body>
 

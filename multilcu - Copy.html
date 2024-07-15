@@ -1,246 +1,202 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>League Client</title>
-    <base target="_blank">
-    <script type="text/javascript">
-        window.parent.postMessage({
-            type: 'PostMessageBridge',
-            action: 'landing-page-loading'
-        }, '*');
-    </script>
-    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/css/lol_landing.css">
-    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/css/lcu_flat_button.css"></link>
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/lucascssLOL.css" rel="stylesheet">
-    <script src="https://www.youtube.com/iframe_api"></script>
+  <meta charset="utf-8">
 
-    <script type="text/javascript">
-        window.oembedGlobals = {
-            region: 'euw',
-            language: 'en',
-            locale: 'en_GB',
-            amServiceHost: 'https://am-a.akamaihd.net',
-            newsOembedServiceHost: 'http://news-oembed.leagueoflegends.com',
-            oembedProviderHost: 'https://oembed.leagueoflegends.com',
-            pingEndpoint: null
-        }
-    </script>
-    <script type="text/javascript">
-        window.i18nEmbed = {
-            "button.learnMore": "Learn More",
-            "button.patchNotes": "Patch Notes",
-            "button.freeChampRotation": "Free Champion Rotation"
-        };
-    </script>
+  <title>League clients</title>
+  <meta name="description" content="Preview of all clients">
+  <meta name="author" content="@mbacconnier,@lucas.wilson">
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      overflow:auto;
+      background: #236096;
+    }
+
+        .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+
+        .blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+
+    .boxCont {
+      height: 422px;
+      width: 638px;
+      /* background-color: red; */
+      display: flex;
+    }
+
+    .frameGrid {
+      display: flex;
+      margin-top: -15px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes {
+      display: flex;
+      margin-top: -3257px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes2 {
+      display: flex;
+      margin-top: -40px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes3 {
+      display: flex;
+      margin-top: -10px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes4 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes5 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes6 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes7 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+
+    .textBoxes8 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .testFrame {
+      width: 320px;
+      height: 192px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .frame {
+      flex: 0 0 auto;
+      width: 1280px;
+      height: 786px;
+      border: 0;
+      /* -ms-transform: scale(0.5);
+      -moz-transform: scale(0.5);
+      -o-transform: scale(0.5);
+      -webkit-transform: scale(0.5); */
+      transform-origin: left;
+      transform: scale(0.60,0.60);
+
+      -ms-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+
+    }
+
+    .twitter-timeline {
+    z-index: 10;
+    }
+
+    .viewChange{
+      z-index: 50;
+    }
+
+    h2{
+      color: #009aff;
+      z-index: 2;
+      padding-left: 30px;
+      /* margin-right: -72px; */
+      /* white-space: nowrap; */
+      /* overflow: hidden; */
+      /* margin-bottom: -47px; */
+    }
+
+    #div-with-bg{
+    background: color url('EU.svg') others;
+    }
+
+
+
+  </style>
+
+
+
 </head>
 
-<body  data-lasso-endpoint="https://oembed.leagueoflegends.com/oembed" data-rodeo-concurrency="false" onload="myFunction()" style="overflow:visible;">
+<body>
 
 
+  <h1>IF YOU ARE SEEING THIS THE PAGE YOU WANT HAS BEEN MOVED, PLEASE REACH OUT TO LUCAS WILSON OR TO A MEMBER OF CONTENT OPS</h1>
 
-
-<!-- First row -->
-<div class="col-lg-4 col-sm-6 col-xs-12" id="boxy1" >
-<!-- class="i18n-en_GB" -->
-    <div class="lcu-container">
-        <div class="card-type-promo" data-ping-meta="cardType=promo">
-            <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/1?styled=0&requirejs=2"></lasso-embed>
-        </div>
-        <div class="button-row-top flex-row flex-gutter-medium" id="euw_en"></div>
-        <div class="content-row-bottom flex-row flex-gutter-medium">
-            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=1">
-                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/2?styled=0&requirejs=2"></lasso-embed>
-            </div>
-            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=2">
-                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/3?styled=0&requirejs=2"></lasso-embed>
-            </div>
-            <div class="flex-col card-type-news card-style-standard" data-ping-meta="cardType=article|size=2|position=3">
-                <lasso-embed url="http://news-oembed.leagueoflegends.com/v2/euw/en/lists/rclient-lol-home-overview/4?styled=0&requirejs=2"></lasso-embed>
-            </div>
-
-        </div>
-    </div>
-  </div>
-
-
-
-
-
-
-      <!-- <div class="col-lg-4 col-sm-6 col-xs-12" id="boxy12">
-         <a href="#">
-             <h3 style="color: #EA5146; font-family: 'Ubuntu', sans-serif; text-shadow: 2px 2px Black;">
-               <br>
-              <p>Last load was at</p>
-               <h3 id="time" style="color:#EA5146; font-family: 'Ubuntu', sans-serif; text-shadow: 2px 2px Black;">
-                <script>
-                var d = new Date();
-                   document.getElementById("time").innerHTML = d.toString();
-                  // document.write(Date());
-                 </script>
-               </h3>
-            </h3>
-         </a>
-     </div> -->
-
-    <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/lassojs/0.1.4/lasso.js"></script>
-    <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/js/require.js" data-main="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/league_client/en_GB/428b87bd76db29ea4734091a2d0a9836247a2626/assets/js/require-league-landing.js"></script>
-
-
-    <script>
-
-    console.log("I changed something");
-
-
-
-    function myFunction() {
-      var myVar = setInterval(myTimer, 500000);
-      var myVar2 = setInterval(myTimer2, 20000);
-      //var myVar3 = setInterval(myTimer3, 21000);
-
-
-    function myTimer() {
-        location.reload();
-        window.location.href = "http://koka-noodles.github.io/multilcu.html";
-    }
-
-    function myTimer2() {
-      var x = document.getElementsByClassName("youtube-thumbnail");
-          var i;
-          for (i = 0; i < x.length; i++) {
-              x[i].style.display = "inline";
-              console.log("I changed youtube 20 sec");
-              }
-              clearInterval(myVar2);
-    }
-
-
-
-    // function myTimer3() {
-    //   console.log("I got to  bluuu sec");
-    //   var y = document.getElementsByClassName("date-20170718");
-    //   var matches = document.querySelectorAll("class.date-20170718");
-    //   console.log(matches);
-    //       var t;
-    //       for (t = 0; t < y.length; t++) {
-    //           y[t].style.backgroundColor="blue";
-    //           console.log("I changed bluuu sec");
-    //           }
-    //           clearInterval(myVar2);
-    // }
-
-
-
-
-
-
-
-        //document.getElementById("boxy1").style.height ="712";
-        //document.getElementById("boxy1").style.width ="1280";
-
-
-        document.getElementById("boxy1").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
-        document.getElementById("boxy2").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; z-index: -1; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;";
-        document.getElementById("boxy3").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px; z-index: -2;";
-        document.getElementById("boxy4").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px; z-index: -3;";
-        document.getElementById("boxy5").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  top: -375px;";
-        document.getElementById("boxy6").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -1; top: -375px;";
-        document.getElementById("boxy7").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -2; top: -375px;";
-        document.getElementById("boxy8").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -3; top: -375px;";
-        document.getElementById("boxy9").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  top: -750px;";
-        document.getElementById("boxy10").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -1; top: -750px;";
-        document.getElementById("boxy11").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -2; top: -750px;";
-        document.getElementById("boxy12").style="-webkit-transform-origin: 0% 0%;-webkit-transform:scale(0.45);-moz-transform-scale(0.45); width: 470px; -webkit-box-shadow: rgba(44, 40, 75, 0.898039) 616px 0px 14px;  z-index: -3; top: -750px;";
-
-        //document.getElementById("boxy12").style=" width: 470px; z-index: -2; left: 50px; top: -750px;";
-
-        // var x = document.getElementsByClassName("youtube-thumbnail");
-        //     var i;
-        //     for (i = 0; i < x.length; i++) {
-        //         x[i].style.display = "inline";
-        //         console.log("I changed youtube");
-        //         }
-        //
-        // console.log("Love you long time");
-        // document.getElementsByClassName("youtube-thumbnail").style.display = "inline";
-        // document.getElementById("boxy6").style.display = "inline";
-
-
-
-        var theDiv = document.getElementById("euw_en");
-        var content = document.createTextNode(" EUW EN");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("euw_fr");
-        var content = document.createTextNode(" French");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("euw_it");
-        var content = document.createTextNode(" Italian");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("euw_es");
-        var content = document.createTextNode(" Spanish");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("euw_de");
-        var content = document.createTextNode(" German");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("eune_pl");
-        var content = document.createTextNode(" Polish");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("eune_cs");
-        var content = document.createTextNode(" Czech");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("eune_en");
-        var content = document.createTextNode(" EUNE EN");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("eune_el");
-        var content = document.createTextNode(" Greek");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("eune_hu");
-        var content = document.createTextNode(" Hungarian");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("eune_ro");
-        var content = document.createTextNode(" Romanian");
-        theDiv.appendChild(content);
-
-        var theDiv = document.getElementById("na_en");
-        var content = document.createTextNode(" NA");
-        theDiv.appendChild(content);
-
-
-
-
-
-
-        // var theDiv = document.getElementById("boxy1");
-        // var content = document.createTextNode(" EUNE EN");
-        // theDiv.appendChild(content);
-
-    }
-    </script>
-
-    </body>
-
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-
+</body>
 
 </html>

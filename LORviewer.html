@@ -13,7 +13,7 @@
     body {
       margin: 0;
       padding: 0;
-      overflow:hidden;
+      overflow:auto;
       background: #236096;
     }
 
@@ -74,37 +74,62 @@
 
 
     .boxCont {
-      height: 264px;
-      width: 448px;
+      height: 422px;
+      width: 638px;
       /* background-color: red; */
       display: flex;
     }
 
     .frameGrid {
       display: flex;
-      margin-top: 13px;
+      margin-top: -15px;
       /* flex-wrap: wrap; */
     }
 
     .textBoxes {
       display: flex;
-      margin-top: -840px;
+      margin-top: -3257px;
       /* flex-wrap: wrap; */
     }
 
     .textBoxes2 {
       display: flex;
-      margin-top: 18px;
+      margin-top: -40px;
       /* flex-wrap: wrap; */
     }
 
     .textBoxes3 {
       display: flex;
-      margin-top: 12px;
+      margin-top: -10px;
       /* flex-wrap: wrap; */
     }
 
     .textBoxes4 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes5 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes6 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+    .textBoxes7 {
+      display: flex;
+      margin-top: -21px;
+      /* flex-wrap: wrap; */
+    }
+
+
+    .textBoxes8 {
       display: flex;
       margin-top: -21px;
       /* flex-wrap: wrap; */
@@ -127,7 +152,7 @@
       -o-transform: scale(0.5);
       -webkit-transform: scale(0.5); */
       transform-origin: left;
-      transform: scale(0.35,0.35);
+      transform: scale(0.60,0.60);
 
       -ms-transform-origin: 0 0;
       -moz-transform-origin: 0 0;
@@ -148,9 +173,7 @@
     h2{
       color: #009aff;
       z-index: 2;
-      /* padding-left: 30px; */
-      padding-left: 290px;
-      width: 454px;
+      padding-left: 30px;
       /* margin-right: -72px; */
       /* white-space: nowrap; */
       /* overflow: hidden; */
@@ -169,199 +192,10 @@
 
 </head>
 
-<body onload="myFunction()">
-  <script>
-    (function () {
-      const allIframes = document.getElementsByTagName('iframe');
-
-      window.addEventListener('message', evnt => {
-        if (!evnt.data || evnt.data.messageType !== 'rcp-fe-lol-home-data-request') return;
-
-        var sourceIframe = [].slice.call(allIframes).filter(function (iframe) {
-          return iframe.contentWindow === event.source;
-        })[0];
-
-        sourceIframe.contentWindow.postMessage(evnt.data, '*');
-      }, false);
-    }());
-</script>
-
-<script>
-console.log("I changed something");
-
-function myFunction() {
-  console.log("Timer start");
-  var myVar = setInterval(myTimer, 500000);
-}
-
-function myTimer() {
-    console.log("Timer run");
-    location.reload();
-    window.location.href = "http://koka-noodles.github.io/TFTviewer.html";
-}
-
-</script>
+<body>
 
 
-<section class="frameGrid">
-  <div class="boxCont" id="div-with-bg">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=en-us&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=en-gb&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=fr-fr&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=it-it&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=de-de" class="frame"></iframe>
-  </div> -->
-</section>
-
-<section class="frameGrid">
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=es-es&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=pl-pl&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=de-de&seamless=true" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=tr-tr&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=vi-vn" class="frame"></iframe>
-  </div> -->
-</section>
-
-
-<!-- <section class="frameGrid">
-  <div class="boxCont">
-      <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=ru-ru" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div>
-</section> -->
-
-<section class="frameGrid">
-  <div class="boxCont">
-    <iframe id="testFrame" src="https://pubchannels.rgpub.io/channels?channelId=lor_client_modal&locale=ru-ru&seamless=true" class="frame"></iframe>
-  </div>
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div> -->
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://static.preview.rgpub.io/pcs/?seamless=true&channelId=lor_client_modal&environment=live&clientUI=false&locale=en-gb" class="frame"></iframe>
-  </div> -->
-  <!-- for TFT box -->
-  <!-- <div class="boxCont">
-    <iframe id="testFrame" src="https://koka-noodles.github.io/TFTviewer.html" class="frame"></iframe>
-  </div> -->
-  <!-- <div class="boxCont">
-    <a class="twitter-timeline" href="https://twitter.com/PlayRuneterra?ref_src=twsrc%5Etfw">Tweets by PlayRuneterra EU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div> -->
-  <form class="viewChange" action="https://koka-noodles.github.io/TFTviewer.html">
-      <input type="submit" value="Go to TFT" />
-  </form>
-</section>
-
-
-
-
-<div class="textBoxes">
-  <div class="boxCont">
-    <h2>English US<h2>
-  </div>
-  <div class="boxCont">
-    <h2>EUW En (Not available yet)<p>Note if assests fail to load try a ctrl + f5</p></h2>
-  </div>
-  <div class="boxCont">
-    <h2>French</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Italian</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-
-<div class="textBoxes2">
-  <div class="boxCont">
-    <h2>Spanish</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Polish</h2>
-  </div>
-  <div class="boxCont">
-    <h2>German</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Turkish</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-<div class="textBoxes3">
-  <div class="boxCont">
-    <h2>Russian<h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div>
-</div>
-
-
-<div class="textBoxes4">
-  <!-- <div class="boxCont">
-    <h2>Remove<h2>
-  </div>
-  <div class="boxCont">
-    <h2>Remove</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Remove</h2>
-  </div>
-  <div class="boxCont">
-    <h2>Remove</h2>
-  </div>
-  <div class="boxCont">
-    <h2></h2>
-  </div> -->
-
-</div>
-
-
-
-
-
+  <h1>IF YOU ARE SEEING THIS THE PAGE YOU WANT HAS BEEN MOVED, PLEASE REACH OUT TO LUCAS WILSON OR TO A MEMBER OF CONTENT OPS</h1>
 
 </body>
 
