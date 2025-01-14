@@ -21,7 +21,7 @@ data = {
         "id17": { "id": "id17", "name": "Ian Fletcher", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         
         //Gen 0
-        "id1": { "id": "id1", "name": "Lucas Wilson", "birthyear": 1976, "deathyear": www.google.com, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
+        "id1": { "id": "id1", "name": "Lucas Wilson", "birthyear": 1976, "deathyear": "www.google.com", "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
         "id2": { "id": "id2", "name": "Clare F", "birthyear": 1978, "deathyear": 2099, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
         "id6": { "id": "id6", "name": "Rama Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id7": { "id": "id7", "name": "Jason Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "birthplace":"Ireland", "deathplace":"Neptune"},    
