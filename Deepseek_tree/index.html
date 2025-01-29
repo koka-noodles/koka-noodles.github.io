@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Family Tree</h1>
+    <div id="family-tree">
+        <ul>
+            <li>
+                <div class="member">
+                    <img src="grandpa.jpg" alt="Grandpa">
+                    <span>Grandpa</span>
+                    <a href="https://example.com/grandpa" target="_blank">More Info</a>
+                    <button onclick="toggleChildren(this)">+</button>
+                </div>
+                <ul>
+                    <li>
+                        <div class="member">
+                            <img src="dad.jpg" alt="Dad">
+                            <span>Dad</span>
+                            <a href="https://example.com/dad" target="_blank">More Info</a>
+                            <button onclick="toggleChildren(this)">+</button>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="member">
+                                    <img src="me.jpg" alt="Me">
+                                    <span>Me</span>
+                                    <a href="https://example.com/me" target="_blank">More Info</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="member">
+                                    <img src="sister.jpg" alt="Sister">
+                                    <span>Sister</span>
+                                    <a href="https://example.com/sister" target="_blank">More Info</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="member">
+                            <img src="uncle.jpg" alt="Uncle">
+                            <span>Uncle</span>
+                            <a href="https://example.com/uncle" target="_blank">More Info</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

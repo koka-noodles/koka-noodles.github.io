@@ -21,21 +21,21 @@ data = {
         "id17": { "id": "id17", "name": "Ian Fletcher", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         
         //Gen 0
-        "id1": { "id": "id1", "name": "Lucas Wilson", "birthyear": 1976, "deathyear": 1976, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
-        "id2": { "id": "id2", "name": "Clare F", "birthyear": 1978, "deathyear": 2099, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
-        "id6": { "id": "id6", "name": "Rama Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id7": { "id": "id7", "name": "Jason Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id8": { "id": "id8", "name": "Chokole Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"Neptune"},   
-        "id10": { "id": "id10", "name": "Danny Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u3", "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id11": { "id": "id11", "name": "Sarah Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id15": { "id": "id15", "name": "Jason McC", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id18": { "id": "id18", "name": "Jonathan Fletcher", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u6", "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id1": { "id": "id1", "name": "Lucas Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
+        "id2": { "id": "id2", "name": "Clare F", "birthyear": 1978, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
+        "id6": { "id": "id6", "name": "Rama Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id7": { "id": "id7", "name": "Jason Wilson", "birthyear": 1969, "deathyear": 2222, "own_unions": [], "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id8": { "id": "id8", "name": "Chokole Wilson", "birthyear": 1981, "deathyear": 2222, "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"Neptune"},   
+        "id10": { "id": "id10", "name": "Danny Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u3", "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id11": { "id": "id11", "name": "Sarah Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id15": { "id": "id15", "name": "Jason McC", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id18": { "id": "id18", "name": "Jonathan Fletcher", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u6", "birthplace":"Ireland", "deathplace":"Neptune"},    
         
         //Gen 1
-        "id3": { "id": "id3", "name": "Morrow Fletcher-Wilson", "birthyear": 2018, "deathyear": 2199, "own_unions": [], "parent_union": "u1", "birthplace":"Dublin", "deathplace":"Neptune"},     
-        "id12": { "id": "id12", "name": "Thorjborn Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u4", "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id13": { "id": "id13", "name": "Robin Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id14": { "id": "id14", "name": "Orin Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id3": { "id": "id3", "name": "Morrow Fletcher-Wilson", "birthyear": 2018, "deathyear": 2222, "own_unions": [], "parent_union": "u1", "birthplace":"Dublin", "deathplace":"Neptune"},     
+        "id12": { "id": "id12", "name": "Thorjborn Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u4", "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id13": { "id": "id13", "name": "Robin Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id14": { "id": "id14", "name": "Orin Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"Neptune"},    
         
         // index is at 25
         
