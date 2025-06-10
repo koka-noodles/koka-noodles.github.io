@@ -23,7 +23,7 @@ data = {
         //Gen 0
         "id1": { "id": "id1", "name": "Backtrack Lucas Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
         "id2": { "id": "id2", "name": "Clare F", "birthyear": 1978, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
-        "id6": { "id": "id6", "name": "Rama Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id6": { "id": "id6", "name": "Rama Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "parent_union": "u2", "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id7": { "id": "id7", "name": "Jason Wilson", "birthyear": 1969, "deathyear": 2222, "own_unions": [], "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id8": { "id": "id8", "name": "Chokole Wilson", "birthyear": 1981, "deathyear": 2222, "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"Neptune"},   
         "id10": { "id": "id10", "name": "Danny Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u3", "birthplace":"Ireland", "deathplace":"Neptune"},    
@@ -125,7 +125,7 @@ data = {
         //Gen -1 -> 0
 
         //judy & dave union -> to lucas wilson
-        ["u2", "id1"],
+        //["u2", "id1"],
         //judy & dave union -> to coco wilson
         ["u2", "id8"],
         //judy & dave union -> to Jason wilson
