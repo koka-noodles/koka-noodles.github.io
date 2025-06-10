@@ -103,16 +103,15 @@ data = {
         ["id5", "u2"],
         //Judy Russell -> dave & judy union
         ["id4", "u2"],
-         //Dave wilson -> Dave & Fiona union
-         ["id5", "u3"],
-         //Fiona wilson -> Dave & Fiona union
-         ["id9", "u3"],
-         //nick -> nick & sue union 
+        //Dave wilson -> Dave & Fiona union
+        ["id5", "u3"],
+        //Fiona wilson -> Dave & Fiona union
+        ["id9", "u3"],
+        //nick -> nick & sue union 
         ["id24", "u8"],
         //sue -> nick & sue union 
         ["id22", "u8"],
 
-    
         //Gen -1 -> 0
 
         //judy & dave union -> to lucas wilson
