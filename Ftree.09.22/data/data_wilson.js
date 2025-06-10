@@ -7,7 +7,7 @@ data = {
         "id20": { "id": "id20", "name": "Ann Willy", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u7"], "birthplace":"UK", "deathplace":"Neptune"},
 
         //gen -1
-        "id4": { "id": "id4", "name": "Judy Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2"], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
+        "id4": { "id": "id4", "name": "Judy Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2"], "parent_union": "u7"},
         
         "id21": { "id": "id21", "name": "Martin Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
         "id22": { "id": "id22", "name": "Susan Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
