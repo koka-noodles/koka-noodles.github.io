@@ -119,7 +119,7 @@ data = {
          //nick  -> sue & union 
          ["i24", "u8"],
          //sue  -> nick & union 
-         ["i24", "u8"],
+         ["i22", "u8"],
 
     
         //Gen -1 -> 0
