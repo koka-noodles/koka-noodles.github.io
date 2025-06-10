@@ -109,6 +109,8 @@ data = {
          ["id9", "u3"],
          //nick -> nick & sue union 
         ["id24", "u8"],
+        //sue -> nick & sue union 
+        ["id22", "u8"],
 
     
         //Gen -1 -> 0
