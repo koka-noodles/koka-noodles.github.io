@@ -61,7 +61,7 @@ data = {
         //Ian and Angela
         "u6": { "id": "u6", "partner": ["id16", "id17"], "children": ["id2"] },
         // //Sue and Nick
-        "u8": { "id": "u8", "partner": ["id22", "id24"],"children": ["id25"] },
+        "u8": { "id": "u8", "partner": ["id22", "id26"],"children": ["id25"] },
         
         // //Martin and Marins first wife
         // "u9": { "id": "u9", "partner": ["id21", "id25"]},
