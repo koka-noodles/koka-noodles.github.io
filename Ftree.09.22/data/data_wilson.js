@@ -12,7 +12,7 @@ data = {
         "id21": { "id": "id21", "name": "Martin Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
         "id22": { "id": "id22", "name": "Susan Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
         "id23": { "id": "id23", "name": "Elizabeth Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
-        "id24": { "id": "id24", "name": "Nick Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "birthplace":"UK", "deathplace":"Neptune"},        
+        //"id24": { "id": "id24", "name": "Nick Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "birthplace":"UK", "deathplace":"Neptune"},        
         // "id25": { "id": "id25", "name": "Matin fist wife", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u9"], "birthplace":"UK", "deathplace":"Neptune"},        
 
         "id5": { "id": "id5", "name": "David Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2", "u3"], "birthplace":"UK", "deathplace":"Neptune"},    
@@ -112,14 +112,14 @@ data = {
         ["id5", "u2"],
         //Judy Russell -> dave & judy union
         ["id4", "u2"],
-         //Dave wilson -> Dave & Fiona union
-         ["id5", "u3"],
-         //Fiona wilson -> Dave & Fiona union
-         ["id9", "u3"],
-         //nick  -> sue & union 
-         ["i24", "u8"],
-         //sue  -> nick & union 
-         ["i22", "u8"],
+        //Dave wilson -> Dave & Fiona union
+        ["id5", "u3"],
+        //Fiona wilson -> Dave & Fiona union
+        ["id9", "u3"],
+        //nick  -> sue & union 
+        //["i24", "u8"],
+        //sue  -> nick & union 
+        //["i22", "u8"],
 
     
         //Gen -1 -> 0
