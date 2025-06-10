@@ -10,10 +10,10 @@ data = {
         "id4": { "id": "id4", "name": "Judy Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2"], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
         
         "id21": { "id": "id21", "name": "Martin Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
-        "id22": { "id": "id22", "name": "Susan Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
+        "id22": { "id": "id22", "name": "Susan Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
         "id23": { "id": "id23", "name": "Elizabeth Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
-        "id26": { "id": "id26", "name": "Nick Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "birthplace":"UK", "deathplace":"Neptune"},        
-        // "id": { "id": "id", "name": "Matin fist wife", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u9"], "birthplace":"UK", "deathplace":"Neptune"},        
+        // "id24": { "id": "id24", "name": "Nick Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "birthplace":"UK", "deathplace":"Neptune"},        
+        // "id25": { "id": "id25", "name": "Matin fist wife", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u9"], "birthplace":"UK", "deathplace":"Neptune"},        
 
         "id5": { "id": "id5", "name": "David Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2", "u3"], "birthplace":"UK", "deathplace":"Neptune"},    
         "id9": { "id": "id9", "name": "Fiona Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u3"], "birthplace":"Ireland", "deathplace":"Neptune"},    
@@ -29,9 +29,7 @@ data = {
         "id10": { "id": "id10", "name": "Danny Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u3", "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id11": { "id": "id11", "name": "Sarah Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id15": { "id": "id15", "name": "Jason McC", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"Neptune"},    
-        "id18": { "id": "id18", "name": "Jonathan Fletcher", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u6", "birthplace":"Ireland", "deathplace":"Neptune"},
-        
-        "id25": { "id": "id25", "name": "Julia Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"Neptune"},    
+        "id18": { "id": "id18", "name": "Jonathan Fletcher", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u6", "birthplace":"Ireland", "deathplace":"Neptune"},    
         
         //Gen 1
         "id3": { "id": "id3", "name": "Morrow Fletcher-Wilson", "birthyear": 2018, "deathyear": 2222, "own_unions": [], "parent_union": "u1", "birthplace":"Dublin", "deathplace":"Neptune"},     
@@ -60,9 +58,9 @@ data = {
         "u3": { "id": "u3", "partner": ["id9", "id5"], "children": ["id10"] },
         //Ian and Angela
         "u6": { "id": "u6", "partner": ["id16", "id17"], "children": ["id2"] },
+
         // //Sue and Nick
-        "u8": { "id": "u8", "partner": ["id22", "id26"],"children": ["id25"] },
-        
+        // "u8": { "id": "u8", "partner": ["id22", "id24"]},
         // //Martin and Marins first wife
         // "u9": { "id": "u9", "partner": ["id21", "id25"]},
 
