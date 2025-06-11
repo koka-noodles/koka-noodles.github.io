@@ -27,14 +27,12 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/d3-dag.js"></script>
     <script src="data/data_wilson.js"></script>
-    <script src="js/familytreegtp.js"></script>
+    <script src="js/familytree.js"></script>
     <script>
         // insert svg object to hold the family tree
         const svg = d3.select("body").append("svg")
             .attr("width", document.body.offsetWidth)
-            .attr("height", document.documentElement.clientHeight)
-            .attr("xmlns", "http://www.w3.org/2000/svg")
-            .attr("xmlns:xlink", "http://www.w3.org/1999/xlink");
+            .attr("height", document.documentElement.clientHeight);
 
         // make family tree object
         let FT = new FamilyTree(data, svg)
