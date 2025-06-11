@@ -1,10 +1,10 @@
 data = {
-    "start":"id1",
+    "start":"id19",
     "persons": {
 
         //gen -2
         "id19": { "id": "id19", "name": "G W Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u7"], "birthplace":"UK", "deathplace":"Neptune"},
-        "id20": { "id": "id20", "name": "Ann Willy", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u7"], "birthplace":"UK", "deathplace":"Neptune"},
+        "id20": { "id": "id20", "name": "Ann Willy", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u7"], "birthplace":"UK", "deathplace":"Neptune", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
 
         //gen -1
         "id4": { "id": "id4", "name": "Judy Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2"], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
