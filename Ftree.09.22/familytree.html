@@ -32,7 +32,9 @@
         // insert svg object to hold the family tree
         const svg = d3.select("body").append("svg")
             .attr("width", document.body.offsetWidth)
-            .attr("height", document.documentElement.clientHeight);
+            .attr("height", document.documentElement.clientHeight)
+            .attr("xmlns", "http://www.w3.org/2000/svg")
+            .attr("xmlns:xlink", "http://www.w3.org/1999/xlink");
 
         // make family tree object
         let FT = new FamilyTree(data, svg)
