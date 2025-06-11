@@ -16,16 +16,16 @@ Array.prototype.remove = function() {
 
 
 // ✅ NEW: Helper function to wrap text in SVG <a> tags if URL exists
-function appendPersonLabelWithLink(group, person) {
+function appendPersonLabelWithLink(node, person) {
     if (person.data.url) {
-        const link = group.append("a")
+        const link = node.append("a")
             .attr("xlink:href", person.data.url)
             .attr("target", "_blank");
         link.append("text")
             .attr("class", "person-label")
             .text(person.data.name);
     } else {
-        group.append("text")
+        node.append("text")
             .attr("class", "person-label")
             .text(person.data.name);
     }
