@@ -130,7 +130,7 @@ data = {
          //Jonny Fletcher -> Angela & Ian union
          ["u6", "id18"],
          //Julia fenn -> nick & sue union
-         ["u8", "id18"],
+         ["u8", "id25"],
 
 
         //gen 0
