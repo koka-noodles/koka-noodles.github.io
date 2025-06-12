@@ -85,10 +85,15 @@ data = {
 
         // gen -3
 
-        // george -> george & Jean
+        //george -> george & Jean
         ["id26", "u8"],
-        // Jean -> george & Jean
+        //Jean -> george & Jean
         ["id27", "u8"],
+
+        //gen -3 -> -2
+
+        //george russell 
+        ["u8", "id26"],
 
         //Gen -2
         
