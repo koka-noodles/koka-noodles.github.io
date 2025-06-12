@@ -2,8 +2,8 @@ data = {
     "start":"id19",
     "persons": {
         //gen -3
-        "id26": { "id": "id26", "name": "George Herbert", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "birthplace":"UK", "deathplace":"Neptune"},
-        "id27": { "id": "id27", "name": "Jean C.Lawrence", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "birthplace":"UK", "deathplace":"Neptune"},
+        "id26": { "id": "id26", "name": "George Herbert", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u9"], "birthplace":"UK", "deathplace":"Neptune"},
+        "id27": { "id": "id27", "name": "Jean C.Lawrence", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u9"], "birthplace":"UK", "deathplace":"Neptune"},
 
         //gen -2
         "id19": { "id": "id19", "name": "G W Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u7"], "birthplace":"UK", "deathplace":"Neptune"},
@@ -40,16 +40,18 @@ data = {
         "id13": { "id": "id13", "name": "Robin Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id14": { "id": "id14", "name": "Orin Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"Neptune"},    
         
-        // index is at 25
+        
         
 
     },
     "unions": {
 
+        //unions are the partnerhsip of 2 people. It also has thier children as downward relationships 
+        
         //gen -3
 
         // george and Jean 
-        "u8": { "id": "u8", "partner": ["id26", "id27"], "children": ["id19"] },
+        "u9": { "id": "u9", "partner": ["id26", "id27"], "children": ["id19"] },
         
         //Gen -2
 
@@ -83,17 +85,20 @@ data = {
     },
     "links": [
 
+        // this draws lines between the parnters in a v , each partner draws havlf of a v
+        // the gen x -> gen x is to discribe the links between the pair and the children 
+
         // gen -3
 
-        //george -> george & Jean
-        ["id26", "u8"],
-        //Jean -> george & Jean
-        ["id27", "u8"],
+        //george Herbert -> george & Jean
+        ["id26", "u9"],
+        //Jean -> george Herbert & Jean
+        ["id27", "u9"],
 
         //gen -2 -> -3
 
         //george Russell to george & jean 
-        ["u8", "id19"],
+        ["u9", "id19"],
 
         //Gen -2
         
