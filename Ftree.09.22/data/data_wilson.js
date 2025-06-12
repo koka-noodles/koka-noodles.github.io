@@ -92,8 +92,8 @@ data = {
 
         //gen -3 -> -2
 
-        //george russell 
-        ["u8", "id26"],
+        //george larwance to george Russell and willy union 
+        ["u7", "id26"],
 
         //Gen -2
         
