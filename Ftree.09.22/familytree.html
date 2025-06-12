@@ -42,15 +42,14 @@
         FT.draw();
 
         // Log each person circle and its bound data (person object)
-        setTimeout(() => {
-        d3.selectAll("circle.person").each(function(d) {
+        function logPersonCircles() {
+            d3.selectAll("circle.person").each(function(d) {
             console.log("Circle Element:", this);
             console.log("Bound Data (Person):", d);
-            });
-        }, 500); // small delay to ensure draw() has completed
+        });
+    }
         
 
     </script>
-
-    <button onclick="d3.selectAll()">Click me</button>
+<button onclick="logPersonCircles()">Log Person Circles</button>    
 </body>
