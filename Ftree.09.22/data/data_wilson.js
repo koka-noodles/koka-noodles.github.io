@@ -1,10 +1,14 @@
 data = {
     "start":"id19",
     "persons": {
+        //gen -3
+        "id26": { "id": "id26", "name": "George Herbert", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "birthplace":"UK", "deathplace":"Neptune"},
+        "id27": { "id": "id27", "name": "Jean C.Lawrence", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "birthplace":"UK", "deathplace":"Neptune"},
 
         //gen -2
         "id19": { "id": "id19", "name": "G W Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u7"], "birthplace":"UK", "deathplace":"Neptune"},
         "id20": { "id": "id20", "name": "Ann Willy", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u7"], "birthplace":"UK", "deathplace":"Neptune", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
+        
 
         //gen -1
         "id4": { "id": "id4", "name": "Judy Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2"], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
@@ -41,6 +45,11 @@ data = {
 
     },
     "unions": {
+
+        //gen -3
+
+        // george and Jean 
+        "u8": { "id": "u8", "partner": ["id26", "id27"], "children": ["id19"] },
         
         //Gen -2
 
@@ -74,6 +83,12 @@ data = {
     },
     "links": [
 
+        // gen -3
+
+        // george -> george & Jean
+        ["id26", "u8"],
+        // Jean -> george & Jean
+        ["id27", "u8"],
 
         //Gen -2
         
