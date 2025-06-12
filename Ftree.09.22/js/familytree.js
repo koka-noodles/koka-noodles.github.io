@@ -528,7 +528,7 @@ class Person extends FTNode {
         // update dag roots
         this.ft_datahandler.update_roots();
         console.log("Hello world!"); 
-        console.log(circle.person); 
+        console.log(person); 
     };
 
     add_own_union(union_data) {
