@@ -90,10 +90,10 @@ data = {
         //Jean -> george & Jean
         ["id27", "u8"],
 
-        //gen -3 -> -2
+        //gen -2 -> -3
 
-        //george larwance to george Russell and willy union 
-        ["u7", "id26"],
+        //george Russell to george & jean 
+        ["u8", "id19"],
 
         //Gen -2
         
@@ -102,7 +102,7 @@ data = {
         //Ann Willy -> G W Russell & Ann Willy
         ["id20", "u7"],
 
-        //Gen -2 -> -1
+        //Gen -1 -> -2
 
         //Judy Russell -> G W Russell & Anne union 
         ["u7", "id4"],
