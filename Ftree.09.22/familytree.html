@@ -42,35 +42,37 @@
         FT.draw();
 
         // Log each person circle and its bound data (person object)
-        function logPersonCircles() {
-        const container = document.getElementById("personInfoContainer");
-        container.innerHTML = ""; // Clear previous output
+            window.onload = function () {
+            function logPersonCircles() {
+            const container = document.getElementById("personInfoContainer");
+            container.innerHTML = ""; // Clear previous output
 
-        d3.selectAll("circle.person").each(function(d) {
-            const data = d?.data || d; // fallback for how your tree might bind data
+            d3.selectAll("circle.person").each(function(d) {
+                const data = d?.data || d; // fallback for how your tree might bind data
 
-        // Extract fields safely
-            const name = data.name || "Unknown";
-            const birth = data.birth || "–";
-            const death = data.death || "–";
-            const url = data.url || "#";
+            // Extract fields safely
+                const name = data.name || "Unknown";
+                const birth = data.birth || "–";
+                const death = data.death || "–";
+                const url = data.url || "#";
 
-            const box = document.createElement("div");
-            box.className = "personBox";
+                const box = document.createElement("div");
+                box.className = "personBox";
 
-            box.innerHTML = `
-                <strong>${name}</strong><br>
-                <span>Birth: ${birth}</span><br>
-                <span>Death: ${death}</span><br>
-                <a href="${url}" target="_blank">Profile</a>
-            `;
+                box.innerHTML = `
+                    <strong>${name}</strong><br>
+                    <span>Birth: ${birth}</span><br>
+                    <span>Death: ${death}</span><br>
+                    <a href="${url}" target="_blank">Profile</a>
+                `;
 
-        container.appendChild(box);
-    });
+            container.appendChild(box);
 
+            
+            });
+            };
 
-
-    }
+        }
         
 
     </script>
