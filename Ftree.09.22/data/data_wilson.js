@@ -16,14 +16,13 @@ data = {
         "id22": { "id": "id22", "name": "Susan Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
         "id23": { "id": "id23", "name": "Elizabeth Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"UK", "deathplace":"Neptune"},
         "id24": { "id": "id24", "name": "Nick Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "birthplace":"UK", "deathplace":"Neptune"},        
-        // "id25": { "id": "id25", "name": "Matin fist wife", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u9"], "birthplace":"UK", "deathplace":"Neptune"},        
         "id5": { "id": "id5", "name": "David Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2", "u3"], "birthplace":"UK", "deathplace":"Neptune"},    
         "id9": { "id": "id9", "name": "Fiona Wilson", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u3"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id16": { "id": "id16", "name": "Angela Fletcher", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id17": { "id": "id17", "name": "Ian Fletcher", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         
         //Gen 0
-        "id1": { "id": "id1", "name": "person Lucas Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
+        "id1": { "id": "id1", "name": "eod Lucas Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
         "id2": { "id": "id2", "name": "Clare F", "birthyear": 1978, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
         "id6": { "id": "id6", "name": "Rama Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id7": { "id": "id7", "name": "Jason Wilson", "birthyear": 1969, "deathyear": 2222, "own_unions": [], "birthplace":"Ireland", "deathplace":"Neptune"},    
@@ -69,8 +68,7 @@ data = {
 
         // //Sue and Nick
         "u8": { "id": "u8", "partner": ["id22", "id24"]},
-        // //Martin and Marins first wife
-        // "u9": { "id": "u9", "partner": ["id21", "id25"]},
+       
 
         //Gen 0
 
@@ -86,7 +84,7 @@ data = {
     "links": [
 
         // this draws lines between the parnters in a v , each partner draws havlf of a v
-        // the gen x -> gen x is to discribe the links between the pair and the children 
+        // the gen x -> gen x is to discribe the links between the unioin and the child 
 
         // gen -3
 
@@ -97,7 +95,7 @@ data = {
 
         //gen -2 -> -3
 
-        //george Russell to george & jean 
+        //g w Russell to george & jean 
         ["u9", "id19"],
 
         //Gen -2
