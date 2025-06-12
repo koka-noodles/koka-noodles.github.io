@@ -22,7 +22,7 @@ data = {
         "id17": { "id": "id17", "name": "Ian Fletcher", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         
         //Gen 0
-        "id1": { "id": "id1", "name": "eod Lucas Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
+        "id1": { "id": "id1", "name": "broke Lucas Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon"},
         "id2": { "id": "id2", "name": "Clare F", "birthyear": 1978, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
         "id6": { "id": "id6", "name": "Rama Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"Neptune"},    
         "id7": { "id": "id7", "name": "Jason Wilson", "birthyear": 1969, "deathyear": 2222, "own_unions": [], "birthplace":"Ireland", "deathplace":"Neptune"},    
@@ -95,8 +95,8 @@ data = {
 
         //gen -2 -> -3
 
-        //g w Russell to george & jean 
-        ["u9", "id19"],
+        //g w Russell -> george & jean 
+        ["u9", "id26"],
 
         //Gen -2
         
@@ -107,7 +107,7 @@ data = {
 
         //Gen -1 -> -2
 
-        //Judy Russell -> G W Russell & Anne union 
+        //Judy Russell & dave -> G W Russell & Anne union 
         ["u7", "id4"],
         //Martin & Anne union -> G W Russell & Anne union
         ["u7", "id21"],
