@@ -527,6 +527,8 @@ class Person extends FTNode {
         else this.hide();
         // update dag roots
         this.ft_datahandler.update_roots();
+        console.log("Hello world!"); 
+        console.log(circle.person); 
     };
 
     add_own_union(union_data) {
@@ -1001,11 +1003,6 @@ class FamilyTree extends FTDrawer {
         file.type = "text/javascript";
         file.src = path_to_data;
         document.getElementsByTagName("head")[0].appendChild(file)
-
-        console.log("Hello world!"); 
-        console.log(circle.person); 
     }
-
-    
 
 };
