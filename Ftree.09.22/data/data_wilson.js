@@ -96,7 +96,7 @@ data = {
         //gen -2 -> -3
 
         //g w Russell -> george & jean 
-        ["u9", "id26"],
+        ["u9", "id19"],
 
         //Gen -2
         
