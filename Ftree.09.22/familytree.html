@@ -42,15 +42,35 @@
         FT.draw();
 
         // Log each person circle and its bound data (person object)
-        function logPersonCircles() {
-            d3.selectAll("circle.person").each(function(d) {
-            console.log("Circle Element:", this);
-            console.log("Bound Data (Person):", d);
-        });
+        setTimeout(() => {
+        const button = document.getElementById("logButton");
+        const container = document.getElementById("personInfoContainer");
 
+            button.addEventListener("click", () => {
+                if (!container) return;
+                container.innerHTML = "";
 
-        
-    }
+                    d3.selectAll("circle.person").each(function(d) {
+                        const data = d?.data || d || {};
+                        const name = data.name || "Unknown";
+                        const birth = data.birth || "–";
+                        const death = data.death || "–";
+                        const url = data.url || "#";
+
+                        const box = document.createElement("div");
+                        box.className = "personBox";
+
+                        box.innerHTML = `
+                            <strong>${name}</strong><br>
+                            <span>Birth: ${birth}</span><br>
+                            <span>Death: ${death}</span><br>
+                            <a href="${url}" target="_blank">Profile</a>
+                        `;
+
+                        container.appendChild(box);
+                    });
+            });
+        }, 1000); // Delay to ensure FT.draw() has completed
         
 
     </script>
