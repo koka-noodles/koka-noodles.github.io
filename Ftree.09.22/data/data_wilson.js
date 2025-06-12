@@ -44,12 +44,11 @@ data = {
 
     },
     "unions": {
-
         //unions are the partnerhsip of 2 people. It also has thier children as downward relationships 
         
         //gen -3
 
-        // george and Jean 
+        // george Herbert and Jean 
         "u9": { "id": "u9", "partner": ["id26", "id27"], "children": ["id19"] },
         
         //Gen -2
@@ -65,11 +64,9 @@ data = {
         "u3": { "id": "u3", "partner": ["id9", "id5"], "children": ["id10"] },
         //Ian and Angela
         "u6": { "id": "u6", "partner": ["id16", "id17"], "children": ["id2"] },
-
-        // //Sue and Nick
+        //Sue and Nick
         "u8": { "id": "u8", "partner": ["id22", "id24"]},
        
-
         //Gen 0
 
         //lucas and clare 
@@ -78,15 +75,13 @@ data = {
         "u4": { "id": "u4", "partner": ["id6", "id11"], "children": ["id12"] },
         //Coco and Jason
         "u5": { "id": "u5", "partner": ["id8", "id15"], "children": ["id13", "id14"] },
-
         
     },
     "links": [
-
         // this draws lines between the parnters in a v , each partner draws havlf of a v
         // the gen x -> gen x is to discribe the links between the unioin and the child 
 
-        // gen -3
+        //the gen -3
 
         //george Herbert -> george & Jean
         ["id26", "u9"],
@@ -95,7 +90,7 @@ data = {
 
         //gen -2 -> -3
 
-        //g w Russell -> george & jean 
+        //g w Russell -> george & jean union
         ["u9", "id19"],
 
         //Gen -2
@@ -171,7 +166,7 @@ data = {
         //Jason MC -> JasonMC & Coco union 
         ["id15", "u5"],
 
-        //Gen 0 -> -1
+        //Gen -1 -> 0
 
         //Morrow wilson -> Lucas & Clare union
         ["u1", "id3"],
