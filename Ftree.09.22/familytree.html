@@ -25,6 +25,11 @@
 
 <body>
 
+    <!-- gtp select person -->
+    <select id="rootSelector">
+        <option disabled selected>Select Root Person</option>
+    </select>
+
     <button id="logButton">Show People</button>
     <div id="personInfoContainer"></div>
 
@@ -77,6 +82,96 @@
             });
         }, 1000); // Delay to ensure FT.draw() has completed
         
+
+        /// GTP script to make a dropdown 
+
+        function buildSubtree(data, personId) {
+            const visitedPersons = new Set();
+            const visitedUnions = new Set();
+            const persons = [];
+            const unions = [];
+
+            const queue = [personId];
+
+            while (queue.length > 0) {
+                const pid = queue.pop();
+                if (visitedPersons.has(pid)) continue;
+                visitedPersons.add(pid);
+
+                const person = data.persons.find(p => p.id === pid);
+                if (!person) continue;
+
+                persons.push(person);
+
+                if (person.unions) {
+                    for (const uid of person.unions) {
+                        if (visitedUnions.has(uid)) continue;
+                        visitedUnions.add(uid);
+
+                        const union = data.unions.find(u => u.id === uid);
+                        if (!union) continue;
+
+                        unions.push(union);
+
+                        // Traverse up to parents
+                        if (union.parents) {
+                            for (const parentId of union.parents) {
+                                queue.push(parentId);
+                            }
+                        }
+
+                        // Traverse down to children
+                        if (union.children) {
+                            for (const childId of union.children) {
+                                queue.push(childId);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return { persons, unions };
+        }
+
+        // Populate dropdown
+        function populateDropdown(data) {
+            const dropdown = document.getElementById("rootSelector");
+            data.persons.forEach(p => {
+                const option = document.createElement("option");
+                option.value = p.id;
+                option.text = p.name || p.id;
+                dropdown.appendChild(option);
+            });
+        }
+
+        // Redraw tree from selected root
+        function handleRootChange(data, svg) {
+            document.getElementById("rootSelector").addEventListener("change", function () {
+                const selectedId = this.value;
+                const subtree = buildSubtree(data, selectedId);
+
+                // Clear previous drawing
+                svg.selectAll("*").remove();
+
+                // Create new tree
+                const FT = new FamilyTree(subtree, svg)
+                    .orientation("vertical");
+
+                FT.draw();
+            });
+        }
+
+        // Wait a bit to ensure original draw and data is ready
+        setTimeout(() => {
+            if (typeof data === 'undefined' || !data.persons) {
+                console.error("Family tree data not loaded yet.");
+                return;
+            }
+
+            const svg = d3.select("svg");
+            populateDropdown(data);
+            handleRootChange(data, svg);
+        }, 1000);
 
     </script>
 

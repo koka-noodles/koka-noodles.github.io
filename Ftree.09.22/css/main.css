@@ -93,3 +93,15 @@ body {
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+#rootSelector {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  z-index: 9999;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+}
