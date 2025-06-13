@@ -105,7 +105,7 @@
 
                     persons.push(person);
 
-                    if (person.own_unions) {
+                    if (Array.isArray(person.own_unions)) {
                         for (const uid of person.own_unions) {
                             if (visitedUnions.has(uid)) continue;
                             visitedUnions.add(uid);
@@ -115,14 +115,28 @@
 
                             unions.push(union);
 
-                            if (union.parents) queue.push(...union.parents);
-                            if (union.children) queue.push(...union.children);
+                            if (Array.isArray(union.parents)) {
+                                queue.push(...union.parents);
+                            }
+                            if (Array.isArray(union.children)) {
+                                queue.push(...union.children);
+                            }
                         }
                     }
                 }
 
+                // ✅ Ensure required array fields are initialized
+                persons.forEach(p => {
+                    if (!Array.isArray(p.own_unions)) p.own_unions = [];
+                });
+                unions.forEach(u => {
+                    if (!Array.isArray(u.parents)) u.parents = [];
+                    if (!Array.isArray(u.children)) u.children = [];
+                });
+
                 const personIds = new Set(persons.map(p => p.id));
                 const unionIds = new Set(unions.map(u => u.id));
+
                 const links = (fullData.links || []).filter(link =>
                     personIds.has(link.source) || unionIds.has(link.source) ||
                     personIds.has(link.target) || unionIds.has(link.target)
@@ -134,6 +148,7 @@
                     links
                 };
             }
+
 
             setTimeout(() => {
                 const personMap = fullData.persons;
