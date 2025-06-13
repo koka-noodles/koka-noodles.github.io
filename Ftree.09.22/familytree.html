@@ -25,8 +25,9 @@
 
 <body>
 
-    <!-- gtp select person -->
-    <select id="rootSelector">
+    
+    <!-- gtp dropdown -->
+     <select id="rootSelector">
         <option disabled selected>Select Root Person</option>
     </select>
 
@@ -84,110 +85,89 @@
         
 
         /// GTP script to make a dropdown 
+        const fullData = data; // expects { persons: {id: {...}}, unions: {id: {...}}, links: [...] }
 
-    function buildSubtree(data, personId) {
-    const visitedPersons = new Set();
-    const visitedUnions = new Set();
-    const persons = [];
-    const unions = [];
+            function buildSubtree(fullData, personId) {
+                const visitedPersons = new Set();
+                const visitedUnions = new Set();
+                const persons = [];
+                const unions = [];
 
-    const queue = [personId];
+                const queue = [personId];
 
-    while (queue.length > 0) {
-        const pid = queue.pop();
-        if (visitedPersons.has(pid)) continue;
-        visitedPersons.add(pid);
+                while (queue.length > 0) {
+                    const pid = queue.pop();
+                    if (visitedPersons.has(pid)) continue;
+                    visitedPersons.add(pid);
 
-        const person = data.persons.find(p => p.id === pid);
-        if (!person) continue;
+                    const person = fullData.persons[pid];
+                    if (!person) continue;
 
-        persons.push(person);
+                    persons.push(person);
 
-        if (person.own_unions) {
-            for (const uid of person.own_unions) {
-                if (visitedUnions.has(uid)) continue;
-                visitedUnions.add(uid);
+                    if (person.own_unions) {
+                        for (const uid of person.own_unions) {
+                            if (visitedUnions.has(uid)) continue;
+                            visitedUnions.add(uid);
 
-                const union = data.unions.find(u => u.id === uid);
-                if (!union) continue;
+                            const union = fullData.unions[uid];
+                            if (!union) continue;
 
-                unions.push(union);
+                            unions.push(union);
 
-                if (union.parents) queue.push(...union.parents);
-                if (union.children) queue.push(...union.children);
+                            if (union.parents) queue.push(...union.parents);
+                            if (union.children) queue.push(...union.children);
+                        }
+                    }
+                }
+
+                const personIds = new Set(persons.map(p => p.id));
+                const unionIds = new Set(unions.map(u => u.id));
+                const links = (fullData.links || []).filter(link =>
+                    personIds.has(link.source) || unionIds.has(link.source) ||
+                    personIds.has(link.target) || unionIds.has(link.target)
+                );
+
+                return {
+                    persons: persons.reduce((acc, p) => { acc[p.id] = p; return acc; }, {}),
+                    unions: unions.reduce((acc, u) => { acc[u.id] = u; return acc; }, {}),
+                    links
+                };
             }
-        }
-    }
 
-    return { persons, unions };
-}
+            setTimeout(() => {
+                const personMap = fullData.persons;
+                const unionMap = fullData.unions;
+                const people = Object.values(personMap);
 
-        // Populate dropdown
-        function populateDropdown(data) {
-            const dropdown = document.getElementById("rootSelector");
-            Object.values(data.persons).forEach(p => {
-                const option = document.createElement("option");
-                option.value = p.id;
-                option.text = p.name || p.id;
-                dropdown.appendChild(option);
-            });
-        }
+                if (!people.length) {
+                    console.error("No persons found in data.");
+                    return;
+                }
 
-        // Redraw tree from selected root
-        function handleRootChange(data, svg) {
-            document.getElementById("rootSelector").addEventListener("change", function () {
-                const selectedId = this.value;
-                const subtree = buildSubtree(data, selectedId);
+                const dropdown = document.getElementById("rootSelector");
+                people.forEach(p => {
+                    const option = document.createElement("option");
+                    option.value = p.id;
+                    option.text = p.name || p.id;
+                    dropdown.appendChild(option);
+                });
 
-                // Clear previous drawing
-                svg.selectAll("*").remove();
+                dropdown.addEventListener("change", function () {
+                    const selectedId = this.value;
+                    const subtree = buildSubtree(fullData, selectedId);
 
-                // Create new tree
-                const FT = new FamilyTree(subtree, svg)
-                    .orientation("vertical");
+                    const svg = d3.select("svg");
+                    svg.selectAll("*").remove();
 
-                FT.draw();
-            });
-        }
+                    const FT = new FamilyTree(subtree, svg)
+                        .orientation("vertical");
 
-        // Wait a bit to ensure original draw and data is ready
-        setTimeout(() => {
-    // ✅ FIX: Convert data.persons/unions from objects to arrays
-    const personMap = data.persons || (data.default && data.default.persons);
-    const unionMap = data.unions || (data.default && data.default.unions);
+                    FT.draw();
+                });
+            }, 1000);
 
-    if (!personMap || typeof personMap !== 'object') {
-        console.error("Could not find 'persons' object in data. Actual data:", data);
-        return;
-    }
-
-    const people = Object.values(personMap);
-    const unions = Object.values(unionMap || {});
-
-    // ✅ Build dropdown
-    const dropdown = document.getElementById("rootSelector");
-    people.forEach(p => {
-        const option = document.createElement("option");
-        option.value = p.id;
-        option.text = p.name || p.id;
-        dropdown.appendChild(option);
-    });
-
-    // ✅ Rebuild tree when user selects new root
-    dropdown.addEventListener("change", function () {
-        const selectedId = this.value;
-        const subtree = buildSubtree({ persons: people, unions: unions }, selectedId);
-
-        const svg = d3.select("svg");
-        svg.selectAll("*").remove();
-
-        const FT = new FamilyTree(subtree, svg)
-            .orientation("vertical");
-
-        FT.draw();
-    });
-}, 1000);
-        console.log("Loaded data:", data);
+        
 
     </script>
 
