@@ -25,12 +25,7 @@
 
 <body>
 
-    <select id="rootSelector">
-        <option disabled selected>Select Root Person 4</option>
-    </select>
-  
-
-    <button id="logButton">Show People</button>
+    <button id="logButton">Show People eod fri</button>
     <div id="personInfoContainer"></div>
 
 
@@ -50,65 +45,6 @@
 
         // draw family tree
         FT.draw();
-
-        // select person code 
-        function buildSubtree(fullData, personId) {
-            const visitedPersons = new Set();
-            const visitedUnions = new Set();
-            const persons = [];
-            const unions = [];
-
-            const queue = [personId];
-
-            while (queue.length > 0) {
-                const pid = queue.pop();
-                if (visitedPersons.has(pid)) continue;
-                visitedPersons.add(pid);
-
-                const person = fullData.persons[pid];
-                if (!person) continue;
-
-                persons.push(person);
-
-                if (Array.isArray(person.own_unions)) {
-                    for (const uid of person.own_unions) {
-                        if (visitedUnions.has(uid)) continue;
-                        visitedUnions.add(uid);
-
-                        const union = fullData.unions[uid];
-                        if (!union) continue;
-
-                        unions.push(union);
-
-                        if (Array.isArray(union.parents)) queue.push(...union.parents);
-                        if (Array.isArray(union.children)) queue.push(...union.children);
-                    }
-                }
-            }   
-
-                // Ensure structure integrity
-                persons.forEach(p => {
-                    if (!Array.isArray(p.own_unions)) p.own_unions = [];
-                });
-                unions.forEach(u => {
-                    if (!Array.isArray(u.parents)) u.parents = [];
-                    if (!Array.isArray(u.children)) u.children = [];
-                });
-
-                const personIds = new Set(persons.map(p => p.id));
-                const unionIds = new Set(unions.map(u => u.id));
-
-                const links = (fullData.links || []).filter(link =>
-                    personIds.has(link.source) || unionIds.has(link.source) ||
-                    personIds.has(link.target) || unionIds.has(link.target)
-                );
-
-                return {
-                    persons: persons.reduce((acc, p) => { acc[p.id] = p; return acc; }, {}),
-                    unions: unions.reduce((acc, u) => { acc[u.id] = u; return acc; }, {}),
-                    links
-                };
-            }
 
         // Log each person circle and its bound data (person object)
         setTimeout(() => {
@@ -140,38 +76,6 @@
                     });
             });
         }, 1000); // Delay to ensure FT.draw() has completed
-        
-
-        
-
-
-            const rootCandidates = [
-            { id: "id26", name: "George Herbert" },
-            { id: "id4", name: "Judy Russell" },
-            { id: "id2", name: "Clare F" }
-            ];
-
-            const dropdown = document.getElementById("rootSelector");
-
-            rootCandidates.forEach(p => {
-            const option = document.createElement("option");
-            option.value = p.id;
-            option.textContent = p.name;
-            dropdown.appendChild(option);
-            });
-
-            dropdown.addEventListener("change", function () {
-            const selectedId = this.value;
-            const subtree = buildSubtree(data, selectedId);
-
-            const svg = d3.select("svg");
-            svg.selectAll("*").remove();
-
-            const FT = new FamilyTree(subtree, svg)
-                .orientation("vertical");
-
-            FT.draw();
-            });
         
 
     </script>
