@@ -136,7 +136,7 @@
         // Populate dropdown
         function populateDropdown(data) {
             const dropdown = document.getElementById("rootSelector");
-            data.persons.forEach(p => {
+            Object.values(data.persons).forEach(p => {
                 const option = document.createElement("option");
                 option.value = p.id;
                 option.text = p.name || p.id;
