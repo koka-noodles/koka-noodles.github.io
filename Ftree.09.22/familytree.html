@@ -25,9 +25,9 @@
 
 <body>
 
- <!-- Fullscreen overlay with dropdown -->
+  <!-- Dropdown UI -->
   <div id="selectOverlay">
-    <label for="dropdown">Choose a person to begin:</label>
+    <label for="dropdown">Choose a root person:</label>
     <select id="dropdown">
       <option value="" disabled selected>-- Select Person --</option>
       <option value="id26">George Herbert</option>
@@ -39,36 +39,23 @@
   <script>
     let selectedOption = null;
 
+    // Handle dropdown selection
     document.getElementById("dropdown").addEventListener("change", function () {
       selectedOption = this.value;
-      console.log("Selected:", selectedOption);
-
-      // Hide dropdown UI
       document.getElementById("selectOverlay").style.display = "none";
 
-      // Load dependencies in order, then run logic
       loadScriptsSequentially([
         "https://d3js.org/d3.v7.min.js",
         "js/d3-dag.js",
         "data/data_wilson.js",
         "js/familytree.js"
       ], () => {
+        defineBuildSubtree(); // define it globally
         runPageLogic(selectedOption);
       });
     });
 
-    function runPageLogic(selectedId) {
-      // Your main logic begins here after all scripts are loaded
-      const svg = d3.select("body").append("svg")
-        .attr("width", window.innerWidth)
-        .attr("height", window.innerHeight);
-
-      const subtree = buildSubtree(data, selectedId);
-      const FT = new FamilyTree(subtree, svg)
-        .orientation("vertical");
-      FT.draw();
-    }
-
+    // Dynamically load scripts in sequence
     function loadScriptsSequentially(scripts, callback) {
       const load = (i) => {
         if (i >= scripts.length) return callback();
@@ -80,9 +67,79 @@
       };
       load(0);
     }
+
+    // Define buildSubtree globally
+    function defineBuildSubtree() {
+      window.buildSubtree = function (fullData, personId) {
+        const visitedPersons = new Set();
+        const visitedUnions = new Set();
+        const persons = [];
+        const unions = [];
+
+        const queue = [personId];
+
+        while (queue.length > 0) {
+          const pid = queue.pop();
+          if (visitedPersons.has(pid)) continue;
+          visitedPersons.add(pid);
+
+          const person = fullData.persons[pid];
+          if (!person) continue;
+
+          persons.push(person);
+
+          if (Array.isArray(person.own_unions)) {
+            for (const uid of person.own_unions) {
+              if (visitedUnions.has(uid)) continue;
+              visitedUnions.add(uid);
+
+              const union = fullData.unions[uid];
+              if (!union) continue;
+
+              unions.push(union);
+
+              if (Array.isArray(union.parents)) queue.push(...union.parents);
+              if (Array.isArray(union.children)) queue.push(...union.children);
+            }
+          }
+        }
+
+        persons.forEach(p => { if (!Array.isArray(p.own_unions)) p.own_unions = []; });
+        unions.forEach(u => {
+          if (!Array.isArray(u.parents)) u.parents = [];
+          if (!Array.isArray(u.children)) u.children = [];
+        });
+
+        const personIds = new Set(persons.map(p => p.id));
+        const unionIds = new Set(unions.map(u => u.id));
+
+        const links = (fullData.links || []).filter(link =>
+          personIds.has(link.source) || unionIds.has(link.source) ||
+          personIds.has(link.target) || unionIds.has(link.target)
+        );
+
+        return {
+          persons: persons.reduce((acc, p) => { acc[p.id] = p; return acc; }, {}),
+          unions: unions.reduce((acc, u) => { acc[u.id] = u; return acc; }, {}),
+          links
+        };
+      };
+    }
+
+    // Main rendering logic
+    function runPageLogic(selectedId) {
+      const svg = d3.select("body").append("svg")
+        .attr("width", window.innerWidth)
+        .attr("height", window.innerHeight);
+
+      const subtree = buildSubtree(data, selectedId);
+      const FT = new FamilyTree(subtree, svg)
+        .orientation("vertical");
+      FT.draw();
+    }
   </script>
 
-    </script>
+    
 
     
 
