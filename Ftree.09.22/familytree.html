@@ -25,58 +25,62 @@
 
 <body>
 
-    <button id="logButton">Show People eod fri</button>
-    <div id="personInfoContainer"></div>
+ <!-- Fullscreen overlay with dropdown -->
+  <div id="selectOverlay">
+    <label for="dropdown">Choose a person to begin:</label>
+    <select id="dropdown">
+      <option value="" disabled selected>-- Select Person --</option>
+      <option value="id26">George Herbert</option>
+      <option value="id13">Margaret Rose</option>
+      <option value="id7">William the Bold</option>
+    </select>
+  </div>
 
+  <script>
+    let selectedOption = null;
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="js/d3-dag.js"></script>
-    <script src="data/data_wilson.js"></script>
-    <script src="js/familytree.js"></script>
-    <script>
-        // insert svg object to hold the family tree
-        const svg = d3.select("body").append("svg")
-            .attr("width", document.body.offsetWidth)
-            .attr("height", document.documentElement.clientHeight);
+    document.getElementById("dropdown").addEventListener("change", function () {
+      selectedOption = this.value;
+      console.log("Selected:", selectedOption);
 
-        // make family tree object
-        let FT = new FamilyTree(data, svg)
+      // Hide dropdown UI
+      document.getElementById("selectOverlay").style.display = "none";
+
+      // Load dependencies in order, then run logic
+      loadScriptsSequentially([
+        "https://d3js.org/d3.v7.min.js",
+        "js/d3-dag.js",
+        "data/data_wilson.js",
+        "js/familytree.js"
+      ], () => {
+        runPageLogic(selectedOption);
+      });
+    });
+
+    function runPageLogic(selectedId) {
+      // Your main logic begins here after all scripts are loaded
+      const svg = d3.select("body").append("svg")
+        .attr("width", window.innerWidth)
+        .attr("height", window.innerHeight);
+
+      const subtree = buildSubtree(data, selectedId);
+      const FT = new FamilyTree(subtree, svg)
         .orientation("vertical");
+      FT.draw();
+    }
 
-        // draw family tree
-        FT.draw();
-
-        // Log each person circle and its bound data (person object)
-        setTimeout(() => {
-        const button = document.getElementById("logButton");
-        const container = document.getElementById("personInfoContainer");
-
-            button.addEventListener("click", () => {
-                if (!container) return;
-                container.innerHTML = "";
-
-                    d3.selectAll("circle.person").each(function(d) {
-                        const data = d?.data || d || {};
-                        const name = data.name || "Unknown";
-                        const birth = data.birth || "–";
-                        const death = data.death || "–";
-                        const url = data.url || "#";
-
-                        const box = document.createElement("div");
-                        box.className = "personBox";
-
-                        box.innerHTML = `
-                            <strong>${name}</strong><br>
-                            <span>Birth: ${birth}</span><br>
-                            <span>Death: ${death}</span><br>
-                            <a href="${url}" target="_blank">Profile</a>
-                        `;
-
-                        container.appendChild(box);
-                    });
-            });
-        }, 1000); // Delay to ensure FT.draw() has completed
-        
+    function loadScriptsSequentially(scripts, callback) {
+      const load = (i) => {
+        if (i >= scripts.length) return callback();
+        const s = document.createElement("script");
+        s.src = scripts[i];
+        s.onload = () => load(i + 1);
+        s.onerror = () => console.error("Failed to load script:", scripts[i]);
+        document.head.appendChild(s);
+      };
+      load(0);
+    }
+  </script>
 
     </script>
 
