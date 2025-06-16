@@ -37,6 +37,9 @@ class FTDataHandler {
 
     constructor(data, start_node_id = data.start) {
 
+        //console for data 
+        console.log("Hello data start", data.start); 
+
         // check if edge list defined
         if (data.links.length > 0) {
 
