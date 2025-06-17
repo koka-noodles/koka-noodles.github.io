@@ -25,7 +25,16 @@
 
 <body>
 
-    <button id="logButton">Show People tue</button>
+                        <select id="myDropdown">
+                    <option value="" disabled selected>Select someone</option>
+                    <option value="id26">George Herbert</option>
+                    <!-- Add more options here -->
+                    </select>
+
+                    <button id="logButton">Log People</button>
+                    <div id="personInfoContainer"></div>
+
+    <button id="logButton">Show People eod fri</button>
     <div id="personInfoContainer"></div>
 
 
@@ -36,8 +45,8 @@
     <script>
    
             
-        document.addEventListener("DOMContentLoaded", function () {
-            let selectedValue = null;
+   
+        let selectedValue = null;
 
              document.getElementById("myDropdown").addEventListener("change", function () {
                 selectedValue = this.value;
@@ -91,7 +100,6 @@
                 });
                 }, 1000); // Delay ensures nodes are drawn before querying DOM
             }
-        });
     </script>
 
     
