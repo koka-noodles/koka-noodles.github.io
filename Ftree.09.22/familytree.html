@@ -34,50 +34,61 @@
     <script src="data/data_wilson.js"></script>
     <script src="js/familytree.js"></script>
     <script>
-        // insert svg object to hold the family tree
-        const svg = d3.select("body").append("svg")
-            .attr("width", document.body.offsetWidth)
-            .attr("height", document.documentElement.clientHeight);
+   
+   let selectedValue = null;
 
-        // make family tree object
-        let FT = new FamilyTree(data, svg)
-        .orientation("vertical");
+             document.getElementById("myDropdown").addEventListener("change", function () {
+                selectedValue = this.value;
+                console.log("Selected value set to:", selectedValue);
 
-        // draw family tree
-        FT.draw();
-
-        // Log each person circle and its bound data (person object)
-        setTimeout(() => {
-        const button = document.getElementById("logButton");
-        const container = document.getElementById("personInfoContainer");
-
-            button.addEventListener("click", () => {
-                if (!container) return;
-                container.innerHTML = "";
-
-                    d3.selectAll("circle.person").each(function(d) {
-                        const data = d?.data || d || {};
-                        const name = data.name || "Unknown";
-                        const birth = data.birth || "–";
-                        const death = data.death || "–";
-                        const url = data.url || "#";
-
-                        const box = document.createElement("div");
-                        box.className = "personBox";
-
-                        box.innerHTML = `
-                            <strong>${name}</strong><br>
-                            <span>Birth: ${birth}</span><br>
-                            <span>Death: ${death}</span><br>
-                            <a href="${url}" target="_blank">Profile</a>
-                        `;
-
-                        container.appendChild(box);
-                    });
+                runAfterSelection();
             });
-        }, 1000); // Delay to ensure FT.draw() has completed
-        
 
+            function runAfterSelection() {
+                // 1. Insert the SVG
+                const svg = d3.select("body").append("svg")
+                .attr("width", document.body.offsetWidth)
+                .attr("height", document.documentElement.clientHeight);
+
+                // 2. Create the FamilyTree object
+                let FT = new FamilyTree(data, svg)
+                .orientation("vertical");
+
+                // 3. Draw the tree
+                FT.draw();
+
+                // 4. Attach listener to logButton after FT.draw() completes
+                setTimeout(() => {
+                const button = document.getElementById("logButton");
+                const container = document.getElementById("personInfoContainer");
+
+                if (!button || !container) return;
+
+                button.addEventListener("click", () => {
+                    container.innerHTML = "";
+
+                    d3.selectAll("circle.person").each(function (d) {
+                    const data = d?.data || d || {};
+                    const name = data.name || "Unknown";
+                    const birth = data.birthyear || "–";
+                    const death = data.deathyear || "–";
+                    const url = data.url || "#";
+
+                    const box = document.createElement("div");
+                    box.className = "personBox";
+
+                    box.innerHTML = `
+                        <strong>${name}</strong><br>
+                        <span>Birth: ${birth}</span><br>
+                        <span>Death: ${death}</span><br>
+                        <a href="${url}" target="_blank">Profile</a>
+                    `;
+
+                    container.appendChild(box);
+                    });
+                });
+                }, 1000); // Delay ensures nodes are drawn before querying DOM
+            }
     </script>
 
     
