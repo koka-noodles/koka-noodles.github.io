@@ -1,85 +1,82 @@
 <!DOCTYPE html>
-
-<!--
-    collapsible directed acyclical graph for family tree visualization
-    author: Benjamin W. Portner
-    license: GNU General Public License v3.0
-
-    based on d3 collapsible treemap example by d3noob: https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
-    features in the original:
-    - d3 tree
-    - collapsible
-    - transitions
-    new features:
-    - two types of nodes: unions and persons
-    - d3 dag instead of tree (to allow two parents per union)
-    - collapse/expand in all directions (memory function)
-    - tooltips: show node metadata on hover
--->
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Comment -->
+  <meta charset="UTF-8" />
+  <title>Set Start Node</title>
+  
+   <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
+  <!-- Dropdown menu to select the start person -->
+  <select id="startSelector">
+    <option disabled selected>Select Root Person</option>
+    <option value="id30">Joheph Russell</option>
+    <option value="id19">G W Russell</option>
+    <option value="id4">Judy Russell</option>
+    <option value="id1">Lucas Wilson</option>
+  </select>
 
-    <button id="logButton">Show People eod fri</button>
-    <div id="personInfoContainer"></div>
+  <!-- Person info and tree button -->
+  <button id="logButton">Show People local</button>
+  <div id="personInfoContainer"></div>
 
+  <!-- Scripts -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/d3-dag.js"></script>
+  <script src="data/data_wilson.js"></script>
+  <script src="js/familytree.js"></script>
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="js/d3-dag.js"></script>
-    <script src="data/data_wilson.js"></script>
-    <script src="js/familytree.js"></script>
-    <script>
-        // insert svg object to hold the family tree
-        const svg = d3.select("body").append("svg")
-            .attr("width", document.body.offsetWidth)
-            .attr("height", document.documentElement.clientHeight);
+  <script>
 
-        // make family tree object
-        let FT = new FamilyTree(data, svg)
-        .orientation("vertical");
+    
+    // Wait for DOM and user to select start node
+    document.getElementById("startSelector").addEventListener("change", function () {
+      const selectedId = this.value;
+      
+      // Set data.start before doing anything else
+      data.start = selectedId;
 
-        // draw family tree
-        FT.draw();
+      // Build SVG for tree
+      const svg = d3.select("body").append("svg")
+        .attr("width", document.body.offsetWidth)
+        .attr("height", document.documentElement.clientHeight);
 
-        // Log each person circle and its bound data (person object)
-        setTimeout(() => {
+      // Create FamilyTree and draw it
+      let FT = new FamilyTree(data, svg).orientation("vertical");
+      FT.draw();
+
+      // Setup log button
+      setTimeout(() => {
         const button = document.getElementById("logButton");
         const container = document.getElementById("personInfoContainer");
 
-            button.addEventListener("click", () => {
-                if (!container) return;
-                container.innerHTML = "";
+        button.addEventListener("click", () => {
+          if (!container) return;
+          container.innerHTML = "";
 
-                    d3.selectAll("circle.person").each(function(d) {
-                        const data = d?.data || d || {};
-                        const name = data.name || "Unknown";
-                        const birth = data.birth || "–";
-                        const death = data.death || "–";
-                        const url = data.url || "#";
+          d3.selectAll("circle.person").each(function (d) {
+            const person = d?.data || d || {};
+            const name = person.name || "Unknown";
+            const birth = person.birthyear || "–";
+            const death = person.deathyear || "–";
+            const url = person.url || "#";
 
-                        const box = document.createElement("div");
-                        box.className = "personBox";
+            const box = document.createElement("div");
+            box.className = "personBox";
+            box.innerHTML = `
+              <strong>${name}</strong><br>
+              <span>Birth: ${birth}</span><br>
+              <span>Death: ${death}</span><br>
+              <a href="${url}" target="_blank">Profile</a>
+            `;
+            container.appendChild(box);
+          });
+        });
+      }, 1000);
 
-                        box.innerHTML = `
-                            <strong>${name}</strong><br>
-                            <span>Birth: ${birth}</span><br>
-                            <span>Death: ${death}</span><br>
-                            <a href="${url}" target="_blank">Profile</a>
-                        `;
-
-                        container.appendChild(box);
-                    });
-            });
-        }, 1000); // Delay to ensure FT.draw() has completed
-        
-
-    </script>
-
-    
-
+      // Optionally hide selector after selection
+      this.style.display = "none";
+    });
+  </script>
 </body>
+</html>

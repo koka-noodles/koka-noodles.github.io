@@ -821,25 +821,25 @@ class FTDrawer {
             .attr('visible', true);
 
         // add tooltip
-        if (this.show_tooltips) {
-            const tooltip_div = this._tooltip_div,
-                tooltip_func = this._tooltip_func;
-            nodeEnter
-                .on("mouseover", function (event, d) {
-                    tooltip_div.transition()
-                        .duration(200)
-                        .style("opacity", undefined);
-                    tooltip_div.html(tooltip_func(d));
-                    let height = tooltip_div.node().getBoundingClientRect().height;
-                    tooltip_div.style("left", (event.pageX + 10) + "px")
-                        .style("top", (event.pageY-height/2) + "px");
-                })
-                .on("mouseout", function (d) {
-                    tooltip_div.transition()
-                        .duration(500)
-                        .style("opacity", 0);
-                });
-        };
+        // if (this.show_tooltips) {
+        //     const tooltip_div = this._tooltip_div,
+        //         tooltip_func = this._tooltip_func;
+        //     nodeEnter
+        //         .on("mouseover", function (event, d) {
+        //             tooltip_div.transition()
+        //                 .duration(200)
+        //                 .style("opacity", undefined);
+        //             tooltip_div.html(tooltip_func(d));
+        //             let height = tooltip_div.node().getBoundingClientRect().height;
+        //             tooltip_div.style("left", (event.pageX + 10) + "px")
+        //                 .style("top", (event.pageY-height/2) + "px");
+        //         })
+        //         .on("mouseout", function (d) {
+        //             tooltip_div.transition()
+        //                 .duration(500)
+        //                 .style("opacity", 0);
+        //         });
+        // };
 
         // add a circle for each node
         nodeEnter.append('circle')
