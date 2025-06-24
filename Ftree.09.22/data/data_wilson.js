@@ -4,6 +4,10 @@ data = {
 
         // each new person needs to be added in their gen & a new union formed & each new person needs to be linked to the union sepratly & the child has to be added to the union of the parents 
 
+        //gen -5
+        "id32": { "id": "id32", "name": "Jacob Russell", "birthyear": 11785, "deathyear": 1867, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?", "url":"https://freepages.rootsweb.com/~lymbery/genealogy/luntley/web/gp275.html#head0"},
+        "id33": { "id": "id33", "name": "Hanna Coe warner", "birthyear": 1834, "deathyear": 1879, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?"},
+
         //gen -4
         "id30": { "id": "id30", "name": "Joheph Russell", "birthyear": 1834, "deathyear": 1927, "own_unions": ["u11"], "birthplace":"?", "deathplace":"?"},
         "id31": { "id": "id31", "name": "Ellon Digg", "birthyear": 1840, "deathyear": 1913, "own_unions": ["u11"], "birthplace":"?", "deathplace":"?"},
@@ -49,12 +53,15 @@ data = {
         "id14": { "id": "id14", "name": "Orin Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"?"},    
         
         // Jacob Russell 
-        // https://freepages.rootsweb.com/~lymbery/genealogy/luntley/web/gp275.html#head0
+        // 
 
     },
     "unions": {
         //unions are the partnerhsip of 2 people. It also has thier children as downward relationships 
         
+        //gen -5
+        "u12": { "id": "u12", "partner": ["id32", "id33"], "children": ["id30"] },
+
         //gen -4
 
         // joheph rusell and Ellon Digg
@@ -97,6 +104,15 @@ data = {
         // this draws lines between the parnters in a v , each partner draws havlf of a v
         // the gen x -> gen x is to discribe the links between the unioin and the child 
 
+        //the gen -5
+        //Jacob Russell -> Jacob Russell & Hanna Coe
+        ["id32", "u12"],
+        //Hanna Coe -> Jacob Russell & Hanna Coe
+        ["id33", "u12"],        
+
+        // gen -5 -> -4
+        //Jacob Russell and Hanna union -> Joseph 
+        ["u12", "id30"],
 
         //the gen -4
 
@@ -107,7 +123,7 @@ data = {
 
         //gen -4 -> -3 
 
-        //Joheph Russell -> george and jean
+        //Joheph Russell -> george
         ["u11", "id26"],
 
         //the gen -3

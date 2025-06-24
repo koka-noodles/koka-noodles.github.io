@@ -35,7 +35,6 @@ function d3_append_multiline_text(d3element, text, delimiter = "_", css_class = 
 
 class FTDataHandler {
 
-    
     constructor(data, start_node_id = data.start) {
 
         //console for data 
@@ -44,28 +43,8 @@ class FTDataHandler {
         // check if edge list defined
         if (data.links.length > 0) {
 
-            // Clone original links
-            const extendedLinks = [...data.links];
-
-            // Add spouse-to-spouse links from unions
-            Object.values(data.unions).forEach(union => {
-                const partners = union.partner;
-                if (partners && partners.length === 2) {
-                    const [p1, p2] = partners;
-                    // Only add if not already present (avoid d3-dag errors)
-                    if (!extendedLinks.some(([a, b]) => (a === p1 && b === p2) || (a === p2 && b === p1))) {
-                        extendedLinks.push([p1, p2]);
-                    }
-                }
-            });
-
-            // make dag from extended edge list
-            this.dag = d3.dagConnect()(extendedLinks);
-                            console.log("Total DAG links:", this.dag.links().length);
-                this.dag.links().forEach(link => {
-                console.log("Link:", link.source.id, "→", link.target.id);
-                });
-
+            // make dag from edge list
+            this.dag = d3.dagConnect()(data.links);
 
             // dag must be a node with id undefined. fix if necessary
             if (this.dag.id != undefined) {
@@ -619,7 +598,6 @@ class FTDrawer {
 
         // append group element to draw family tree in
         this.g = this.svg.append("g");
-        
 
         // initialize panning, zooming
         this.zoom = d3.zoom().on("zoom", event => this.g.attr("transform", event.transform));
@@ -806,7 +784,7 @@ class FTDrawer {
     static make_unique_link_id(link) {
         return link.id || link.source.id + "_" + link.target.id;
     }
-    
+
     draw(source = this.ft_datahandler.root) {
 
         // get visible nodes and links
