@@ -4,8 +4,12 @@ data = {
 
         // each new person needs to be added in their gen & a new union formed & each new person needs to be linked to the union sepratly & the child has to be added to the union of the parents 
 
+        //gen -6
+        "id34": { "id": "id34", "name": "Joshua Russell", "birthyear": 1740, "deathyear": 1801, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?"},
+        "id35": { "id": "id35", "name": "Rebecca Rine", "birthyear": 1742, "deathyear": 1827, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?"},
+
         //gen -5
-        "id32": { "id": "id32", "name": "Jacob Russell", "birthyear": 11785, "deathyear": 1867, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?", "url":"https://freepages.rootsweb.com/~lymbery/genealogy/luntley/web/gp275.html#head0"},
+        "id32": { "id": "id32", "name": "Jacob Russell", "birthyear": 1785, "deathyear": 1867, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?", "url":"https://freepages.rootsweb.com/~lymbery/genealogy/luntley/web/gp275.html#head0"},
         "id33": { "id": "id33", "name": "Hanna Coe warner", "birthyear": 1834, "deathyear": 1879, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?"},
 
         //gen -4
@@ -52,14 +56,18 @@ data = {
         "id13": { "id": "id13", "name": "Robin Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"?"},    
         "id14": { "id": "id14", "name": "Orin Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"?"},    
         
-        // Jacob Russell 
-        // 
+        
 
     },
     "unions": {
         //unions are the partnerhsip of 2 people. It also has thier children as downward relationships 
         
+        //gen -6
+        //Joshua Russell and Rebecca Rine
+        "u13": { "id": "u13", "partner": ["id34", "id35"], "children": ["id32"] },
+
         //gen -5
+        //Jacob Russell and Hanna Coe warner
         "u12": { "id": "u12", "partner": ["id32", "id33"], "children": ["id30"] },
 
         //gen -4
@@ -104,6 +112,16 @@ data = {
         // this draws lines between the parnters in a v , each partner draws havlf of a v
         // the gen x -> gen x is to discribe the links between the unioin and the child 
 
+        //the gen -6
+        //Joshua Russell -> Joshua Russell & Rebecca Rine
+        ["id34", "u13"],
+        //Rebecca Rine -> Joshua Russell & Rebecca Rine
+        ["id35", "u13"],
+
+        //gen -6 -> -5
+        //Joshua Russell & Rebecca Rine -> Jacob Russell 
+        ["u13", "id32"],
+
         //the gen -5
         //Jacob Russell -> Jacob Russell & Hanna Coe
         ["id32", "u12"],
@@ -123,7 +141,7 @@ data = {
 
         //gen -4 -> -3 
 
-        //Joheph Russell -> george
+        //Joheph Russell & Digg -> george
         ["u11", "id26"],
 
         //the gen -3
