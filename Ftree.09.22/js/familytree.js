@@ -620,6 +620,8 @@ class FTDrawer {
         // append group element to draw family tree in
         this.g = this.svg.append("g");
         
+        
+        
 
         // initialize panning, zooming
         this.zoom = d3.zoom().on("zoom", event => this.g.attr("transform", event.transform));
@@ -910,40 +912,47 @@ class FTDrawer {
 
         // ****************** links section ***************************
 
-        // Update the links...
-        var link = this.g.selectAll('path.' + this.link_css_class)
-            .data(links, FTDrawer.make_unique_link_id);
+// ****************** links section ***************************
 
-        // Enter any new links at the parent's previous position.
-        var linkEnter = link.enter().insert('path', "g")
-            .attr("class", this.link_css_class)
-            .attr('d', _ => {
-                var o = {
-                    x: source.x0,
-                    y: source.y0
-                }
-                return this.link_path_func(o, o)
-            });
+// Update the links...
+var link = this.g.selectAll('path.' + this.link_css_class)
+    .data(links, FTDrawer.make_unique_link_id);
 
-        // UPDATE
-        var linkUpdate = linkEnter.merge(link);
+// Enter any new links at the parent's previous position.
+var linkEnter = link.enter().insert('path', "g")
+    .attr("class", this.link_css_class)
+    .attr("data-source", d => d.source.id)   // NEW
+    .attr("data-target", d => d.target.id)   // NEW
+    .attr('d', _ => {
+        var o = {
+            x: source.x0,
+            y: source.y0
+        }
+        return this.link_path_func(o, o)
+    });
 
-        // Transition back to the parent element position
-        linkUpdate.transition()
-            .duration(this.transition_duration())
-            .attr('d', d => this.link_path_func(d.source, d.target));
+// UPDATE
+var linkUpdate = linkEnter.merge(link);
 
-        // Remove any exiting links
-        var linkExit = link.exit().transition()
-            .duration(this.transition_duration())
-            .attr('d', _ => {
-                var o = {
-                    x: source.x,
-                    y: source.y
-                }
-                return this.link_path_func(o, o)
-            })
-            .remove();
+// Re-apply attributes to *all* links (new + updated)
+linkUpdate
+    .attr("data-source", d => d.source.id)   // NEW
+    .attr("data-target", d => d.target.id)   // NEW
+    .transition()
+    .duration(this.transition_duration())
+    .attr('d', d => this.link_path_func(d.source, d.target));
+
+// Remove any exiting links
+var linkExit = link.exit().transition()
+    .duration(this.transition_duration())
+    .attr('d', _ => {
+        var o = {
+            x: source.x,
+            y: source.y
+        }
+        return this.link_path_func(o, o)
+    })
+    .remove();
 
         // expanding a big subgraph moves the entire dag out of the screen
         // to prevent this, cancel any transformations in y-direction
@@ -1012,6 +1021,7 @@ class FamilyTree extends FTDrawer {
     }
 
     load_data(path_to_data) {
+        console.log("Yeet");
         const old_data = data,
             max_tries = 5,
             delay = 1000,

@@ -29,7 +29,9 @@ data = {
 
         //gen -1
         "id4": { "id": "id4", "name": "Judy _ Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u2"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
-        "id21": { "id": "id21", "name": "Martin _ Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
+        "id21": { "id": "id21", "name": "Martin _ Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u17","u18"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
+        "id50": { "id": "id50", "name": "Jean", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u17"], "birthplace":"?", "deathplace":"?"},
+        "id54": { "id": "id54", "name": "Vicki", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u18"], "birthplace":"?", "deathplace":"?"},
         "id22": { "id": "id22", "name": "Susan _ Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
         "id23": { "id": "id23", "name": "Elizabeth _ Russell", "birthyear": 1950, "deathyear": 2199, "own_unions": [], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
         "id24": { "id": "id24", "name": "Nick _ Fenn", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u8"], "birthplace":"?", "deathplace":"?"},        
@@ -51,8 +53,12 @@ data = {
         "id25": { "id": "id25", "name": "Julia _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u14"], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
         "id36": { "id": "id36", "name": "Bernardo _ Arrizabalaga _ Martín", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u14"], "birthplace":"Ireland", "deathplace":"?"},
         "id38": { "id": "id38", "name": "Rob _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u15"],"parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
-        "id39": { "id": "id39", "name": "Charlie _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
+        "id39": { "id": "id39", "name": "Charlie _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u16"], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
+        "id48": { "id": "id48", "name": "Helen _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u16"], "birthplace":"Ireland", "deathplace":"?"},
         "id43": { "id": "id43", "name": "(Sir) Julia _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u15"], "birthplace":"Ireland", "deathplace":"?"},    
+        "id53": { "id": "id53", "name": "Ingrid _ Russell", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},  
+        "id51": { "id": "id51", "name": "Liz _ Russell", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},
+        "id52": { "id": "id52", "name": "Andrew _ Russell", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},    
 
         //Gen 1
         "id3": { "id": "id3", "name": "Morrow _ Fletcher-Wilson", "birthyear": 2018, "deathyear": 2222, "own_unions": [], "parent_union": "u1", "birthplace":"Dublin", "deathplace":"?"},     
@@ -65,8 +71,9 @@ data = {
         "id42": { "id": "id42", "name": "Luken _ Arrizabalaga", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
         "id44": { "id": "id44", "name": "Alexander _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u15", "birthplace":"Ireland", "deathplace":"?"},
         "id45": { "id": "id45", "name": "Kit _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u15", "birthplace":"Ireland", "deathplace":"?"},
-        //"id46": { "id": "id46", "name": "John _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "", "birthplace":"Ireland", "deathplace":"?"},
-        //"id47": { "id": "id47", "name": "Rebecca _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "", "birthplace":"Ireland", "deathplace":"?"},
+        "id46": { "id": "id46", "name": "Jack _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
+        "id49": { "id": "id49", "name": "Ali _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
+        "id47": { "id": "id47", "name": "Rebecca _ Fenn", "birthyear": 1950, "deathyear": 2222, "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
         
         
         
@@ -109,8 +116,12 @@ data = {
         //Ian and Angela
         "u6": { "id": "u6", "partner": ["id16", "id17"], "children": ["id2"] },
         //Sue and Nick
-        "u8": { "id": "u8", "partner": ["id22", "id24"]},
-       
+        "u8": { "id": "u8", "partner": ["id22", "id24"], "children": ["id25","id38","id39"] },
+        //Martin and Jean
+        "u17": { "id": "u17", "partner": ["id21","id50"], "children": ["id53","id51","id52"] },
+        //Martin and Vicki
+        "u18": { "id": "u18", "partner": ["id21","id54"], "children": [] },
+
         //Gen 0
 
         //lucas and clare 
@@ -123,6 +134,8 @@ data = {
         "u14": { "id": "u14", "partner": ["id25", "id36"], "children": ["id37","id40","id41","id42"] },
         //Rob and Julia (sir)
         "u15": { "id": "u15", "partner": ["id38", "id43"], "children": ["id44","id45"] },        
+        //Charlie and Helen
+        "u16": { "id": "u16", "partner": ["id39", "id48"], "children": [] },
     },
     "links": [
         // this draws lines between the parnters in a v , each partner draws havlf of a v
@@ -214,16 +227,25 @@ data = {
         ["id24", "u8"],
         //sue -> nick & sue union 
         ["id22", "u8"],
+        //jean -> jean & martin union
+        ["id50", "u17"],
+        //Martin -> jean & martin union
+        ["id21", "u17"],
+        //vicki -> martin & vicki union 
+        ["id54", "u18"],
+        //Martin -> martin & viki union
+        ["id21", "u18"],
+
 
         //Gen -1 -> 0
 
-        //judy & dave union -> to lucas wilson
+        //judy & dave union ->  lucas wilson
         ["u2", "id1"],
-        //judy & dave union -> to coco wilson
+        //judy & dave union ->  coco wilson
         ["u2", "id8"],
-        //judy & dave union -> to Jason wilson
+        //judy & dave union ->  Jason wilson
         ["u2", "id7"],
-        //judy & dave union -> to Rama wilson
+        //judy & dave union ->  Rama wilson
         ["u2", "id6"],
          //Clare fletcher -> Angela & Ian union
          ["u6", "id2"],
@@ -237,10 +259,18 @@ data = {
          ["u8", "id38"],
          //charlie fenn -> nick & sue union
          ["u8", "id39"],
+         //ingrid 53 -> martin & jean union
+         ["u17","id53"],
+         //liz 51 -> martin & jean union
+         ["u17","id51"],
+         //andrew 52 -> martin & jean union
+         ["u17","id52"],
+        
+
 
 
         //gen 0
-
+        
         //lucas wilson -> to clare & lucas union
         ["id1", "u1"],
         //Clare Fletcher -> to Lucas & Clare union
@@ -261,6 +291,10 @@ data = {
         ["id38", "u15"],
         //sir julia -> rob and sir Julia union
         ["id43", "u15"],
+        //charlie fenn -> Charlie and helen union
+        ["id39", "u16"],
+        //Helen fenn ->  Charlie and helen union 
+        ["id48", "u16"],
 
         //Gen -1 -> 0
 
@@ -284,6 +318,12 @@ data = {
         ["u15", "id44"],
         //Alexander Fenn -> Rob & sir Julia union
         ["u15", "id45"],
+        //Ali fenn -> charlie & helen union
+        ["u16", "id46"], 
+        //jack fenn -> charlie & helen union
+        ["u16", "id47"], 
+        //rebecca fenn -> charlie & helen union
+        ["u16", "id49"], 
         
         
 

@@ -150,3 +150,36 @@ path.marriage {
   stroke-dasharray: 5, 3;
   fill: none;
 }
+
+
+/* All links default style */
+path.link {
+  stroke: rgb(143, 189, 231);
+  stroke-width: 2px;
+  fill: none;
+}
+
+/* Specific link from Jean → martin union */
+path[data-source="id50"][data-target="u17"] {
+  stroke: rgb(135, 134, 151);
+  stroke-width: 4px;
+  stroke-dasharray: 5,5;
+}
+
+/* Specific link from Dave -> judy union */
+path[data-source="id5"][data-target="u2"] {
+  stroke: rgb(135, 134, 151);
+  stroke-width: 4px;
+  stroke-dasharray: 5,5;
+}
+
+/* Style all links starting at id33 */
+path[data-source="id33"] {
+  stroke: blue;
+  stroke-dasharray: 5,5;
+}
+
+/* Style all links pointing to u12 */
+path[data-target="u12"] {
+  stroke: green;
+}
