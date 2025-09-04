@@ -41,7 +41,7 @@ data = {
         "id17": { "id": "id17", "name": "Ian _ Fletcher", "birthyear": 1950, "deathyear": 2199, "own_unions": ["u6"], "parent_union": "u10", "birthplace":"Ireland", "deathplace":"?"},    
         
         //Gen 0
-        "id1": { "id": "id1", "name": "Lucas _ Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson.html"},
+        "id1": { "id": "id1", "name": "Lucas _ Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson_id1.html"},
         "id2": { "id": "id2", "name": "Clare _ F", "birthyear": 1978, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
         "id6": { "id": "id6", "name": "Rama _ Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"?"},    
         "id7": { "id": "id7", "name": "Jason _ Wilson", "birthyear": 1969, "deathyear": 2222, "own_unions": [], "birthplace":"Ireland", "deathplace":"?"},    
