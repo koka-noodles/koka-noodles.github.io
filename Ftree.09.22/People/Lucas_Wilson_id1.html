@@ -6,13 +6,30 @@
   
    <link rel="stylesheet" href="css/main.css">
 </head>
-</head>
+
 <body>
 
 <div class="center_div">
-  <h1>Hello World!</h1>
+  <a href="https://koka-noodles.github.io/Ftree.09.22/familytree.html">Back to home</a>
   <p>This example contains some advanced CSS methods you may not have learned yet. But, we will explain these methods in a later chapter in the tutorial.</p>
 </div>
+
+<a id="mlink" href="#">Contact Lucas</a>
+
+<script>
+/* 1. define variables */
+var me = "lucasrowanwilson";
+var place = "gmail.com";
+
+/* 2. find email link to replace */
+var elink = document.getElementById("mlink");
+
+/* 3. replace link href with variables  */
+elink.href = `mailto:${me}@${place}`;
+</script>
+
+
+
 
 </body>
 </html>

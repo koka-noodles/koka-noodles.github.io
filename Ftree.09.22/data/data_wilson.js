@@ -5,11 +5,11 @@ data = {
         // each new person needs to be added in their gen & a new union formed & each new person needs to be linked to the union sepratly & the child has to be added to the union of the parents 
 
         //gen -6
-        "id34": { "id": "id34", "name": "Joshua _ Russell", "birthyear": 1740, "deathyear": 1801, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?"},
+        "id34": { "id": "id34", "name": "Joshua _ Russell", "birthyear": 1740, "deathyear": 1801, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Joshua_Russell_id34.html"},
         "id35": { "id": "id35", "name": "Rebecca _ Rine", "birthyear": 1742, "deathyear": 1827, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?"},
 
         //gen -5
-        "id32": { "id": "id32", "name": "Jacob _ Russell", "birthyear": 1785, "deathyear": 1867, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?", "url":"https://freepages.rootsweb.com/~lymbery/genealogy/luntley/web/gp275.html#head0"},
+        "id32": { "id": "id32", "name": "Jacob _ Russell", "birthyear": 1785, "deathyear": 1867, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?"},
         "id33": { "id": "id33", "name": "Hanna _ Coe warner", "birthyear": 1834, "deathyear": 1879, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?"},
 
         //gen -4
@@ -42,7 +42,7 @@ data = {
         
         //Gen 0
         "id1": { "id": "id1", "name": "Lucas _ Wilson", "birthyear": 1976, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson_id1.html"},
-        "id2": { "id": "id2", "name": "Clare _ F", "birthyear": 1978, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
+        "id2": { "id": "id2", "name": "Clare _ Fletcher", "birthyear": 1978, "deathyear": 2222, "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
         "id6": { "id": "id6", "name": "Rama _ Wilson", "birthyear": 1950, "deathyear": 2222, "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"?"},    
         "id7": { "id": "id7", "name": "Jason _ Wilson", "birthyear": 1969, "deathyear": 2222, "own_unions": [], "birthplace":"Ireland", "deathplace":"?"},    
         "id8": { "id": "id8", "name": "Chokole _ Wilson", "birthyear": 1981, "deathyear": 2222, "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"?"},   
