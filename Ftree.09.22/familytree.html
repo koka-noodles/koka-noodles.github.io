@@ -61,17 +61,25 @@
             const name = person.name || "Unknown";
             const birth = person.birthyear || "–";
             const death = person.deathyear || "–";
-            const url = person.url || "#";
+            const url = person.url || "";
 
-            const box = document.createElement("div");
-            box.className = "personBox";
-            box.innerHTML = `
+            // Build the content
+            let content = `
               <strong>${name}</strong><br>
               <span>Birth: ${birth}</span><br>
               <span>Death: ${death}</span><br>
-              <a href="${url}" target="_blank">Profile</a>
             `;
+
+            // Only add a link if url is non-empty
+            if (url && url.trim() !== "") {
+              content += `<a href="${url}" target="_blank" rel="noopener noreferrer">Profile</a>`;
+            }
+
+            const box = document.createElement("div");
+            box.className = "personBox";
+            box.innerHTML = content;
             container.appendChild(box);
+
           });
         });
 

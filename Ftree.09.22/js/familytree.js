@@ -657,7 +657,8 @@ class FTDrawer {
     default_root_position() {
         return [
             this.svg.attr("width") / 2,
-            this.svg.attr("height") / 2
+            this.svg.attr("height") / 4 
+            // height set to 4th instead of half to pull the graph up
         ];
     }
 
