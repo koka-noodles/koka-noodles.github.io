@@ -13,13 +13,14 @@
     <option value="id34">Joshua Russell</option>
     <option value="id32">Jacob Russell</option>
     <option value="id30">Joheph Russell</option>
-    <option value="id19">G W Russell</option>
-    <option value="id4">Judy Russell</option>
-    <option value="id1">Lucas Wilson</option>
+    <option value="id19">George Lawrence Russell</option>
+    <option value="id4">Judy Russell (The Silent Generation)</option>
+    <option value="id1">Lucas Wilson (Gen X)</option>
   </select>
 
   <!-- Person info and tree button -->
-  <button id="logButton">Show People local</button>
+   <button id="refreshbutton" onClick="window.location.href=window.location.href">Start over</button>
+  <button id="logButton">Show details of these people</button>
   <div id="personInfoContainer"></div>
 
   <!-- Scripts -->
@@ -50,6 +51,7 @@
       // Setup log button
       setTimeout(() => {
         const button = document.getElementById("logButton");
+        const button2 = document.getElementById("refreshbutton");
         const container = document.getElementById("personInfoContainer");
 
         button.addEventListener("click", () => {
@@ -59,16 +61,17 @@
           d3.selectAll("circle.person").each(function (d) {
             const person = d?.data || d || {};
             const name = person.name || "Unknown";
-            const birth = person.birthyear || "–";
-            const death = person.deathyear || "–";
+            const birth = person.birthplace || "–";
+            // const death = person.deathyear || "–";
             const url = person.url || "";
 
             // Build the content
             let content = `
               <strong>${name}</strong><br>
-              <span>Birth: ${birth}</span><br>
-              <span>Death: ${death}</span><br>
+              <span>Birthplace: ${birth}</span><br>
+              
             `;
+            //<span>Death: ${death}</span><br>
 
             // Only add a link if url is non-empty
             if (url && url.trim() !== "") {

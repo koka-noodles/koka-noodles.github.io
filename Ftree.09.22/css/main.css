@@ -3,6 +3,7 @@ body {
     height: 100%;
     overflow: hidden;
     zoom: 1.5; /* works in most browsers */
+    background-color: #c9d2db;
 }
 
 .person {
@@ -44,7 +45,7 @@ body {
     top: 10px;
     left: 10px;
     z-index: 9999;
-    padding: 10px 15px;
+    padding: 2px 2px;
     background-color: #007BFF;
     color: white;
     border: none;
@@ -54,6 +55,21 @@ body {
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     z-index: 10;
+}
+
+#refreshbutton {
+  position: fixed;
+  top: 32px;
+  left: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
 #logButton:hover {

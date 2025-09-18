@@ -21,8 +21,8 @@ data = {
         "id27": { "id": "id27", "name": "Jean _ C.Lawrence", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u9"], "birthplace":"?", "deathplace":"?"},
 
         //gen -2
-        "id19": { "id": "id19", "name": "George _ Lawrence _ Russell", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u7"], "birthplace":"?", "deathplace":"?"},
-        "id20": { "id": "id20", "name": "Ann _ Willy", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u7"], "birthplace":"?", "deathplace":"?", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
+        "id19": { "id": "id19", "name": "George _ Lawrence _ Russell", "birthyear": 1909, "deathyear": 3000, "own_unions": ["u7"], "birthplace":"?", "deathplace":"?"},
+        "id20": { "id": "id20", "name": "Ann _ Willy", "birthyear": 1907, "deathyear": 3000, "own_unions": ["u7"], "birthplace":"?", "deathplace":"?", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
         "id28": { "id": "id28", "name": "Ian _ Fletcher Mum", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u10"], "birthplace":"?", "deathplace":"?"},
         "id29": { "id": "id29", "name": "Ian _ Fletcher Dad", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u10"], "birthplace":"?", "deathplace":"?", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
         
