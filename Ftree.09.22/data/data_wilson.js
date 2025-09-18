@@ -9,19 +9,21 @@ data = {
         "id35": { "id": "id35", "name": "Rebecca _ Rine", "birthyear": 1742, "deathyear": 1827, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?"},
 
         //gen -5
-        "id32": { "id": "id32", "name": "Jacob _ Russell", "birthyear": 1785, "deathyear": 1867, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?"},
+        "id32": { "id": "id32", "name": "Jacob _ Russell", "birthyear": 1785, "deathyear": 1867, "own_unions": ["u12", "u19"], "birthplace":"?", "deathplace":"?"},
+        "id55": { "id": "id55", "name": "Elizabeth _ Drew", "birthyear": 1789, "deathyear": 1824, "own_unions": ["u19"], "birthplace":"?", "deathplace":"?"},
         "id33": { "id": "id33", "name": "Hanna _ Coe warner", "birthyear": 1834, "deathyear": 1879, "own_unions": ["u12"], "birthplace":"?", "deathplace":"?"},
 
         //gen -4
         "id30": { "id": "id30", "name": "Joheph _ Russell", "birthyear": 1834, "deathyear": 1927, "own_unions": ["u11"], "birthplace":"?", "deathplace":"?"},
         "id31": { "id": "id31", "name": "Ellon _ Digg", "birthyear": 1840, "deathyear": 1913, "own_unions": ["u11"], "birthplace":"?", "deathplace":"?"},
+        "id56": { "id": "id56", "name": "Archibald _ Campbell", "birthyear": 1816, "deathyear": 1865, "own_unions": [], "parent_union": "u19", "birthplace":"?", "deathplace":"New Zeland"},
 
         //gen -3
         "id26": { "id": "id26", "name": "George _ Herbert _ Russell", "birthyear": 1879, "deathyear": 1962, "own_unions": ["u9"], "parent_union": "u11", "birthplace":"?", "deathplace":"?"},
         "id27": { "id": "id27", "name": "Jean _ C.Lawrence", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u9"], "birthplace":"?", "deathplace":"?"},
 
         //gen -2
-        "id19": { "id": "id19", "name": "George _ Lawrence _ Russell", "birthyear": 1909, "deathyear": 3000, "own_unions": ["u7"], "birthplace":"?", "deathplace":"?"},
+        "id19": { "id": "id19", "name": "George _ Lawrence _ Russell", "birthyear": 1909, "deathyear": 3000, "own_unions": ["u7"], "birthplace":"Norwich", "deathplace":"?"},
         "id20": { "id": "id20", "name": "Ann _ Willy", "birthyear": 1907, "deathyear": 3000, "own_unions": ["u7"], "birthplace":"?", "deathplace":"?", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
         "id28": { "id": "id28", "name": "Ian _ Fletcher Mum", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u10"], "birthplace":"?", "deathplace":"?"},
         "id29": { "id": "id29", "name": "Ian _ Fletcher Dad", "birthyear": 3000, "deathyear": 3000, "own_unions": ["u10"], "birthplace":"?", "deathplace":"?", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
@@ -89,6 +91,9 @@ data = {
         //gen -5
         //Jacob Russell and Hanna Coe warner
         "u12": { "id": "u12", "partner": ["id32", "id33"], "children": ["id30"] },
+        //Jacob Russell and Elizabeth _ Drew
+        "u19": { "id": "u19", "partner": ["id32", "id55"], "children": []},
+  
 
         //gen -4
 
@@ -150,6 +155,10 @@ data = {
         //gen -6 -> -5
         //Joshua Russell & Rebecca Rine -> Jacob Russell 
         ["u13", "id32"],
+        //Joshua Russell --> Jacob Russell & Elizabeth _ Drew 
+        ["id13", "u19"],
+        //Elizabeth _ Drew  --> Jacob Russell & Elizabeth _ Drew 
+        ["id55", "u19"],
 
         //the gen -5
         //Jacob Russell -> Jacob Russell & Hanna Coe
@@ -160,6 +169,8 @@ data = {
         // gen -5 -> -4
         //Jacob Russell and Hanna union -> Joseph 
         ["u12", "id30"],
+        //Jacob Russell and Elizabeth Drew union -> Archabald 
+        ["u19", "id56"],
 
         //the gen -4
 
