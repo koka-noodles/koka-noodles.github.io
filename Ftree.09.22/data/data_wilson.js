@@ -4,6 +4,10 @@ data = {
 
         // each new person needs to be added in their gen & a new union formed & each new person needs to be linked to the union sepratly & the child has to be added to the union of the parents 
 
+        //gen -7
+        "id58": { "id": "id58", "name": "John _ Russell", "birthyear": 1707, "deathyear": 1762, "own_unions": ["u20"], "birthplace":"?", "deathplace":"?"},
+        "id57": { "id": "id57", "name": "Sarah", "birthyear": 1707, "deathyear": 1767, "own_unions": ["u20"], "birthplace":"?", "deathplace":"?"},
+
         //gen -6
         "id34": { "id": "id34", "name": "Joshua _ Russell", "birthyear": 1740, "deathyear": 1801, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Joshua_Russell_id34.html"},
         "id35": { "id": "id35", "name": "Rebecca _ Rine", "birthyear": 1742, "deathyear": 1827, "own_unions": ["u13"], "birthplace":"?", "deathplace":"?"},
