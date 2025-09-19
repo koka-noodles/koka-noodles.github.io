@@ -174,12 +174,12 @@ path[data-source="id5"][data-target="u2"] {
 }
 
 /* Style all links starting at id33 */
-path[data-source="id33"] {
+/* path[data-source="id33"] {
   stroke: blue;
   stroke-dasharray: 5,5;
-}
+} */
 
 /* Style all links pointing to u12 */
-path[data-target="u12"] {
+/* path[data-target="u12"] {
   stroke: green;
-}
+} */
