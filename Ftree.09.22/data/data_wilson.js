@@ -40,7 +40,7 @@ data = {
         "id54": { "id": "id54", "name": "Vicki", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u18"], "birthplace":"?", "deathplace":"?"},
         "id22": { "id": "id22", "name": "Susan _ Fenn", "birthyear": 1937, "deathyear": "2021", "own_unions": ["u8"], "parent_union": "u7", "birthplace":"China", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Susan_Fenn_id22.html"},
         "id23": { "id": "id23", "name": "Elizabeth _ Russell", "birthyear": "date _ not Set", "deathyear": "date _ not Set", "own_unions": [], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
-        "id24": { "id": "id24", "name": "Nick _ Fenn", "birthyear": 1936, "deathyear": 2016, "own_unions": ["u8"], "birthplace":"?", "deathplace":"?"},        
+        "id24": { "id": "id24", "name": "Nick _ Fenn", "birthyear": 1936, "deathyear": 2016, "own_unions": ["u8"], "birthplace":"?", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Nick_Fenn_id24.html}"},        
         "id5": { "id": "id5", "name": "David _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u2", "u3"], "birthplace":"?", "deathplace":"?"},    
         "id9": { "id": "id9", "name": "Fiona _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u3"], "birthplace":"Ireland", "deathplace":"?"},    
         "id16": { "id": "id16", "name": "Angela _ Fletcher", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"?"},    
