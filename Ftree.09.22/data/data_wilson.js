@@ -24,62 +24,68 @@ data = {
 
         //gen -3
         "id26": { "id": "id26", "name": "George _ Herbert _ Russell", "birthyear": 1879, "deathyear": 1962, "own_unions": ["u9"], "parent_union": "u11", "birthplace":"?", "deathplace":"?"},
-        "id27": { "id": "id27", "name": "Jean _ C.Lawrence", "birthyear": "date _ not Set", "deathyear": "date _ not Set", "own_unions": ["u9"], "birthplace":"?", "deathplace":"?"},
+        "id27": { "id": "id27", "name": "Jean _ C.Lawrence", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u9"], "birthplace":"?", "deathplace":"?"},
 
         //gen -2
-        "id19": { "id": "id19", "name": "George _ Lawrence _ Russell", "birthyear": 1909, "deathyear": "date _ not Set", "own_unions": ["u7"], "birthplace":"Norwich", "deathplace":"?"},
-        "id20": { "id": "id20", "name": "Ann _ Willy", "birthyear": 1907, "deathyear": "date _ not Set", "own_unions": ["u7"], "birthplace":"?", "deathplace":"?", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
-        "id28": { "id": "id28", "name": "Ian _ Fletcher Mum", "birthyear": "date _ not Set", "deathyear": "date _ not Set", "own_unions": ["u10"], "birthplace":"?", "deathplace":"?"},
-        "id29": { "id": "id29", "name": "Ian _ Fletcher Dad", "birthyear": "date _ not Set", "deathyear": "date _ not Set", "own_unions": ["u10"], "birthplace":"?", "deathplace":"?", "url": "https://www.sageappliances.com/en-ie/product/bov860"},
+        "id19": { "id": "id19", "name": "George _ Lawrence _ Russell", "birthyear": 1909, "deathyear": ".", "own_unions": ["u7"], "birthplace":"Norwich", "deathplace":"?"},
+        "id20": { "id": "id20", "name": "Ann _ Willy", "birthyear": 1907, "deathyear": ".", "own_unions": ["u7"], "birthplace":"?", "deathplace":"?"},
+        "id28": { "id": "id28", "name": "Ian _ Fletcher Mum", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u10"], "birthplace":"?", "deathplace":"?"},
+        "id29": { "id": "id29", "name": "Ian _ Fletcher Dad", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u10"], "birthplace":"?", "deathplace":"?"},
         
 
         //gen -1
-        "id4": { "id": "id4", "name": "Judy _ Russell", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u2"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
-        "id21": { "id": "id21", "name": "Martin _ Russell", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u17","u18"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
-        "id50": { "id": "id50", "name": "Jean", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u17"], "birthplace":"?", "deathplace":"?"},
-        "id54": { "id": "id54", "name": "Vicki", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u18"], "birthplace":"?", "deathplace":"?"},
+        "id4": { "id": "id4", "name": "Judy _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u2"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
+        "id21": { "id": "id21", "name": "Martin _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u17","u18"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
+        "id50": { "id": "id50", "name": "Jean", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u17"], "birthplace":"?", "deathplace":"?"},
+        "id54": { "id": "id54", "name": "Vicki", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u18"], "birthplace":"?", "deathplace":"?"},
         "id22": { "id": "id22", "name": "Susan _ Fenn", "birthyear": 1937, "deathyear": "2021", "own_unions": ["u8"], "parent_union": "u7", "birthplace":"China", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Susan_Fenn_id22.html"},
-        "id23": { "id": "id23", "name": "Elizabeth _ Russell", "birthyear": "date _ not Set", "deathyear": "date _ not Set", "own_unions": [], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
+        "id23": { "id": "id23", "name": "Elizabeth _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
         "id24": { "id": "id24", "name": "Nick _ Fenn", "birthyear": 1936, "deathyear": 2016, "own_unions": ["u8"], "birthplace":"London", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Nick_Fenn_id24.html"},        
-        "id5": { "id": "id5", "name": "David _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u2", "u3"], "birthplace":"?", "deathplace":"?"},    
-        "id9": { "id": "id9", "name": "Fiona _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u3"], "birthplace":"Ireland", "deathplace":"?"},    
-        "id16": { "id": "id16", "name": "Angela _ Fletcher", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"?"},    
-        "id17": { "id": "id17", "name": "Ian _ Fletcher", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u6"], "parent_union": "u10", "birthplace":"Ireland", "deathplace":"?"},    
+        "id5": { "id": "id5", "name": "David _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u2", "u3"], "birthplace":"?", "deathplace":"?"},    
+        "id9": { "id": "id9", "name": "Fiona _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u3"], "birthplace":"Ireland", "deathplace":"?"},    
+        "id16": { "id": "id16", "name": "Angela _ Fletcher", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"?"},    
+        "id17": { "id": "id17", "name": "Ian _ Fletcher", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u6"], "parent_union": "u10", "birthplace":"Ireland", "deathplace":"?"},    
         
         //Gen 0
-        "id1": { "id": "id1", "name": "Lucas _ Wilson", "birthyear": 1976, "deathyear": "TBD", "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson_id1.html"},
-        "id2": { "id": "id2", "name": "Clare _ Fletcher", "birthyear": 1978, "deathyear": "TBD", "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
-        "id6": { "id": "id6", "name": "Rama _ Wilson", "birthyear": 1975, "deathyear": "TBD", "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"?"},    
-        "id7": { "id": "id7", "name": "Jason _ Wilson", "birthyear": 1969, "deathyear": "TBD", "own_unions": [], "birthplace":"Ireland", "deathplace":"?"},    
-        "id8": { "id": "id8", "name": "Chokole _ Wilson", "birthyear": 1981, "deathyear": "TBD", "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"?"},   
-        "id10": { "id": "id10", "name": "Danny _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u3", "birthplace":"Ireland", "deathplace":"?"},    
-        "id11": { "id": "id11", "name": "Sarah _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"?"},    
-        "id15": { "id": "id15", "name": "Jason _ McC", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"?"},    
-        "id18": { "id": "id18", "name": "Jonathan _ Fletcher", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u6", "birthplace":"Ireland", "deathplace":"?"},    
-        "id25": { "id": "id25", "name": "Julia _ Fenn", "birthyear": "date _ not Set", "deathyear": "date _ not Set", "own_unions": ["u14"], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
-        "id36": { "id": "id36", "name": "Bernardo _ Arrizabalaga _ Martín", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u14"], "birthplace":"Ireland", "deathplace":"?"},
-        "id38": { "id": "id38", "name": "Rob _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u15"],"parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
-        "id39": { "id": "id39", "name": "Charlie _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u16"], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
-        "id48": { "id": "id48", "name": "Helen _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u16"], "birthplace":"Ireland", "deathplace":"?"},
-        "id43": { "id": "id43", "name": "(Sir) Julia _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": ["u15"], "birthplace":"Ireland", "deathplace":"?"},    
-        "id53": { "id": "id53", "name": "Ingrid _ Russell", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},  
-        "id51": { "id": "id51", "name": "Liz _ Russell", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},
-        "id52": { "id": "id52", "name": "Andrew _ Russell", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},    
+        "id1": { "id": "id1", "name": "Lucas _ Wilson", "birthyear": 1976, "deathyear": ".", "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson_id1.html"},
+        "id2": { "id": "id2", "name": "Clare _ Fletcher", "birthyear": 1978, "deathyear": ".", "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
+        "id6": { "id": "id6", "name": "Rama _ Wilson", "birthyear": 1975, "deathyear": ".", "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"?"},    
+        "id7": { "id": "id7", "name": "Jason _ Wilson", "birthyear": 1969, "deathyear": ".", "own_unions": [], "birthplace":"Ireland", "deathplace":"?"},    
+        "id8": { "id": "id8", "name": "Chokole _ Wilson", "birthyear": 1981, "deathyear": ".", "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"?"},   
+        "id10": { "id": "id10", "name": "Danny _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u3", "birthplace":"Ireland", "deathplace":"?"},    
+        "id11": { "id": "id11", "name": "Sarah _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"?"},    
+        "id15": { "id": "id15", "name": "Jason _ McC", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u5"], "birthplace":"Ireland", "deathplace":"?"},    
+        "id18": { "id": "id18", "name": "Jonathan _ Fletcher", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u6", "birthplace":"Ireland", "deathplace":"?"},    
+        "id25": { "id": "id25", "name": "Julia _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u14"], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
+        "id36": { "id": "id36", "name": "Bernardo _ Arrizabalaga _ Martín", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u14"], "birthplace":"Ireland", "deathplace":"?"},
+        "id38": { "id": "id38", "name": "Rob _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u15"],"parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
+        "id39": { "id": "id39", "name": "Charlie _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u16"], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
+        "id48": { "id": "id48", "name": "Helen _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u16"], "birthplace":"Ireland", "deathplace":"?"},
+        "id43": { "id": "id43", "name": "(Sir) Julia _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u15"], "birthplace":"Ireland", "deathplace":"?"},    
+        "id53": { "id": "id53", "name": "Ingrid _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},  
+        "id51": { "id": "id51", "name": "Liz _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},
+        "id52": { "id": "id52", "name": "Andrew _ Lawrence _ Russell", "birthyear": 1959, "deathyear": ".", "own_unions": ["u21"], "parent_union": "u17", "birthplace":"San Francisco, California", "deathplace":"?"},
+        "id59": { "id": "id59", "name": "Jonathan _ Nyoka _ Castleberry", "birthyear": 1959, "deathyear": ".", "own_unions": ["u21"], "birthplace":"San Francisco, California", "deathplace":"?"},
+             
 
         //Gen 1
-        "id3": { "id": "id3", "name": "Morrow _ Fletcher-Wilson", "birthyear": 2018, "deathyear": "TBD", "own_unions": [], "parent_union": "u1", "birthplace":"Dublin", "deathplace":"?"},     
-        "id12": { "id": "id12", "name": "Thorjborn _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u4", "birthplace":"Ireland", "deathplace":"?"},    
-        "id13": { "id": "id13", "name": "Robin _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"?"},    
-        "id14": { "id": "id14", "name": "Orin _ Wilson", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"?"},
-        "id37": { "id": "id37", "name": "Nadia _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
-        "id40": { "id": "id40", "name": "Andrea _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
-        "id41": { "id": "id41", "name": "Marteen _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
-        "id42": { "id": "id42", "name": "Luken _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
-        "id44": { "id": "id44", "name": "Alexander _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u15", "birthplace":"Ireland", "deathplace":"?"},
-        "id45": { "id": "id45", "name": "Kit _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u15", "birthplace":"Ireland", "deathplace":"?"},
-        "id46": { "id": "id46", "name": "Jack _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
-        "id49": { "id": "id49", "name": "Ali _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
-        "id47": { "id": "id47", "name": "Rebecca _ Fenn", "birthyear": "date _ not Set", "deathyear": "TBD", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
+        "id3": { "id": "id3", "name": "Morrow _ Fletcher-Wilson", "birthyear": 2018, "deathyear": ".", "own_unions": [], "parent_union": "u1", "birthplace":"Dublin", "deathplace":"?"},     
+        "id12": { "id": "id12", "name": "Thorjborn _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u4", "birthplace":"Ireland", "deathplace":"?"},    
+        "id13": { "id": "id13", "name": "Robin _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"?"},    
+        "id14": { "id": "id14", "name": "Orin _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u5", "birthplace":"Ireland", "deathplace":"?"},
+        "id37": { "id": "id37", "name": "Nadia _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
+        "id40": { "id": "id40", "name": "Andrea _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
+        "id41": { "id": "id41", "name": "Marteen _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
+        "id42": { "id": "id42", "name": "Luken _ Arrizabalaga", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u14", "birthplace":"Ireland", "deathplace":"?"},
+        "id44": { "id": "id44", "name": "Alexander _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u15", "birthplace":"Ireland", "deathplace":"?"},
+        "id45": { "id": "id45", "name": "Kit _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u15", "birthplace":"Ireland", "deathplace":"?"},
+        "id46": { "id": "id46", "name": "Jack _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
+        "id49": { "id": "id49", "name": "Ali _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
+        "id47": { "id": "id47", "name": "Rebecca _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
+
+        //dylan and owen
+        "id60": { "id": "id60", "name": "Dylan _ Lawrence _ Russell", "birthyear": 1995, "deathyear": ".", "own_unions": [], "parent_union": "u21", "birthplace":"Ireland", "deathplace":"?"},
+        "id61": { "id": "id61", "name": "Owen _ Yeats _ Russell", "birthyear": 1999, "deathyear": ".", "own_unions": [], "parent_union": "u21", "birthplace":"Ireland", "deathplace":"?"},
         
         
         
@@ -145,6 +151,10 @@ data = {
         "u15": { "id": "u15", "partner": ["id38", "id43"], "children": ["id44","id45"] },        
         //Charlie and Helen
         "u16": { "id": "u16", "partner": ["id39", "id48"], "children": [] },
+
+        //andrew and okie 
+        "u21": { "id": "u21", "partner": ["id52", "id59"], "children": ["id60", "id61"] },
+
     },
     "links": [
         // this draws lines between the parnters in a v , each partner draws havlf of a v
@@ -311,6 +321,11 @@ data = {
         //Helen fenn ->  Charlie and helen union 
         ["id48", "u16"],
 
+        //andrew russell -> amdrew amd okie union
+        ["id52", "u21"],
+        //okie -> andrew and okie union
+        ["id59", "u21"],
+
         //Gen -1 -> 0
 
         //Morrow wilson -> Lucas & Clare union
@@ -340,8 +355,10 @@ data = {
         //rebecca fenn -> charlie & helen union
         ["u16", "id49"], 
         
-        
-
+        //dylan russell -> okie and andrew union
+        ["u21", "id60"],
+        //Owne russell -> okie and andrew union
+        ["u21", "id61"],
         
 
        

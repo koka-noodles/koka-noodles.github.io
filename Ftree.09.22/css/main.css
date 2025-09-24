@@ -7,12 +7,12 @@ body {
 }
 
 .person {
-    stroke: steelblue;
-    stroke-width: 3px;
+    stroke: #2f774f;
+    stroke-width: 1px;
 }
 
 .extendable {
-    fill: lightsteelblue;
+    fill: #9aa0ff;
 }
 
 .non-extendable {
