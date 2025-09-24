@@ -427,6 +427,10 @@ class Person extends FTNode {
         return this.data.deathyear;
     };
 
+    get_birth_date() {
+        return this.data.birthdate;
+    };
+
     get_death_place() {
         return this.data.deathplace;
     };

@@ -64,11 +64,13 @@
             const birth = person.birthplace || "–";
             // const death = person.deathyear || "–";
             const url = person.url || "";
+            const birthdate = person.birthdate || "";
 
             // Build the content
             let content = `
               <strong>${name}</strong><br>
               <span>Birthplace: ${birth}</span><br>
+              <span>Birth Date: ${birthdate}</span><br>
               
             `;
             //<span>Death: ${death}</span><br>

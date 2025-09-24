@@ -36,7 +36,7 @@ data = {
         //gen -1
         "id4": { "id": "id4", "name": "Judy _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u2"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
         "id21": { "id": "id21", "name": "Martin _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u17","u18"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
-        "id50": { "id": "id50", "name": "Jean", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u17"], "birthplace":"?", "deathplace":"?"},
+        "id50": { "id": "id50", "name": "Jean _ Louise _ Jelinek", "birthyear": 1935, "deathyear": 2020, "own_unions": ["u17"], "birthplace":"?", "deathplace":"?"},
         "id54": { "id": "id54", "name": "Vicki", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u18"], "birthplace":"?", "deathplace":"?"},
         "id22": { "id": "id22", "name": "Susan _ Fenn", "birthyear": 1937, "deathyear": "2021", "own_unions": ["u8"], "parent_union": "u7", "birthplace":"China", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Susan_Fenn_id22.html"},
         "id23": { "id": "id23", "name": "Elizabeth _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
@@ -47,7 +47,7 @@ data = {
         "id17": { "id": "id17", "name": "Ian _ Fletcher", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u6"], "parent_union": "u10", "birthplace":"Ireland", "deathplace":"?"},    
         
         //Gen 0
-        "id1": { "id": "id1", "name": "Lucas _ Wilson", "birthyear": 1976, "deathyear": ".", "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson_id1.html"},
+        "id1": { "id": "id1", "name": "Lucas _ Wilson", "birthyear": 1976, "deathyear": ".","birthdate": "29.Nov", "own_unions": ["u1"], "parent_union": "u2", "birthplace":"Wik", "deathplace":"The Moon", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson_id1.html"},
         "id2": { "id": "id2", "name": "Clare _ Fletcher", "birthyear": 1978, "deathyear": ".", "own_unions": ["u1"], "parent_union": "u6", "birthplace":"Cork", "deathplace":"The Moon"},
         "id6": { "id": "id6", "name": "Rama _ Wilson", "birthyear": 1975, "deathyear": ".", "own_unions": ["u4"], "birthplace":"Ireland", "deathplace":"?"},    
         "id7": { "id": "id7", "name": "Jason _ Wilson", "birthyear": 1969, "deathyear": ".", "own_unions": [], "birthplace":"Ireland", "deathplace":"?"},    
@@ -62,10 +62,12 @@ data = {
         "id39": { "id": "id39", "name": "Charlie _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u16"], "parent_union": "u8", "birthplace":"Ireland", "deathplace":"?"},
         "id48": { "id": "id48", "name": "Helen _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u16"], "birthplace":"Ireland", "deathplace":"?"},
         "id43": { "id": "id43", "name": "(Sir) Julia _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u15"], "birthplace":"Ireland", "deathplace":"?"},    
-        "id53": { "id": "id53", "name": "Ingrid _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},  
-        "id51": { "id": "id51", "name": "Liz _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},
+        "id53": { "id": "id53", "name": "Ingrid _ Anne _ Russell", "birthyear": 1962, "deathyear": ".", "own_unions": [], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},  
+        "id51": { "id": "id51", "name": "Elizabeth _ Jean _ Russell", "birthyear": 1968, "deathyear": ".", "own_unions": ["u22"], "parent_union": "u17", "birthplace":"Ireland", "deathplace":"?"},
         "id52": { "id": "id52", "name": "Andrew _ Lawrence _ Russell", "birthyear": 1959, "deathyear": ".", "own_unions": ["u21"], "parent_union": "u17", "birthplace":"San Francisco, California", "deathplace":"?"},
         "id59": { "id": "id59", "name": "Jonathan _ Nyoka _ Castleberry", "birthyear": 1959, "deathyear": ".", "own_unions": ["u21"], "birthplace":"San Francisco, California", "deathplace":"?"},
+        "id62": { "id": "id62", "name": "Scott _ Richard _ Carnevale", "birthyear": 1968, "deathyear": 2011, "own_unions": ["u22"], "birthplace":"San Francisco, California", "deathplace":"?"},
+    
              
 
         //Gen 1
@@ -82,8 +84,6 @@ data = {
         "id46": { "id": "id46", "name": "Jack _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
         "id49": { "id": "id49", "name": "Ali _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
         "id47": { "id": "id47", "name": "Rebecca _ Fenn", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u16", "birthplace":"Ireland", "deathplace":"?"},
-
-        //dylan and owen
         "id60": { "id": "id60", "name": "Dylan _ Lawrence _ Russell", "birthyear": 1995, "deathyear": ".", "own_unions": [], "parent_union": "u21", "birthplace":"Ireland", "deathplace":"?"},
         "id61": { "id": "id61", "name": "Owen _ Yeats _ Russell", "birthyear": 1999, "deathyear": ".", "own_unions": [], "parent_union": "u21", "birthplace":"Ireland", "deathplace":"?"},
         
@@ -151,10 +151,10 @@ data = {
         "u15": { "id": "u15", "partner": ["id38", "id43"], "children": ["id44","id45"] },        
         //Charlie and Helen
         "u16": { "id": "u16", "partner": ["id39", "id48"], "children": [] },
-
         //andrew and okie 
         "u21": { "id": "u21", "partner": ["id52", "id59"], "children": ["id60", "id61"] },
-
+        //Elizabeth Russell and Scott
+        "u22": { "id": "u22", "partner": ["id51", "id62"], "children": [] },
     },
     "links": [
         // this draws lines between the parnters in a v , each partner draws havlf of a v
@@ -320,11 +320,15 @@ data = {
         ["id39", "u16"],
         //Helen fenn ->  Charlie and helen union 
         ["id48", "u16"],
-
         //andrew russell -> amdrew amd okie union
         ["id52", "u21"],
         //okie -> andrew and okie union
         ["id59", "u21"],
+
+        //Scott -> scott and liz union
+        ["id62", "u22"],
+        //liz -> scott and liz union
+        ["id51", "u22"],
 
         //Gen -1 -> 0
 
