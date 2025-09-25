@@ -83,7 +83,7 @@ body {
     z-index: 9999;
     max-height: 65vh;
     overflow-y: auto;
-    width: 300px;
+    width: 34vw;
     font-family: sans-serif;
 }
 
@@ -113,7 +113,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 10vh;
     background: rgba(255, 255, 255, 0.95);
     z-index: 9999;
     display: flex;
@@ -131,7 +131,7 @@ body {
 #startSelector {
     position: absolute;
     top: 50%;
-    left: 50%;
+    
     z-index: 9999;
     padding: 6px;
 }

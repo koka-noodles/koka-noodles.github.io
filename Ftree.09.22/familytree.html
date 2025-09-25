@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Set Start Node</title>
+  <title>Family tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   
    <link rel="stylesheet" href="css/main.css">
 </head>
@@ -54,41 +56,50 @@
         const button2 = document.getElementById("refreshbutton");
         const container = document.getElementById("personInfoContainer");
 
+        let isVisible = false; // state to track toggle
+
         button.addEventListener("click", () => {
           if (!container) return;
-          container.innerHTML = "";
 
-          d3.selectAll("circle.person").each(function (d) {
-            const person = d?.data || d || {};
-            const name = person.name || "Unknown";
-            const birth = person.birthplace || "–";
-            // const death = person.deathyear || "–";
-            const url = person.url || "";
-            const birthdate = person.birthdate || "";
+          if (isVisible) {
+            // Hide content
+            container.innerHTML = "";
+            isVisible = false;
+            button.textContent = "Show deatils"; // optional label change
+          } else {
+            // Show content
+            container.innerHTML = "";
 
-            // Build the content
-            let content = `
-              <strong>${name}</strong><br>
-              <span>Birthplace: ${birth}</span><br>
-              <span>Birth Date: ${birthdate}</span><br>
-              
-            `;
-            //<span>Death: ${death}</span><br>
+            d3.selectAll("circle.person").each(function (d) {
+              const person = d?.data || d || {};
+              const name = person.name || "Unknown";
+              const birth = person.birthplace || "–";
+              const url = person.url || "";
+              const birthdate = person.birthdate || "";
 
-            // Only add a link if url is non-empty
-            if (url && url.trim() !== "") {
-              content += `<a href="${url}" target="_blank" rel="noopener noreferrer">Profile</a>`;
-            }
+              let content = `
+                <strong>${name}</strong><br>
+                <span>Birthplace: ${birth}</span><br>
+                <span>Birth Date: ${birthdate}</span><br>
+              `;
 
-            const box = document.createElement("div");
-            box.className = "personBox";
-            box.innerHTML = content;
-            container.appendChild(box);
+              if (url && url.trim() !== "") {
+                content += `<a href="${url}" target="_blank" rel="noopener noreferrer">Profile</a>`;
+              }
 
-          });
+              const box = document.createElement("div");
+              box.className = "personBox";
+              box.innerHTML = content;
+              container.appendChild(box);
+            });
+
+            isVisible = true;
+            button.textContent = "Hide deatils"; // optional label change
+          }
         });
 
       }, 1000);
+
 
       // Optionally hide selector after selection
       this.style.display = "none";
