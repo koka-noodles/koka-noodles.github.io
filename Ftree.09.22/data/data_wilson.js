@@ -34,14 +34,14 @@ data = {
         
 
         //gen -1
-        "id4": { "id": "id4", "name": "Judy _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u2"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
-        "id21": { "id": "id21", "name": "Martin _ Lawrence _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u17","u18"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
+        "id4": { "id": "id4", "name": "Judy _ Russell", "birthyear": 1944, "deathyear": ".", "birthdate": "July 11th", "own_unions": ["u2"], "parent_union": "u7", "birthplace":"Whitmore Road, Harrow-on-the-hill, north London", "deathplace":"?"},
+        "id21": { "id": "id21", "name": "Martin _ Lawrence _ Russell", "birthyear": 1938, "birthdate": "May 13th", "deathyear": ".", "own_unions": ["u17","u18"], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
         "id50": { "id": "id50", "name": "Jean _ Louise _ Jelinek", "birthyear": 1935, "deathyear": 2020, "own_unions": ["u17"], "birthplace":"?", "deathplace":"?"},
         "id54": { "id": "id54", "name": "Vicki", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u18"], "birthplace":"?", "deathplace":"?"},
         "id22": { "id": "id22", "name": "Susan _ Clare _ Fenn", "birthyear": 1937, "deathyear": "2021", "own_unions": ["u8"], "parent_union": "u7", "birthplace":"China", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Susan_Fenn_id22.html"},
-        "id23": { "id": "id23", "name": "Elizabeth _ Russell", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": [], "parent_union": "u7", "birthplace":"?", "deathplace":"?"},
+        "id23": { "id": "id23", "name": "Elizabeth _ Anne _ Russell", "birthyear":1934, "deathyear": 1936, "birthdate": "June 15th", "own_unions": [], "parent_union": "u7", "birthplace":"London, St Pancras", "deathplace":"Pakoi, China"},
         "id24": { "id": "id24", "name": "Nick _ Fenn", "birthyear": 1936, "deathyear": 2016, "own_unions": ["u8"], "birthplace":"London", "deathplace":"?", "url":"https://koka-noodles.github.io/Ftree.09.22/People/Nick_Fenn_id24.html"},        
-        "id5": { "id": "id5", "name": "David _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u2", "u3"], "birthplace":"?", "deathplace":"?"},    
+        "id5": { "id": "id5", "name": "David _ Ross _ Wilson", "birthyear": 1938, "deathyear": ".","birthdate": "Sep 13th", "own_unions": ["u2", "u3"], "birthplace":"Glasgo", "deathplace":"?"},    
         "id9": { "id": "id9", "name": "Fiona _ Wilson", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u3"], "birthplace":"Ireland", "deathplace":"?"},    
         "id16": { "id": "id16", "name": "Angela _ Fletcher", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u6"], "birthplace":"Ireland", "deathplace":"?"},    
         "id17": { "id": "id17", "name": "Ian _ Fletcher", "birthyear": "date _ not Set", "deathyear": ".", "own_unions": ["u6"], "parent_union": "u10", "birthplace":"Ireland", "deathplace":"?"},    
