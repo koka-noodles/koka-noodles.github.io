@@ -36,21 +36,32 @@ let data = null;
 
 // 🟢 STEP 1: Load existing data file from GitHub Pages
 async function loadData() {
-  const url = "https://koka-noodles.github.io/Ftree.09.22/data/data_wilson.js"; // ⬅️ Replace this
+  const url = "https://koka-noodles.github.io/Ftree.09.22/data/data_wilson.js"; // ⬅️ your data file
   try {
     const text = await fetch(url).then(r => r.text());
-    // Extract the object from the JS file
-    const jsonMatch = text.match(/=\s*({[\s\S]*});?$/);
-    if (jsonMatch) {
-      data = eval("(" + jsonMatch[1] + ")");
+
+    // 🧹 Clean the file content to isolate the main data object
+    const cleanText = text
+      .replace(/^export\s+default\s+/m, "")   // remove "export default"
+      .replace(/^const\s+data\s*=\s*/m, "")   // remove "const data ="
+      .replace(/^let\s+data\s*=\s*/m, "")     // remove "let data ="
+      .replace(/^var\s+data\s*=\s*/m, "")     // remove "var data ="
+      .replace(/^data\s*=\s*/m, "")           // remove plain "data ="
+      .replace(/;?\s*$/, "");                 // remove trailing semicolon or whitespace
+
+    // 🧠 Try parsing the cleaned JS into an object
+    try {
+      data = eval("(" + cleanText + ")");
       document.getElementById("status").textContent = "✅ Data loaded successfully.";
       document.getElementById("form").style.display = "block";
-    } else {
-      document.getElementById("status").textContent = "❌ Could not parse data file.";
+    } catch (err) {
+      console.error("Parse error:", err);
+      document.getElementById("status").textContent = "❌ Could not parse data file (format issue).";
     }
+
   } catch (err) {
-    console.error(err);
-    document.getElementById("status").textContent = "❌ Failed to load data file.";
+    console.error("Fetch error:", err);
+    document.getElementById("status").textContent = "❌ Failed to load data file (fetch issue).";
   }
 }
 
