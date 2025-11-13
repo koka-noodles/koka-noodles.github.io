@@ -313,7 +313,7 @@ data = {
         },
         "id1": {
             "id": "id1",
-            "name": "Lucas _ Wilson",
+            "name": "BLucas _ Wilson",
             "birthyear": 1976,
             "deathyear": ".",
             "birthdate": "29.Nov",
