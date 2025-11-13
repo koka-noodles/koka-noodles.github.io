@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wilson Family Data Editor</title>
+  <style>
+    body { font-family: sans-serif; background: #f9fafb; padding: 2rem; }
+    form { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 700px; }
+    label { display: block; margin-top: 1rem; }
+    input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 6px; }
+    button { margin-top: 1.5rem; padding: 0.75rem 1.25rem; font-size: 1rem; cursor: pointer; border-radius: 6px; border: none; background: #2563eb; color: white; }
+    #output { margin-top: 2rem; background: #fff; padding: 1rem; border-radius: 8px; white-space: pre-wrap; }
+    #status { margin-bottom: 1rem; font-weight: bold; color: #444; }
+  </style>
+</head>
+<body>
+
+<h1>Wilson Family Data Updater</h1>
+<p id="status">Loading data from GitHub...</p>
+
+<form id="form" style="display:none">
+  <label>Name: <input type="text" id="name" required></label>
+  <label>Birth Year: <input type="text" id="birthyear"></label>
+  <label>Death Year: <input type="text" id="deathyear"></label>
+  <label>Birthplace: <input type="text" id="birthplace"></label>
+  <label>Deathplace: <input type="text" id="deathplace"></label>
+  <label>Spouse Name (optional): <input type="text" id="spouse"></label>
+  <label>Parents’ Names (comma separated, optional): <input type="text" id="parents"></label>
+  <button type="submit">Generate Updated data_wilson.js</button>
+</form>
+
+<pre id="output"></pre>
+
+<script>
+let data = null;
+
+// 🟢 STEP 1: Load existing data file from GitHub Pages
+async function loadData() {
+  const url = "https://YOUR_USERNAME.github.io/YOUR_REPO/data_wilson.js"; // ⬅️ Replace this
+  try {
+    const text = await fetch(url).then(r => r.text());
+    // Extract the object from the JS file
+    const jsonMatch = text.match(/=\s*({[\s\S]*});?$/);
+    if (jsonMatch) {
+      data = eval("(" + jsonMatch[1] + ")");
+      document.getElementById("status").textContent = "✅ Data loaded successfully.";
+      document.getElementById("form").style.display = "block";
+    } else {
+      document.getElementById("status").textContent = "❌ Could not parse data file.";
+    }
+  } catch (err) {
+    console.error(err);
+    document.getElementById("status").textContent = "❌ Failed to load data file.";
+  }
+}
+
+loadData();
+
+// Helper functions
+const nextId = () => {
+  const ids = Object.keys(data.persons).map(id => +id.replace("id",""));
+  return "id" + (Math.max(...ids) + 1);
+};
+const nextUnionId = () => {
+  const ids = Object.keys(data.unions).map(u => +u.replace("u",""));
+  return "u" + (Math.max(...ids) + 1);
+};
+
+// 🟢 STEP 2: Form submission
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const birthyear = document.getElementById("birthyear").value || ".";
+  const deathyear = document.getElementById("deathyear").value || ".";
+  const birthplace = document.getElementById("birthplace").value || "?";
+  const deathplace = document.getElementById("deathplace").value || "?";
+  const spouseName = document.getElementById("spouse").value.trim();
+  const parentsInput = document.getElementById("parents").value.trim();
+
+  const newId = nextId();
+  const newPerson = {
+    id: newId,
+    name,
+    birthyear,
+    deathyear,
+    birthplace,
+    deathplace,
+    own_unions: []
+  };
+  data.persons[newId] = newPerson;
+
+  // Handle spouse
+  if (spouseName) {
+    let spouseId = null;
+    for (let pid in data.persons) {
+      if (data.persons[pid].name.toLowerCase() === spouseName.toLowerCase()) {
+        spouseId = pid;
+        break;
+      }
+    }
+    if (!spouseId) {
+      spouseId = nextId();
+      data.persons[spouseId] = {
+        id: spouseId,
+        name: spouseName,
+        birthyear: ".",
+        deathyear: ".",
+        birthplace: "?",
+        deathplace: "?",
+        own_unions: []
+      };
+    }
+    const newUnionId = nextUnionId();
+    data.unions[newUnionId] = { id: newUnionId, partner: [newId, spouseId], children: [] };
+    data.persons[newId].own_unions.push(newUnionId);
+    data.persons[spouseId].own_unions.push(newUnionId);
+    data.links.push([newId, newUnionId]);
+    data.links.push([spouseId, newUnionId]);
+  }
+
+  // Handle parents
+  if (parentsInput) {
+    const parentNames = parentsInput.split(",").map(x => x.trim().toLowerCase());
+    const parentIds = Object.keys(data.persons).filter(pid => parentNames.includes(data.persons[pid].name.toLowerCase()));
+    if (parentIds.length === 2) {
+      const parentUnionId = Object.keys(data.unions).find(u =>
+        parentIds.every(id => data.unions[u].partner.includes(id))
+      );
+      if (parentUnionId) {
+        newPerson.parent_union = parentUnionId;
+        data.unions[parentUnionId].children.push(newId);
+        data.links.push([parentUnionId, newId]);
+      }
+    }
+  }
+
+  // 🟢 STEP 3: Serialize new data
+  const output = "data = " + JSON.stringify(data, null, 4);
+  document.getElementById("output").textContent = output;
+
+  // 🟢 STEP 4: Download updated file
+  const blob = new Blob([output], { type: "text/javascript" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "data_wilson.js";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
