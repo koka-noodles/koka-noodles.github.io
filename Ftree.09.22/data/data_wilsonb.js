@@ -155,7 +155,8 @@ data = {
                 "u7"
             ],
             "birthplace": "?",
-            "deathplace": "?"
+            "deathplace": "?",
+            "parent_union": "u23"
         },
         "id28": {
             "id": "id28",
@@ -313,7 +314,7 @@ data = {
         },
         "id1": {
             "id": "id1",
-            "name": "BLucas _ Wilson",
+            "name": "Lucas _ Wilson",
             "birthyear": 1976,
             "deathyear": ".",
             "birthdate": "29.Nov",
@@ -705,37 +706,21 @@ data = {
         },
         "id64": {
             "id": "id64",
-            "name": "test",
-            "birthyear": "1999",
-            "deathyear": "2001",
-            "birthplace": "here",
-            "deathplace": "there3",
-            "own_unions": [
-                "u23"
-            ]
-        },
-        "id65": {
-            "id": "id65",
-            "name": "mary",
+            "name": "anne parent test",
             "birthyear": ".",
             "deathyear": ".",
             "birthplace": "?",
             "deathplace": "?",
-            "own_unions": [
-                "u23",
-                "u24"
-            ]
+            "own_unions": []
         },
-        "id66": {
-            "id": "id66",
-            "name": "testb",
-            "birthyear": "1999",
-            "deathyear": "2001",
-            "birthplace": "here",
-            "deathplace": "there3",
-            "own_unions": [
-                "u24"
-            ]
+        "id65": {
+            "id": "id65",
+            "name": "anne parent b test",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": []
         }
     },
     "unions": {
@@ -959,15 +944,9 @@ data = {
                 "id64",
                 "id65"
             ],
-            "children": []
-        },
-        "u24": {
-            "id": "u24",
-            "partner": [
-                "id66",
-                "id65"
-            ],
-            "children": []
+            "children": [
+                "id20"
+            ]
         }
     },
     "links": [
@@ -1304,12 +1283,8 @@ data = {
             "u23"
         ],
         [
-            "id66",
-            "u24"
-        ],
-        [
-            "id65",
-            "u24"
+            "u23",
+            "id20"
         ]
     ]
 }
