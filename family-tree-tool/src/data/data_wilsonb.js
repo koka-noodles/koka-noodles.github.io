@@ -33,7 +33,7 @@ data = {
             ],
             "birthplace": "?",
             "deathplace": "?",
-            "url": "https://koka-noodles.github.io/Ftree.09.22/People/Joshua_Russell_id34.html"
+            "url": "https://koka-noodles.github.io/family-tree-tool/src/People/Joshua_Russell_id34.html"
         },
         "id35": {
             "id": "id35",
@@ -240,7 +240,7 @@ data = {
             "parent_union": "u7",
             "birthplace": "China",
             "deathplace": "?",
-            "url": "https://koka-noodles.github.io/Ftree.09.22/People/Susan_Fenn_id22.html"
+            "url": "https://koka-noodles.github.io/family-tree-tool/src/People/Susan_Fenn_id22.html"
         },
         "id23": {
             "id": "id23",
@@ -263,7 +263,7 @@ data = {
             ],
             "birthplace": "London",
             "deathplace": "?",
-            "url": "https://koka-noodles.github.io/Ftree.09.22/People/Nick_Fenn_id24.html"
+            "url": "https://koka-noodles.github.io/family-tree-tool/src/People/Nick_Fenn_id24.html"
         },
         "id5": {
             "id": "id5",
@@ -324,7 +324,7 @@ data = {
             "parent_union": "u2",
             "birthplace": "Wik",
             "deathplace": "The Moon",
-            "url": "https://koka-noodles.github.io/Ftree.09.22/People/Lucas_Wilson_id1.html"
+            "url": "https://koka-noodles.github.io/family-tree-tool/src/People/Lucas_Wilson_id1.html"
         },
         "id2": {
             "id": "id2",
