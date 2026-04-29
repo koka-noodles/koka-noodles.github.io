@@ -1,0 +1,21 @@
+  {
+    "name": "Meta biz fix",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "cs rules hootsuite",
+    "permissions": ["storage"],
+    "permissions": ["tabs"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    	"content_scripts": [
+		   {
+		     "matches": ["https://hootsuite.com/*"],
+		     "css": ["myStyles.css"],
+		     "js": ["contentScript.js"]
+		   }
+	 	]
+ 	}
+    
+

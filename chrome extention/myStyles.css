@@ -1,0 +1,183 @@
+
+body {
+  background-color: lightblue;
+}
+
+
+h1 {
+	color: red;
+}
+
+.filter-dropdown {
+/* background-color: #74dc61 !important; */
+
+max-height: 750px !important;
+
+}
+
+
+ul {
+/* background-color: #74dc61 !important; */
+max-height: 950px !important;
+}
+
+
+.create-role {
+	/* background-color: #74dc61 !important; */
+	max-height: 950px !important;
+}
+
+.scroll-bar-design{
+	/* background-color: #74dc61 !important; */
+	max-height: 950px !important;
+}
+
+.infor-container{
+	padding-bottom: none;
+	padding-left: none;
+}
+
+.lang-box{
+	right: 500px !important;
+}
+
+.entries .cv-btn{
+	width: 500px !important;
+	/* background-color: #74dc61 !important; */
+}
+
+.latest-tag{
+	font-style: bold !important;
+	/* background-color: #74dc61 !important; */
+}
+
+.modified-by{
+	width: 50px !important;
+	/* background-color: #74dc61 !important; */
+}
+
+.last-modified{
+	width: 170px !important;
+	/* background-color: #74dc61 !important; */
+}
+
+.name{
+	width: 530px !important;
+	/* background-color: #74dc61 !important; */
+}
+
+.info-container{
+	/* background-color: #74dc61 !important; */
+	padding-bottom: 0px !important;
+}
+
+
+.x1gg5tnf{
+	background-color: #f08ac2 !important;
+	padding-bottom: 0px !important;
+	width: 140% !important;
+}
+/*
+.x1kmanbg{
+	background-color: #E0218A !important;
+	padding-bottom: 0px !important;
+	width: 140% !important;
+}
+
+.xh8yej3 {
+    width: 127% !important;
+}
+
+*/
+.xinu3np {
+    width: 15% !important;
+}
+ 
+
+
+
+/*.alert-success{
+	background-color: yellow !important;
+	right: 500px !important;
+}
+
+.ui-pnotify-container{
+	background-color: yellow !important;
+	right: 500px !important;
+}
+
+.alert{
+	background-color: yellow !important;
+	right: 500px !important;
+}
+*/
+/*class="alert ui-pnotify-container alert-success"*/
+
+/*.entries{
+	right: 500px !important;	
+}
+*/
+
+/*.cs-border-btn{
+	right: 500px !important;	
+}
+*/
+
+/*.cv-btn{
+	right: 500px !important;	
+}*/
+
+/*.ng-scope{
+	right: 500px !important;	
+}
+*/
+
+
+
+
+/*.dropdown-menu {
+background-color: yellow !important;
+max-height: 750px !important;
+}*/
+
+
+
+/*.language-border{
+background-color: yellow !important;
+height: 500px !important;
+max-height: 750px !important;
+}*/
+
+
+/*.row {
+background-color: yellow !important;
+height: 500px !important;
+max-height: 750px !important;
+}
+
+
+.entry-create{
+background-color: yellow !important;
+height: 500px !important;
+max-height: 750px !important;
+}
+
+.create-role{
+background-color: yellow !important;
+height: 500px !important;
+max-height: 750px !important;
+}
+*/
+
+/*.envi-border{
+background-color: yellow !important;
+height: 500px !important;
+max-height: 750px !important;
+}
+*/
+
+/*.envi-border.language-border{
+background-color: yellow !important;
+height: 500px !important;
+max-height: 750px !important;
+}*/
