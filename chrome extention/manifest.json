@@ -1,21 +1,17 @@
-  {
-    "name": "Meta biz fix",
+{
+    "name": "Hoot fix",
     "manifest_version": 3,
-    "version": "1.0",
+    "version": "1.1",
     "description": "cs rules hootsuite",
-    "permissions": ["storage"],
-    "permissions": ["tabs"],
+    "permissions": ["storage", "tabs"],
     "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "service_worker": "background.js"
     },
-    	"content_scripts": [
-		   {
-		     "matches": ["https://hootsuite.com/*"],
-		     "css": ["myStyles.css"],
-		     "js": ["contentScript.js"]
-		   }
-	 	]
- 	}
-    
-
+    "content_scripts": [
+      {
+        "matches": ["https://hootsuite.com/*"],
+        "css": ["myStyles.css"],
+        "js": ["contentScript.js"]
+      }
+    ]
+}

@@ -77,6 +77,34 @@ max-height: 950px !important;
 	padding-bottom: 0px !important;
 	width: 140% !important;
 }
+
+
+.includeAllTeamsStyles .bladeSidebar .content .content-scroll {
+    overflow-y: auto;
+    position: absolute;
+    top: 90px;
+    bottom: 0;
+    /* width: 240px; */
+    height: auto;
+    border-width: 1px 0 0 0;
+    border-color: #ccc;
+    width: 557px !important;
+    background-color: cornflowerblue;
+    /* padding-right: 1000px; */
+}
+
+
+
+.includeAllTeamsStyles .bladeContent .drillDownContent {
+    overflow-y: auto;
+    position: absolute;
+    top: 101px;
+    right: 19px;
+    bottom: 0;
+    left: 319px !important;
+}
+
+
 /*
 .x1kmanbg{
 	background-color: #E0218A !important;
