@@ -32,7 +32,7 @@
     <h1>Wilson Family Data Updater</h1>
     <div id="status">Loading data from GitHub...</div>
 
-    <form id="form" style="display:none" onsubmit="handleSubmit(event)">
+    <form id="form" style="display:none" onsubmit="return false">
       <label class="full">Name: <input id="name" type="text" required /></label>
       <label>Birth Year: <input id="birthyear" type="text" /></label>
       <label>Death Year: <input id="deathyear" type="text" /></label>
@@ -71,16 +71,22 @@
       </div>
 
       <div class="full row">
-        <button type="submit">Generate Updated data_wilson.js</button>
+        <button type="button" onclick="addTempPerson()">Add Person to Temp</button>
+        <button type="button" onclick="generateUpdatedData()" style="background:#059669;margin-left:0.5rem;">Generate Updated data_wilson.js</button>
       </div>
     </form>
 
     <pre id="output"></pre>
+    <div id="tempList" style="margin-top:1rem;background:#fff;padding:0.75rem;border-radius:8px;">
+      <strong>Temporary Persons (not yet merged):</strong>
+      <div id="tempPersonsList" style="margin-top:0.5rem;font-size:0.95rem; color:#111827;"></div>
+    </div>
   </div>
 
 <script>
 // ---------------------- Data loading & parsing ----------------------
 let data = null;
+let tempPersons = [];
 async function loadData() {
   const url = "../src/data/data_wilson.js";
   try {
@@ -182,9 +188,8 @@ function renderSuggestions(list, box, onClick) {
 }
 
 // ---------------------- Main submit / insert logic ----------------------
-function handleSubmit(ev) {
-  ev.preventDefault();
-  // collect form values
+function addTempPerson() {
+  // collect form values and push to temporary storage
   const name = document.getElementById('name').value.trim();
   if (!name) return alert('Name is required');
   const birthyear = document.getElementById('birthyear').value || '.';
@@ -192,95 +197,17 @@ function handleSubmit(ev) {
   const birthplace = document.getElementById('birthplace').value || '?';
   const deathplace = document.getElementById('deathplace').value || '?';
 
-  // parents selected via dropdown must provide ids
   const parentA_id = document.getElementById('parentA_id').value || null;
   const parentB_id = document.getElementById('parentB_id').value || null;
-  const parentIds = [];
-  if (parentA_id) parentIds.push(parentA_id);
-  if (parentB_id) parentIds.push(parentB_id);
+  if ((parentA_id || parentB_id) && !(parentA_id && parentB_id)) return alert('Please select exactly two parents (or none).');
 
-  // spouse: either existing selected id, or new typed name
   const spouse_existing_id = document.getElementById('spouse_id').value || null;
   const spouse_new_name = document.getElementById('spouse_new').value.trim() || null;
 
-  // create new person
-  const newId = nextPersonId();
-  data.persons[newId] = {
-    id: newId,
-    name,
-    birthyear,
-    deathyear,
-    birthplace,
-    deathplace,
-    own_unions: []
-  };
+  tempPersons.push({ name, birthyear, deathyear, birthplace, deathplace, parentA_id, parentB_id, spouse_existing_id, spouse_new_name });
+  renderTempList();
 
-  // HANDLE PARENTS: if exactly two parent IDs are provided, link to their union
-  if (parentIds.length === 2) {
-    const [p1, p2] = parentIds;
-    // try find parent union where these two are partners
-    let parentUnionId = Object.keys(data.unions).find(uid => {
-      const un = data.unions[uid];
-      return un.partner && un.partner.includes(p1) && un.partner.includes(p2);
-    });
-    // If no union exists for these parents, create a new union and add partner->union links
-    if (!parentUnionId) {
-      parentUnionId = nextUnionId();
-      data.unions[parentUnionId] = { id: parentUnionId, partner: [p1, p2], children: [] };
-      data.links.push([p1, parentUnionId]);
-      data.links.push([p2, parentUnionId]);
-    }
-    // add child to union children, add union->child link and set child's parent_union
-    data.unions[parentUnionId].children.push(newId);
-    data.links.push([parentUnionId, newId]);
-    data.persons[newId].parent_union = parentUnionId;
-  } else if (parentIds.length > 0 && parentIds.length !== 2) {
-    alert('Please select exactly two parents (or none).');
-    // remove added person to keep data clean
-    delete data.persons[newId];
-    return;
-  }
-
-  // HANDLE SPOUSE: prefer typed-new spouse if provided; otherwise use selected existing
-  let spouseIdToUse = null;
-  if (spouse_new_name) {
-    // create new spouse person
-    spouseIdToUse = nextPersonId();
-    data.persons[spouseIdToUse] = { id: spouseIdToUse, name: spouse_new_name, birthyear: '.', deathyear: '.', birthplace: '?', deathplace: '?', own_unions: [] };
-  } else if (spouse_existing_id) {
-    spouseIdToUse = spouse_existing_id;
-  }
-
-  if (spouseIdToUse) {
-    // create union between new person and spouse
-    const unionId = nextUnionId();
-    data.unions[unionId] = { id: unionId, partner: [newId, spouseIdToUse], children: [] };
-
-    // update persons' own_unions arrays
-    if (!Array.isArray(data.persons[newId].own_unions)) data.persons[newId].own_unions = [];
-    if (!Array.isArray(data.persons[spouseIdToUse].own_unions)) data.persons[spouseIdToUse].own_unions = [];
-    data.persons[newId].own_unions.push(unionId);
-    data.persons[spouseIdToUse].own_unions.push(unionId);
-
-    // add partner->union links
-    data.links.push([newId, unionId]);
-    data.links.push([spouseIdToUse, unionId]);
-  }
-
-  // Serialize and show
-  const output = 'data = ' + JSON.stringify(data, null, 4);
-  document.getElementById('output').textContent = output;
-
-  // Trigger download
-  const blob = new Blob([output], { type: 'text/javascript' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'data_wilson.js';
-  a.click();
-  URL.revokeObjectURL(url);
-
-  // reset form fields (but keep lists)
+  // reset form
   document.getElementById('form').reset();
   document.getElementById('parentA_id').value = '';
   document.getElementById('parentB_id').value = '';
@@ -288,11 +215,103 @@ function handleSubmit(ev) {
   document.getElementById('parentA_suggestions').style.display = 'none';
   document.getElementById('parentB_suggestions').style.display = 'none';
   document.getElementById('spouse_suggestions').style.display = 'none';
-
-  // re-populate so new person appears in lists
-  populateParentDropdowns();
-  alert('New person added and file prepared for download. Remember to commit the downloaded file to your repo.');
 }
+
+function renderTempList() {
+  const container = document.getElementById('tempPersonsList');
+  if (!container) return;
+  container.innerHTML = '';
+  if (!tempPersons.length) { container.textContent = '(no temporary persons)'; return; }
+  tempPersons.forEach((p, idx) => {
+    const div = document.createElement('div');
+    div.style.padding = '0.25rem 0';
+    const parentText = (p.parentA_id && p.parentB_id) ? `${p.parentA_id}/${p.parentB_id}` : '-/-';
+    const spouseText = p.spouse_existing_id ? p.spouse_existing_id : (p.spouse_new_name || '-');
+    div.innerHTML = `<strong>${escapeHtml(p.name)}</strong> — ${escapeHtml(p.birthyear)}/${escapeHtml(p.deathyear)} — Parents: ${escapeHtml(parentText)} — Spouse: ${escapeHtml(spouseText)} <button onclick="removeTemp(${idx})" style="margin-left:0.5rem;">Remove</button>`;
+    container.appendChild(div);
+  });
+}
+
+function removeTemp(i) { tempPersons.splice(i,1); renderTempList(); }
+
+function generateUpdatedData() {
+  if (!tempPersons.length) return alert('No temporary persons to merge.');
+
+  // merge each temporary person into the main data structure
+  for (const entry of tempPersons.slice()) {
+    const name = entry.name;
+    const birthyear = entry.birthyear;
+    const deathyear = entry.deathyear;
+    const birthplace = entry.birthplace;
+    const deathplace = entry.deathplace;
+    const parentA_id = entry.parentA_id || null;
+    const parentB_id = entry.parentB_id || null;
+    const parentIds = [];
+    if (parentA_id) parentIds.push(parentA_id);
+    if (parentB_id) parentIds.push(parentB_id);
+
+    const spouse_existing_id = entry.spouse_existing_id || null;
+    const spouse_new_name = entry.spouse_new_name || null;
+
+    // create new person id in data
+    const newId = nextPersonId();
+    data.persons[newId] = { id: newId, name, birthyear, deathyear, birthplace, deathplace, own_unions: [] };
+
+    // handle parents
+    if (parentIds.length === 2) {
+      const [p1,p2] = parentIds;
+      let parentUnionId = Object.keys(data.unions).find(uid => {
+        const un = data.unions[uid];
+        return un.partner && un.partner.includes(p1) && un.partner.includes(p2);
+      });
+      if (!parentUnionId) {
+        parentUnionId = nextUnionId();
+        data.unions[parentUnionId] = { id: parentUnionId, partner: [p1,p2], children: [] };
+        data.links.push([p1, parentUnionId]);
+        data.links.push([p2, parentUnionId]);
+      }
+      if (!data.unions[parentUnionId].children.includes(newId)) data.unions[parentUnionId].children.push(newId);
+      data.links.push([parentUnionId, newId]);
+      data.persons[newId].parent_union = parentUnionId;
+    }
+
+    // handle spouse
+    let spouseIdToUse = null;
+    if (spouse_new_name) {
+      spouseIdToUse = nextPersonId();
+      data.persons[spouseIdToUse] = { id: spouseIdToUse, name: spouse_new_name, birthyear: '.', deathyear: '.', birthplace: '?', deathplace: '?', own_unions: [] };
+    } else if (spouse_existing_id) {
+      spouseIdToUse = spouse_existing_id;
+    }
+
+    if (spouseIdToUse) {
+      const unionId = nextUnionId();
+      data.unions[unionId] = { id: unionId, partner: [newId, spouseIdToUse], children: [] };
+      if (!Array.isArray(data.persons[newId].own_unions)) data.persons[newId].own_unions = [];
+      if (!Array.isArray(data.persons[spouseIdToUse].own_unions)) data.persons[spouseIdToUse].own_unions = [];
+      data.persons[newId].own_unions.push(unionId);
+      data.persons[spouseIdToUse].own_unions.push(unionId);
+      data.links.push([newId, unionId]);
+      data.links.push([spouseIdToUse, unionId]);
+    }
+  }
+
+  // output and download
+  const output = 'data = ' + JSON.stringify(data, null, 4);
+  document.getElementById('output').textContent = output;
+  const blob = new Blob([output], { type: 'text/javascript' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'data_wilson.js'; a.click(); URL.revokeObjectURL(url);
+
+  // cleanup
+  tempPersons = [];
+  renderTempList();
+  populateParentDropdowns();
+  alert('Merged temporary persons into data and prepared download. Commit the downloaded file to your repo.');
+}
+
+// small helper to avoid raw HTML injection in the temp list
+function escapeHtml(s){ return (s+'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[c]); }
 </script>
   <!-- Assign Parents to Existing Person -->
   <div class="card" style="margin-top:1.5rem;">
