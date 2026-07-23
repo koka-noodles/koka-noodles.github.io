@@ -705,21 +705,21 @@ data = {
         },
         "id64": {
             "id": "id64",
-            "name": "test person",
-            "birthyear": "1999",
-            "deathyear": "3999",
-            "birthplace": "dublin",
-            "deathplace": "dublin",
+            "name": "BroLucas wilson",
+            "birthyear": "4343",
+            "deathyear": "2232",
+            "birthplace": "asdfioj",
+            "deathplace": "jiojsdf",
             "own_unions": [],
-            "parent_union": "u23"
+            "parent_union": "u2"
         },
         "id65": {
             "id": "id65",
-            "name": "test 2222",
-            "birthyear": "334343",
-            "deathyear": "324324",
-            "birthplace": "sdfash",
-            "deathplace": "ddsfha",
+            "name": "SisLucas Wilson",
+            "birthyear": "42343",
+            "deathyear": "4343",
+            "birthplace": "333q",
+            "deathplace": "ksdfn",
             "own_unions": [],
             "parent_union": "u2"
         }
@@ -801,6 +801,7 @@ data = {
             ],
             "children": [
                 "id1",
+                "id64",
                 "id65"
             ]
         },
@@ -938,16 +939,6 @@ data = {
             ],
             "children": [
                 "id63"
-            ]
-        },
-        "u23": {
-            "id": "u23",
-            "partner": [
-                "id4",
-                "id10"
-            ],
-            "children": [
-                "id64"
             ]
         }
     },
@@ -1277,15 +1268,7 @@ data = {
             "id63"
         ],
         [
-            "id4",
-            "u23"
-        ],
-        [
-            "id10",
-            "u23"
-        ],
-        [
-            "u23",
+            "u2",
             "id64"
         ],
         [
