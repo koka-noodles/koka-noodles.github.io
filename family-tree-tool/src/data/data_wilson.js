@@ -702,26 +702,6 @@ data = {
             "parent_union": "u22",
             "birthplace": "San Francisco, California",
             "deathplace": "?"
-        },
-        "id64": {
-            "id": "id64",
-            "name": "ProBroLucas wilson",
-            "birthyear": "4343",
-            "deathyear": "2232",
-            "birthplace": "asdfioj",
-            "deathplace": "jiojsdf",
-            "own_unions": [],
-            "parent_union": "u2"
-        },
-        "id65": {
-            "id": "id65",
-            "name": "SisLucas Wilson",
-            "birthyear": "42343",
-            "deathyear": "4343",
-            "birthplace": "333q",
-            "deathplace": "ksdfn",
-            "own_unions": [],
-            "parent_union": "u2"
         }
     },
     "unions": {
@@ -800,9 +780,7 @@ data = {
                 "id5"
             ],
             "children": [
-                "id1",
-                "id64",
-                "id65"
+                "id1"
             ]
         },
         "u3": {
@@ -1266,14 +1244,6 @@ data = {
         [
             "u22",
             "id63"
-        ],
-        [
-            "u2",
-            "id64"
-        ],
-        [
-            "u2",
-            "id65"
         ]
     ]
 }
