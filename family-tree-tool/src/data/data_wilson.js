@@ -313,7 +313,7 @@ data = {
         },
         "id1": {
             "id": "id1",
-            "name": "Lucas _ Wilson",
+            "name": "Lucas _ WilsonVoop",
             "birthyear": 1976,
             "deathyear": ".",
             "birthdate": "29.Nov",
@@ -705,7 +705,7 @@ data = {
         },
         "id64": {
             "id": "id64",
-            "name": "BroLucas wilson",
+            "name": "ProBroLucas wilson",
             "birthyear": "4343",
             "deathyear": "2232",
             "birthplace": "asdfioj",
