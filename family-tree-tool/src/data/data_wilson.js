@@ -702,6 +702,246 @@ data = {
             "parent_union": "u22",
             "birthplace": "San Francisco, California",
             "deathplace": "?"
+        },
+        "id64": {
+            "id": "id64",
+            "name": "Monica _ Russell",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u23"
+            ],
+            "parent_union": "u9"
+        },
+        "id65": {
+            "id": "id65",
+            "name": "Ronald _ Hodgson",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u23"
+            ]
+        },
+        "id66": {
+            "id": "id66",
+            "name": "Ruth _ Nary",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u24"
+            ],
+            "parent_union": "u9"
+        },
+        "id67": {
+            "id": "id67",
+            "name": "A.W. _ Quinton",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u24"
+            ]
+        },
+        "id68": {
+            "id": "id68",
+            "name": "Joseph Nelson _  Russell",
+            "birthyear": "1870",
+            "deathyear": "1949",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u25"
+            ],
+            "parent_union": "u11"
+        },
+        "id69": {
+            "id": "id69",
+            "name": "Sarah Ada _ Starmers",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u25"
+            ]
+        },
+        "id70": {
+            "id": "id70",
+            "name": "Ellen Louise _ Russell",
+            "birthyear": "1871",
+            "deathyear": "1940",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u26"
+            ],
+            "parent_union": "u11"
+        },
+        "id71": {
+            "id": "id71",
+            "name": "Alfred _ Naylor",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u26"
+            ]
+        },
+        "id72": {
+            "id": "id72",
+            "name": "John Addison _ Russell",
+            "birthyear": "1872",
+            "deathyear": "1905",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u27"
+            ],
+            "parent_union": "u11"
+        },
+        "id73": {
+            "id": "id73",
+            "name": "Florence _  Lewis",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u27"
+            ]
+        },
+        "id74": {
+            "id": "id74",
+            "name": "Ernest Sydney _ Russell",
+            "birthyear": "1873",
+            "deathyear": "1889",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [],
+            "parent_union": "u11"
+        },
+        "id75": {
+            "id": "id75",
+            "name": "Rebeca Marion _ Russell",
+            "birthyear": "1875",
+            "deathyear": "1968",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u28"
+            ],
+            "parent_union": "u11"
+        },
+        "id76": {
+            "id": "id76",
+            "name": "Joseph B. _ Wallace",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u28"
+            ]
+        },
+        "id77": {
+            "id": "id77",
+            "name": "Alfred Warner _ Russell",
+            "birthyear": "1876",    
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u29"
+            ],
+            "parent_union": "u11"
+        },
+        "id78": {
+            "id": "id78",
+            "name": "May _ Knight",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u29"
+            ]
+        },
+        "id79": {
+            "id": "id79",
+            "name": "Henry Campbell _ Russell",
+            "birthyear": "1870",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u30"
+            ],
+            "parent_union": "u11"
+        },
+        "id80": {
+            "id": "id80",
+            "name": "Emily _ Ingram",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u30"
+            ]
+        },
+        "id81": {
+            "id": "id81",
+            "name": "Frank Stanley _ Russell",
+            "birthyear": "1881",
+            "deathyear": "1945",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u31"
+            ],
+            "parent_union": "u11"
+        },
+        "id82": {
+            "id": "id82",
+            "name": "Christina Jane _ Duff",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u31"
+            ]
+        },
+        "id83": {
+            "id": "id83",
+            "name": "James Percy _ Russell",
+            "birthyear": "1884",
+            "deathyear": "1952",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u32"
+            ],
+            "parent_union": "u11"
+        },
+        "id84": {
+            "id": "id84",
+            "name": "Nelle _ Stevens",
+            "birthyear": ".",
+            "deathyear": ".",
+            "birthplace": "?",
+            "deathplace": "?",
+            "own_unions": [
+                "u32"
+            ]
         }
     },
     "unions": {
@@ -740,7 +980,16 @@ data = {
                 "id31"
             ],
             "children": [
-                "id26"
+                "id26",
+                "id68",
+                "id70",
+                "id72",
+                "id74",
+                "id75",
+                "id77",
+                "id79",
+                "id81",
+                "id83"
             ]
         },
         "u9": {
@@ -750,7 +999,9 @@ data = {
                 "id27"
             ],
             "children": [
-                "id19"
+                "id19",
+                "id64",
+                "id66"
             ]
         },
         "u7": {
@@ -918,6 +1169,86 @@ data = {
             "children": [
                 "id63"
             ]
+        },
+        "u23": {
+            "id": "u23",
+            "partner": [
+                "id64",
+                "id65"
+            ],
+            "children": []
+        },
+        "u24": {
+            "id": "u24",
+            "partner": [
+                "id66",
+                "id67"
+            ],
+            "children": []
+        },
+        "u25": {
+            "id": "u25",
+            "partner": [
+                "id68",
+                "id69"
+            ],
+            "children": []
+        },
+        "u26": {
+            "id": "u26",
+            "partner": [
+                "id70",
+                "id71"
+            ],
+            "children": []
+        },
+        "u27": {
+            "id": "u27",
+            "partner": [
+                "id72",
+                "id73"
+            ],
+            "children": []
+        },
+        "u28": {
+            "id": "u28",
+            "partner": [
+                "id75",
+                "id76"
+            ],
+            "children": []
+        },
+        "u29": {
+            "id": "u29",
+            "partner": [
+                "id77",
+                "id78"
+            ],
+            "children": []
+        },
+        "u30": {
+            "id": "u30",
+            "partner": [
+                "id79",
+                "id80"
+            ],
+            "children": []
+        },
+        "u31": {
+            "id": "u31",
+            "partner": [
+                "id81",
+                "id82"
+            ],
+            "children": []
+        },
+        "u32": {
+            "id": "u32",
+            "partner": [
+                "id83",
+                "id84"
+            ],
+            "children": []
         }
     },
     "links": [
@@ -1244,6 +1575,130 @@ data = {
         [
             "u22",
             "id63"
+        ],
+        [
+            "u9",
+            "id64"
+        ],
+        [
+            "id64",
+            "u23"
+        ],
+        [
+            "id65",
+            "u23"
+        ],
+        [
+            "u9",
+            "id66"
+        ],
+        [
+            "id66",
+            "u24"
+        ],
+        [
+            "id67",
+            "u24"
+        ],
+        [
+            "u11",
+            "id68"
+        ],
+        [
+            "id68",
+            "u25"
+        ],
+        [
+            "id69",
+            "u25"
+        ],
+        [
+            "u11",
+            "id70"
+        ],
+        [
+            "id70",
+            "u26"
+        ],
+        [
+            "id71",
+            "u26"
+        ],
+        [
+            "u11",
+            "id72"
+        ],
+        [
+            "id72",
+            "u27"
+        ],
+        [
+            "id73",
+            "u27"
+        ],
+        [
+            "u11",
+            "id74"
+        ],
+        [
+            "u11",
+            "id75"
+        ],
+        [
+            "id75",
+            "u28"
+        ],
+        [
+            "id76",
+            "u28"
+        ],
+        [
+            "u11",
+            "id77"
+        ],
+        [
+            "id77",
+            "u29"
+        ],
+        [
+            "id78",
+            "u29"
+        ],
+        [
+            "u11",
+            "id79"
+        ],
+        [
+            "id79",
+            "u30"
+        ],
+        [
+            "id80",
+            "u30"
+        ],
+        [
+            "u11",
+            "id81"
+        ],
+        [
+            "id81",
+            "u31"
+        ],
+        [
+            "id82",
+            "u31"
+        ],
+        [
+            "u11",
+            "id83"
+        ],
+        [
+            "id83",
+            "u32"
+        ],
+        [
+            "id84",
+            "u32"
         ]
     ]
 }
